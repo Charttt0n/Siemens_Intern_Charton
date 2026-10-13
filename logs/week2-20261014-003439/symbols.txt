@@ -1,0 +1,28 @@
+$ arm-none-eabi-nm -n /Users/charton/Projects/西门子实习/codes/build/week2-y9rubkqb/bootloader.elf
+00000000 R vectors
+000000c0 T Reset_Handler
+00000100 T Default_Handler
+00000108 t runtime_ok
+0000016c T boot_idle
+00000170 T fault_idle
+00000174 T exception_handler
+00000184 T main
+0000022c T board_init
+00000244 T board_clock_hz
+0000024c T uart_init
+00000294 T uart_flush
+000002c8 T uart_putc
+000002e0 T uart_write
+000003c8 A _sidata
+20000000 D _sdata
+20000000 D runtime_data
+20000014 D _edata
+20000014 B _sbss
+20000014 B exception_number
+20000018 B boot_status
+2000001c B runtime_bss
+20000038 B _ebss
+203ff000 A _stack_bottom
+20400000 R _stack_top
+
+EXIT_CODE=0

@@ -1,8 +1,26 @@
-# 第一周：Cortex-M7 开发环境
+# Cortex-M7 工业 Bootloader 学习工程
 
 目标：在 Apple Silicon macOS 上完成 GNU Arm GCC + CMake/Make → ELF → QEMU Cortex-M7 → GDB 的验证闭环。
 
-## 当前状态
+## 第二周：最小 Bootloader（2026-10-14）
+
+已新增汇编启动、完整 AN500 向量表、板级初始化与 CMSDK UART0 驱动，关闭 semihosting 仍能输出启动和 C 环境自检日志。最终 12 项检查通过，包括本机时钟核对、全新构建、第一周回归以及 9 个第二周固件运行场景。
+
+```sh
+bash scripts/build-week2.sh
+bash scripts/run-week2.sh
+# 看到启动日志后按 Ctrl-C 结束；自动验收使用：
+python3 scripts/verify-week2.py
+```
+
+- [启动架构、操作指南与学习笔记](docs/week2-guide.md)
+- [逐步测试报告与覆盖边界](docs/week2-test-report.md)
+- [第二周实习周报](docs/week2-report.md)
+- [最终验收摘要](logs/week2-20261014-003543/summary.json)
+
+时钟按 QEMU 固定 25 MHz 模型适配，代码区仍为模拟 SRAM。本阶段不包括真实 PLL 调频、Flash 擦写或应用跳转。第一周工具链说明及原示例入口保留如下。
+
+## 第一周环境状态
 
 2026-10-12：工具安装、Cortex-M7 交叉编译、QEMU 运行、GDB 断点与单步均已通过。详见 [验证报告](docs/validation-report.md)。
 
@@ -84,9 +102,9 @@ print initialized_data
 - `docs/`：环境说明。
 - `downloads/`：官方安装文件，不纳入 Git。
 
-## 本周边界
+## 第一周示例边界
 
-当前平台为 QEMU `mps2-an500`（Arm MPS2+ FPGA 平台的 Cortex-M7 模型），不是 SIMATIC S7 的硬件仿真。本例使用 semihosting 输出以验证工具链，不代表第二周 UART 驱动已完成。Semihosting 仅用于本地可信测试固件。
+当前平台为 QEMU `mps2-an500`（Arm MPS2+ FPGA 平台的 Cortex-M7 模型），不是 SIMATIC S7 的硬件仿真。第一周 `demo.elf` 使用 semihosting 输出以验证工具链；第二周 `bootloader.elf` 已实现独立 UART 输出，两个目标的运行入口分开。Semihosting 仅用于本地可信测试固件。
 
 QEMU 自带 GDB server，直接连接 `arm-none-eabi-gdb`；本周无需 OpenOCD、PuTTY 或 Minicom。Doxygen、Mbed TLS 等在后续对应阶段引入。模拟平台的 SRAM 不能直接当作真实可擦写且持久化的 MCU Flash，后续 Flash/断电恢复需单独设计仿真存储层。
 

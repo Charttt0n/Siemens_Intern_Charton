@@ -1,0 +1,141 @@
+{
+  "started_at": "2026-10-14T00:34:39.635790+08:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "clean-build-no-semihosting",
+      "status": "PASS",
+      "evidence": [
+        "build.txt",
+        "size.txt",
+        "sections.txt",
+        "vectors.txt",
+        "disassembly.txt",
+        "symbols.txt"
+      ]
+    },
+    {
+      "name": "week1-regression",
+      "status": "PASS",
+      "evidence": [
+        "week1-regression.txt"
+      ]
+    },
+    {
+      "name": "uart-repeat-1",
+      "status": "PASS",
+      "uart_bytes": 144,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-1-qemu.log",
+        "uart-repeat-1-uart.log",
+        "uart-repeat-1-command.txt"
+      ]
+    },
+    {
+      "name": "uart-repeat-2",
+      "status": "PASS",
+      "uart_bytes": 144,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-2-command.txt",
+        "uart-repeat-2-uart.log",
+        "uart-repeat-2-qemu.log"
+      ]
+    },
+    {
+      "name": "uart-repeat-3",
+      "status": "PASS",
+      "uart_bytes": 144,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-3-uart.log",
+        "uart-repeat-3-qemu.log",
+        "uart-repeat-3-command.txt"
+      ]
+    },
+    {
+      "name": "poisoned-startup-and-registers",
+      "status": "PASS",
+      "uart_bytes": 144,
+      "qemu_exit": 0,
+      "evidence": [
+        "poisoned-startup-and-registers-uart.log",
+        "poisoned-startup-and-registers-qemu.log",
+        "poisoned-startup-and-registers.gdb",
+        "poisoned-startup-and-registers-gdb.txt",
+        "poisoned-startup-and-registers-command.txt"
+      ]
+    },
+    {
+      "name": "corrupt-data",
+      "status": "PASS",
+      "uart_bytes": 134,
+      "qemu_exit": 0,
+      "evidence": [
+        "corrupt-data.gdb",
+        "corrupt-data-gdb.txt",
+        "corrupt-data-uart.log",
+        "corrupt-data-qemu.log",
+        "corrupt-data-command.txt"
+      ]
+    },
+    {
+      "name": "corrupt-bss",
+      "status": "PASS",
+      "uart_bytes": 134,
+      "qemu_exit": 0,
+      "evidence": [
+        "corrupt-bss-command.txt",
+        "corrupt-bss.gdb",
+        "corrupt-bss-gdb.txt",
+        "corrupt-bss-qemu.log",
+        "corrupt-bss-uart.log"
+      ]
+    },
+    {
+      "name": "disabled-uart",
+      "status": "PASS",
+      "uart_bytes": 0,
+      "qemu_exit": 0,
+      "evidence": [
+        "disabled-uart-gdb.txt",
+        "disabled-uart-command.txt",
+        "disabled-uart-qemu.log",
+        "disabled-uart-uart.log",
+        "disabled-uart.gdb"
+      ]
+    },
+    {
+      "name": "undefined-instruction",
+      "status": "PASS",
+      "uart_bytes": 0,
+      "qemu_exit": 0,
+      "evidence": [
+        "undefined-instruction-command.txt",
+        "undefined-instruction-qemu.log",
+        "undefined-instruction-uart.log",
+        "undefined-instruction.gdb",
+        "undefined-instruction-gdb.txt"
+      ]
+    }
+  ],
+  "semihosting": false,
+  "platform": "mps2-an500",
+  "termination": "host stops QEMU after output/state assertions; exit is not the verdict",
+  "elf": "build/week2-y9rubkqb/bootloader.elf",
+  "elf_sha256": "a64280c9820da4845f9fc992efbebcc6ea648f95cc30472f54c77a3172134955",
+  "source_sha256": {
+    "src/week2/board.c": "f119351cad804eb1da32b273809406104cfa6f3a002d30834960b8b9e9cf68ed",
+    "src/week2/startup.S": "af42fb64c0ca07649ec5854e3d3f889773e4fb1d61ccfaaadf845e45e782a676",
+    "src/week2/uart.h": "8cf2fb1eb3eb839537ab18661f6ca9595db87a6633d42dfea31052f83d43895f",
+    "src/week2/main.c": "617bb25f7ae13392e4cd7c3dc325508a82b05c97aff25a4a227e8734f720bc52",
+    "src/week2/board.h": "19bde92eeedc272a65fb3d5ad6a7cd466de1df1c460ffb2aefd5b942356b6aaf",
+    "src/week2/linker.ld": "f804f535a48a6a7721bb3c2bf6935a427be1fbf3d48a07a7cd2bbcf7142e98d0",
+    "src/week2/uart.c": "27def716c6699114e05e5aee98b9d5d3d80eb3bbf8a2bb9e790853a89327fefd",
+    "CMakeLists.txt": "83c891ac5563b26fbee538b613d33a9e910e7546890446ea51123cae339a0732",
+    "cmake/arm-none-eabi.cmake": "714ef86c356761682b2ed92bb2d6c7074557e63a52f2a9158ac3c4309f263829",
+    "scripts/verify-week2.py": "02c29bcb65ec559013f64d5a8652780a3f030d015a54046fb7e2549951e31b9b"
+  },
+  "finished_at": "2026-10-14T00:34:43.652698+08:00"
+}

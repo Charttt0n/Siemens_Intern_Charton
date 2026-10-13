@@ -1,0 +1,4 @@
+BOOT: week2 mps2-an500 Cortex-M7
+CLOCK: 25000000 Hz (QEMU fixed)
+UART0: 115200 requested, divisor=217, 8N1
+FAIL: CPU or C runtime

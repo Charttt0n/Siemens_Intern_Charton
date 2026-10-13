@@ -1,0 +1,5 @@
+$ arm-none-eabi-size /Users/charton/Projects/西门子实习/codes/build/week2-8rmz65ry/bootloader.elf
+   text	   data	    bss	    dec	    hex	filename
+    968	     20	   4132	   5120	   1400	/Users/charton/Projects/西门子实习/codes/build/week2-8rmz65ry/bootloader.elf
+
+EXIT_CODE=0

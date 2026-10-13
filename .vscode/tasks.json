@@ -30,6 +30,24 @@
       "type": "shell",
       "command": "python3 scripts/verify-startup.py",
       "problemMatcher": []
+    },
+    {
+      "label": "Build Week 2 bootloader",
+      "type": "shell",
+      "command": "bash scripts/build-week2.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Week 2 UART bootloader",
+      "type": "shell",
+      "command": "bash scripts/run-week2.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Verify Week 2 bootloader",
+      "type": "shell",
+      "command": "python3 scripts/verify-week2.py",
+      "problemMatcher": []
     }
   ]
 }

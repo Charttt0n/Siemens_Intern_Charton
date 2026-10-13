@@ -1,0 +1,25 @@
+$ arm-none-eabi-size -A /Users/charton/Projects/西门子实习/codes/build/week2-y9rubkqb/bootloader.elf
+/Users/charton/Projects/西门子实习/codes/build/week2-y9rubkqb/bootloader.elf  :
+section            size        addr
+.isr_vector         192           0
+.text               776         192
+.data                20   536870912
+.bss                 36   536870932
+.stack             4096   541061120
+.ARM.attributes      49           0
+.comment             18           0
+.debug_line        1568           0
+.debug_line_str     133           0
+.debug_info        1415           0
+.debug_abbrev       860           0
+.debug_aranges      200           0
+.debug_str        15011           0
+.debug_rnglists     143           0
+.debug_loclists     436           0
+.debug_macro       3818           0
+.debug_frame        268           0
+Total             29039
+
+
+
+EXIT_CODE=0

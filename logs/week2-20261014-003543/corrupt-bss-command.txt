@@ -1,0 +1,1 @@
+["qemu-system-arm", "-M", "mps2-an500", "-cpu", "cortex-m7", "-display", "none", "-monitor", "none", "-serial", "file:/Users/charton/Projects/西门子实习/codes/logs/week2-20261014-003543/corrupt-bss-uart.log", "-d", "guest_errors", "-kernel", "/Users/charton/Projects/西门子实习/codes/build/week2-8rmz65ry/bootloader.elf", "-S", "-gdb", "tcp:127.0.0.1:55111"]
