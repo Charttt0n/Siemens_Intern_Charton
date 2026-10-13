@@ -1,0 +1,6 @@
+QEMU emulator version 11.1.2
+arm-none-eabi-gcc (GCC) 16.2.0
+GNU gdb (GDB) 18.1
+cmake version 4.4.4
+GNU Make 4.4.1
+git version 2.54.0 (Apple Git-157)

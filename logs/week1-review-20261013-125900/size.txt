@@ -1,0 +1,5 @@
+$ arm-none-eabi-size /Users/charton/Projects/西门子实习/codes/build/week1-review-t6n_xpv9/demo.elf
+   text	   data	    bss	    dec	    hex	filename
+    368	      4	      8	    380	    17c	/Users/charton/Projects/西门子实习/codes/build/week1-review-t6n_xpv9/demo.elf
+
+EXIT_CODE=0

@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Cortex-M7 demo",
+      "type": "shell",
+      "command": "bash scripts/build.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Run QEMU demo",
+      "type": "shell",
+      "command": "bash scripts/run.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Verify environment",
+      "type": "shell",
+      "command": "python3 scripts/verify.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Verify startup and failure paths",
+      "type": "shell",
+      "command": "python3 scripts/verify-startup.py",
+      "problemMatcher": []
+    }
+  ]
+}

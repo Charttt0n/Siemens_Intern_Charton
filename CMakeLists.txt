@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(week1_cortex_m7 C ASM)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+add_executable(demo.elf src/main.c src/startup.S)
+target_compile_options(demo.elf PRIVATE -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -g3 -Og -ffreestanding -ffunction-sections -fdata-sections -Wall -Wextra)
+target_link_options(demo.elf PRIVATE -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -nostdlib -Wl,--gc-sections -Wl,-Map=${CMAKE_BINARY_DIR}/demo.map -T${CMAKE_SOURCE_DIR}/src/linker.ld)
+set_property(TARGET demo.elf APPEND PROPERTY LINK_DEPENDS ${CMAKE_SOURCE_DIR}/src/linker.ld)

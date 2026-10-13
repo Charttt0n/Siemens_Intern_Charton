@@ -1,0 +1,15 @@
+Reset_Handler () at /Users/charton/Projects/西门子实习/codes/src/startup.S:17
+17	  ldr r0, =_sidata
+Breakpoint 1 at 0x44: file /Users/charton/Projects/西门子实习/codes/src/main.c, line 11.
+
+Breakpoint 1, main () at /Users/charton/Projects/西门子实习/codes/src/main.c:11
+11	int main(void) {
+0x00000046	11	int main(void) {
+Breakpoint 2 at 0x40: file /Users/charton/Projects/西门子实习/codes/src/main.c, line 8.
+
+Breakpoint 2, semihost (operation=operation@entry=4, argument=0x104 <Default_Handler+22>) at /Users/charton/Projects/西门子实习/codes/src/main.c:8
+8	    __asm__ volatile ("bkpt 0xab" : "+r"(r0) : "r"(r1) : "memory");
+DEMO_RESULT=0x600d
+pc             0x40                0x40 <semihost>
+sp             0x203ffff0          0x203ffff0
+[Inferior 1 (process 1) detached]
