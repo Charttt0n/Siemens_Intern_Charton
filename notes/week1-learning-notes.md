@@ -18,7 +18,7 @@
 
 ## 2. 已完成的环境与实验
 
-2026-10-12 的验证记录显示，QEMU 11.1.2、Arm GCC 16.2.0、Arm GDB 18.1、CMake 4.4.4、GNU Make 4.4.1 和原有 Git 2.54.0 已可使用。具体安装与验证过程见 [环境验证报告](validation-report.md)。
+2026-10-12 的验证记录显示，QEMU 11.1.2、Arm GCC 16.2.0、Arm GDB 18.1、CMake 4.4.4、GNU Make 4.4.1 和原有 Git 2.54.0 已可使用。具体安装与验证过程见 [环境验证报告](../codes/docs/validation-report.md)。
 
 我对各工具分工的理解如下：
 
@@ -39,7 +39,7 @@ Mac 自身是 arm64，但这并不表示本机编译器可以直接生成 Cortex
 PASS: Cortex-M7; .data initialized; .bss zero; bare-metal C99
 ```
 
-GDB 日志记录了 `main` 断点、一次 `stepi` 和 `semihost` 断点；随后读到 `demo_result = 0x600d`。这表明当前示例已跑通“编译 → 链接 → 仿真运行 → 调试观察”。原始证据见 [QEMU 日志](../logs/qemu-run.txt)、[GDB 日志](../logs/gdb.txt) 和 [总体验证状态](../logs/STATUS.txt)。
+GDB 日志记录了 `main` 断点、一次 `stepi` 和 `semihost` 断点；随后读到 `demo_result = 0x600d`。这表明当前示例已跑通“编译 → 链接 → 仿真运行 → 调试观察”。原始证据见 [QEMU 日志](../codes/logs/qemu-run.txt)、[GDB 日志](../codes/logs/gdb.txt) 和 [总体验证状态](../codes/logs/STATUS.txt)。
 
 ### 2.1 从正常输出进一步检查初始化
 
@@ -53,7 +53,7 @@ GDB 日志记录了 `main` 断点、一次 `stepi` 和 `semihost` 断点；随�
 
 我另外启动两个独立 QEMU 实例，分别在进入 `main` 时把 `initialized_data`、`zero_data` 改成 `0xDEADBEEF`。两次都观察到 `demo_result = 0xdead`、固件输出 FAIL、QEMU 退出码为 1。由于这是主动注入的错误，测试应判为通过。
 
-这两个负向用例验证的是当前 C 示例的异常识别和失败退出路径，尚未涉及 Bootloader 回退或恢复。全部结果见 [本次检查汇总](../logs/week1-review-20261013-125900/summary.json)；运行方法和限制见 [第一周查漏补缺记录](week1-audit.md)。
+这两个负向用例验证的是当前 C 示例的异常识别和失败退出路径，尚未涉及 Bootloader 回退或恢复。全部结果见 [本次检查汇总](../codes/logs/week1-review-20261013-125900/summary.json)；运行方法和限制见 [第一周查漏补缺记录](../codes/docs/week1-audit.md)。
 
 ## 3. SIMATIC S7：先区分底层启动和 PLC 程序启动
 
@@ -164,7 +164,7 @@ Siemens 的纵深防御思路同时覆盖工厂安全、网络安全和系统完
 
 Cortex-M7 复位启动会取得初始主栈指针 MSP 和复位入口；入口值的最低位用于 Thumb 状态，必须正确设置。向量表随后还包含异常和中断入口。[Arm Cortex-M7 用户指南][arm-guide]
 
-本工程 [startup.S](../src/startup.S) 的开头是：
+本工程 [startup.S](../codes/src/startup.S) 的开头是：
 
 ```asm
 vectors:
@@ -200,7 +200,7 @@ ELF 是 little-endian，所以第一组四字节表示 `0x20400000`，第二组�
 
 ### 6.3 链接脚本把哪些东西放在了哪里
 
-[linker.ld](../src/linker.ld) 为本例指定如下布局；物理区域对应关系见 [平台说明](platform.md) 和 [QEMU 板级实现][qemu-source]。
+[linker.ld](../codes/src/linker.ld) 为本例指定如下布局；物理区域对应关系见 [平台说明](../codes/docs/platform.md) 和 [QEMU 板级实现][qemu-source]。
 
 | 区域 | 地址范围 | 本例用途 |
 |---|---|---|
@@ -262,7 +262,7 @@ arm-none-eabi-objdump -s -j .isr_vector build/demo.elf
 arm-none-eabi-nm -n build/demo.elf
 ```
 
-本次只读检查的原始输出已保存到 [ELF 检查记录](../logs/week1-elf-inspection.txt)。上述具体地址对应当前构建，修改代码后可能改变，应重新查看。
+本次只读检查的原始输出已保存到 [ELF 检查记录](../codes/logs/week1-elf-inspection.txt)。上述具体地址对应当前构建，修改代码后可能改变，应重新查看。
 
 需要自行重做启动观察时，在第一个终端运行：
 

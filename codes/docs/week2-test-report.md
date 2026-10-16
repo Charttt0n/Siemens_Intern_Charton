@@ -20,7 +20,7 @@
 ## 2. 如何重现
 
 ```sh
-cd '/Users/charton/Projects/西门子实习/codes'
+cd '/Users/charton/projects/Siemens_Intern/codes'
 python3 scripts/verify-week2.py
 ```
 

@@ -59,7 +59,7 @@ STEP_PC=0x46
 ## 如何重做和定位失败
 
 ```sh
-cd '/Users/charton/Projects/西门子实习/codes'
+cd '/Users/charton/projects/Siemens_Intern/codes'
 source scripts/env.sh
 python3 scripts/verify-startup.py
 ```

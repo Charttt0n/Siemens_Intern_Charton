@@ -1,3 +1,15 @@
-build/
-downloads/
+# Local history copies and generated artifacts
+/archive/
+**/build/
+**/downloads/
+**/__pycache__/
+*.pyc
 .DS_Store
+.~*
+~$*
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key

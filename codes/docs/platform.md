@@ -35,4 +35,4 @@ Homebrew 7.0.9 官方发行包：https://github.com/Homebrew/brew/releases/tag/7
 
 ## 延伸学习
 
-完整的工业需求调研、启动代码解读和第一周学习记录见 [第一周学习笔记](week1-learning-notes.md)。原始环境验证结果仍见 [验证报告](validation-report.md)。
+完整的工业需求调研、启动代码解读和第一周学习记录见 [第一周学习笔记](../../notes/week1-learning-notes.md)。原始环境验证结果仍见 [验证报告](validation-report.md)。

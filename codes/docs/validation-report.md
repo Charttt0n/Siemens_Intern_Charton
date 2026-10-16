@@ -2,7 +2,7 @@
 
 验证日期：2026-10-12（Asia/Shanghai）
 
-项目：`/Users/charton/Projects/西门子实习/codes`
+项目：`/Users/charton/projects/Siemens_Intern/codes`
 
 结论：第一周软件安装与开发环境验证通过。本文仅覆盖环境和最小示例，不代表整个 bootloader 或第一周工业需求调研已完成。
 

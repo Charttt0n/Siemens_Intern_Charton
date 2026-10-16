@@ -93,7 +93,7 @@ UART0 基址为 `0x40004000`，型号为 CMSDK APB UART。第二周只开启 TX�
 在工程目录执行：
 
 ```sh
-cd '/Users/charton/Projects/西门子实习/codes'
+cd '/Users/charton/projects/Siemens_Intern/codes'
 bash scripts/build-week2.sh
 bash scripts/run-week2.sh
 ```
