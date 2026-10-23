@@ -1,0 +1,25 @@
+$ arm-none-eabi-size -A /Users/charton/Projects/Siemens_Intern/codes/build/week2-n0e8hmah/bootloader.elf
+/Users/charton/Projects/Siemens_Intern/codes/build/week2-n0e8hmah/bootloader.elf  :
+section            size        addr
+.isr_vector         192           0
+.text              1296         192
+.data                20   536870912
+.bss                 36   536870932
+.stack             4096   541061120
+.ARM.attributes      49           0
+.comment             18           0
+.debug_line        1795           0
+.debug_line_str     131           0
+.debug_info        1776           0
+.debug_abbrev       873           0
+.debug_aranges      208           0
+.debug_str        15033           0
+.debug_rnglists     150           0
+.debug_loclists     523           0
+.debug_macro       3818           0
+.debug_frame        308           0
+Total             30322
+
+
+
+EXIT_CODE=0

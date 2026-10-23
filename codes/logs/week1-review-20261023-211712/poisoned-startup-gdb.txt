@@ -1,0 +1,19 @@
+$ arm-none-eabi-gdb --batch -q /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-0h779qul/demo.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/week1-review-20261023-211712/poisoned-startup.gdb
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/startup.S:17
+17	  ldr r0, =_sidata
+RESET_MSP=0x20400000 RESET_PC=0xc4 RESET_VECTOR=0xc5
+INJECTED_DATA=cccccccc
+INJECTED_BSS=a5a5a5a5a5a5a5a5
+Breakpoint 1 at 0x44: file /Users/charton/Projects/Siemens_Intern/codes/src/main.c, line 11.
+
+Breakpoint 1, main () at /Users/charton/Projects/Siemens_Intern/codes/src/main.c:11
+11	int main(void) {
+RESTORED_DATA=78563412
+CLEARED_BSS=0000000000000000
+UPPER_SENTINEL=0x12345678
+0x00000046	11	int main(void) {
+STEP_PC=0x46
+CHECK_PASS:poisoned-startup
+[Inferior 1 (process 1) detached]
+
+EXIT_CODE=0

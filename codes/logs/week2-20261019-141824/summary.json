@@ -1,0 +1,161 @@
+{
+  "started_at": "2026-10-19T14:18:24.687047+08:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "model-clock",
+      "status": "PASS",
+      "evidence": [
+        "model-clock.txt"
+      ]
+    },
+    {
+      "name": "clean-build-no-semihosting",
+      "status": "PASS",
+      "evidence": [
+        "build.txt",
+        "size.txt",
+        "sections.txt",
+        "vectors.txt",
+        "disassembly.txt",
+        "symbols.txt"
+      ]
+    },
+    {
+      "name": "week1-regression",
+      "status": "PASS",
+      "evidence": [
+        "week1-regression.txt"
+      ]
+    },
+    {
+      "name": "uart-repeat-1",
+      "status": "PASS",
+      "uart_bytes": 370,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-1-qemu.log",
+        "uart-repeat-1-uart.log",
+        "uart-repeat-1-command.txt"
+      ]
+    },
+    {
+      "name": "uart-repeat-2",
+      "status": "PASS",
+      "uart_bytes": 370,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-2-command.txt",
+        "uart-repeat-2-uart.log",
+        "uart-repeat-2-qemu.log"
+      ]
+    },
+    {
+      "name": "uart-repeat-3",
+      "status": "PASS",
+      "uart_bytes": 370,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-repeat-3-uart.log",
+        "uart-repeat-3-qemu.log",
+        "uart-repeat-3-command.txt"
+      ]
+    },
+    {
+      "name": "poisoned-startup-and-registers",
+      "status": "PASS",
+      "uart_bytes": 370,
+      "qemu_exit": 0,
+      "evidence": [
+        "poisoned-startup-and-registers-uart.log",
+        "poisoned-startup-and-registers-qemu.log",
+        "poisoned-startup-and-registers.gdb",
+        "poisoned-startup-and-registers-gdb.txt",
+        "poisoned-startup-and-registers-command.txt"
+      ]
+    },
+    {
+      "name": "uart-parameter-boundaries",
+      "status": "PASS",
+      "uart_bytes": 370,
+      "qemu_exit": 0,
+      "evidence": [
+        "uart-parameter-boundaries-command.txt",
+        "uart-parameter-boundaries-uart.log",
+        "uart-parameter-boundaries-qemu.log",
+        "uart-parameter-boundaries.gdb",
+        "uart-parameter-boundaries-gdb.txt"
+      ]
+    },
+    {
+      "name": "corrupt-data",
+      "status": "PASS",
+      "uart_bytes": 359,
+      "qemu_exit": 0,
+      "evidence": [
+        "corrupt-data.gdb",
+        "corrupt-data-gdb.txt",
+        "corrupt-data-uart.log",
+        "corrupt-data-qemu.log",
+        "corrupt-data-command.txt"
+      ]
+    },
+    {
+      "name": "corrupt-bss",
+      "status": "PASS",
+      "uart_bytes": 359,
+      "qemu_exit": 0,
+      "evidence": [
+        "corrupt-bss-command.txt",
+        "corrupt-bss.gdb",
+        "corrupt-bss-gdb.txt",
+        "corrupt-bss-qemu.log",
+        "corrupt-bss-uart.log"
+      ]
+    },
+    {
+      "name": "disabled-uart",
+      "status": "PASS",
+      "uart_bytes": 0,
+      "qemu_exit": 0,
+      "evidence": [
+        "disabled-uart-gdb.txt",
+        "disabled-uart-command.txt",
+        "disabled-uart-qemu.log",
+        "disabled-uart-uart.log",
+        "disabled-uart.gdb"
+      ]
+    },
+    {
+      "name": "undefined-instruction",
+      "status": "PASS",
+      "uart_bytes": 0,
+      "qemu_exit": 0,
+      "evidence": [
+        "undefined-instruction-command.txt",
+        "undefined-instruction-qemu.log",
+        "undefined-instruction-uart.log",
+        "undefined-instruction.gdb",
+        "undefined-instruction-gdb.txt"
+      ]
+    }
+  ],
+  "semihosting": false,
+  "platform": "mps2-an500",
+  "termination": "host stops QEMU after output/state assertions; exit is not the verdict",
+  "elf": "build/week2-n9ewrunc/bootloader.elf",
+  "elf_sha256": "0a87cc90ea291d4e160fcb35733ed2c44c6d3eefaca9f84033630c5d823e5b6d",
+  "source_sha256": {
+    "src/week2/board.c": "f119351cad804eb1da32b273809406104cfa6f3a002d30834960b8b9e9cf68ed",
+    "src/week2/startup.S": "af42fb64c0ca07649ec5854e3d3f889773e4fb1d61ccfaaadf845e45e782a676",
+    "src/week2/uart.h": "8cf2fb1eb3eb839537ab18661f6ca9595db87a6633d42dfea31052f83d43895f",
+    "src/week2/main.c": "5f15bb4ccfa3e4e885a2d1e6c9a2546f90219e07397ba4e2325c665acf650c6f",
+    "src/week2/board.h": "19bde92eeedc272a65fb3d5ad6a7cd466de1df1c460ffb2aefd5b942356b6aaf",
+    "src/week2/linker.ld": "f804f535a48a6a7721bb3c2bf6935a427be1fbf3d48a07a7cd2bbcf7142e98d0",
+    "src/week2/uart.c": "27def716c6699114e05e5aee98b9d5d3d80eb3bbf8a2bb9e790853a89327fefd",
+    "CMakeLists.txt": "0df67bd53768bafc15799047dbf8e535733025132ba85f2c58c007b5f524d4ff",
+    "cmake/arm-none-eabi.cmake": "714ef86c356761682b2ed92bb2d6c7074557e63a52f2a9158ac3c4309f263829",
+    "scripts/verify-week2.py": "6d30da8e366e2b26f37c06cf721b144c37bb24ba758e70c92df81b97adcded6f"
+  },
+  "finished_at": "2026-10-19T14:18:29.228379+08:00"
+}

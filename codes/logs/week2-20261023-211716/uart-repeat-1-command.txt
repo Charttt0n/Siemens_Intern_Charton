@@ -1,0 +1,1 @@
+["qemu-system-arm", "-M", "mps2-an500", "-cpu", "cortex-m7", "-display", "none", "-monitor", "none", "-serial", "file:/Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261023-211716/uart-repeat-1-uart.log", "-d", "guest_errors", "-kernel", "/Users/charton/Projects/Siemens_Intern/codes/build/week2-b4bgnwk4/bootloader.elf"]

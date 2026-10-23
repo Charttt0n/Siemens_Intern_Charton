@@ -1,0 +1,17 @@
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week3/startup.S:35
+35	  ldr r0, =_sidata
+Breakpoint 1 at 0x480: file /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c, line 26.
+
+Breakpoint 1, boot_handoff () at /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c:26
+26	__attribute__((noinline,noreturn)) void boot_handoff(void) {
+27	    __asm__ volatile ("cpsid i" ::: "memory");
+28	    MMIO(0x40004008u) = 0; /* Quiesce UART before disabling its NVIC input. */
+Breakpoint 2 at 0x100c0
+
+Breakpoint 2, 0x000100c0 in ?? ()
+Breakpoint 3 at 0x1010c
+
+Breakpoint 3, 0x0001010c in ?? ()
+APP MSP VTOR masks NVIC SysTick CRT sentinel SVC: PASS
+DEBUG_PASS
+[Inferior 1 (process 1) detached]

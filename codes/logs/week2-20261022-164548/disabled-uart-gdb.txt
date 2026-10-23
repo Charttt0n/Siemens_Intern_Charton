@@ -1,0 +1,16 @@
+$ arm-none-eabi-gdb --batch -q /Users/charton/Projects/Siemens_Intern/codes/build/week2-ih27fhh3/bootloader.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261022-164548/disabled-uart.gdb
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/startup.S:34
+34	  ldr r0, =_sidata
+Breakpoint 1 at 0x3e4: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/uart.c, line 42.
+
+Breakpoint 1, uart_write (text=text@entry=0x4a8 "BOOT: week2 mps2-an500 Cortex-M7\r\n") at /Users/charton/Projects/Siemens_Intern/codes/src/week2/uart.c:42
+42	int uart_write(const char *text) {
+Breakpoint 2 at 0x1f0: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 15.
+
+Breakpoint 2, boot_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:15
+15	    for (;;) __asm__ volatile ("wfi");
+BOOT_STATUS=3 (expected UART failure)
+CHECK_PASS:disabled-uart
+[Inferior 1 (process 1) detached]
+
+EXIT_CODE=0

@@ -1,0 +1,1 @@
+["qemu-system-arm", "-M", "mps2-an500", "-cpu", "cortex-m7", "-display", "none", "-monitor", "none", "-serial", "file:/Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261019-141824/uart-parameter-boundaries-uart.log", "-d", "guest_errors", "-kernel", "/Users/charton/Projects/Siemens_Intern/codes/build/week2-n9ewrunc/bootloader.elf", "-S", "-gdb", "tcp:127.0.0.1:56410"]

@@ -1,0 +1,11 @@
+BOOT: week2 mps2-an500 Cortex-M7
+CLOCK: 25000000 Hz (QEMU fixed)
+UART0: 115200 requested, divisor=217, 8N1
+[INIT] board ready; UART TX enabled; semihosting off
+[CPU] PartNo=0x00000c27
+[CRT] data[4]=0xa55aa55a
+[CRT] bss[6]=0xdeadbeef
+[CHECK] data[5] or bss[7]: FAIL
+[STATE] boot_status=0x00000002
+[NEXT] enter boot_idle (WFI)
+FAIL: CPU or C runtime

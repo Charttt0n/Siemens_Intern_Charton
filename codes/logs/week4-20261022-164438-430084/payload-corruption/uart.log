@@ -1,0 +1,3 @@
+BOOT: stage4 image validation
+REJECT: 0x00000006
+> 

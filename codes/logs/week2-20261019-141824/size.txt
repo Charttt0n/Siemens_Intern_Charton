@@ -1,0 +1,5 @@
+$ arm-none-eabi-size /Users/charton/Projects/Siemens_Intern/codes/build/week2-n9ewrunc/bootloader.elf
+   text	   data	    bss	    dec	    hex	filename
+   1488	     20	   4132	   5640	   1608	/Users/charton/Projects/Siemens_Intern/codes/build/week2-n9ewrunc/bootloader.elf
+
+EXIT_CODE=0

@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "actual_week": 2,
+  "plan_stage": 4,
+  "started_at": "20261022-164438-430084",
+  "checks": [
+    "fresh build; distinct boot/app memory; no semihosting",
+    "CRC known vectors and 8 deterministic lengths match independent zlib oracle under sanitizers",
+    "native and QEMU image valid",
+    "native and QEMU image blank",
+    "native and QEMU image bad-magic",
+    "native and QEMU image unsupported-format",
+    "native and QEMU image bad-header-size",
+    "native and QEMU image bad-header-crc",
+    "native and QEMU image empty-payload",
+    "native and QEMU image oversize-payload",
+    "native and QEMU image wrong-load-address",
+    "native and QEMU image payload-corruption",
+    "native and QEMU image unaligned-msp",
+    "native and QEMU image boot-ram-msp",
+    "native and QEMU image even-reset",
+    "native and QEMU image outside-reset",
+    "native and QEMU image vector-table-reset",
+    "native and QEMU image bad-irq-vector",
+    "native and QEMU image reserved-vector",
+    "native and QEMU image maximum-payload"
+  ],
+  "elf_sha256": {
+    "bootloader-week4.elf": "227178e5e5f71d1f82f68b98053b4d0ad02d527f2f97a194213b98c36fbef10f",
+    "application.elf": "016ea7a179ab4bf635003f561b2c2f09d90b7aac1b19e3298de17c857ea64578"
+  },
+  "payload_bytes": 972,
+  "error": "TimeoutExpired(['arm-none-eabi-gdb', '--batch', '-q', '/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/stage4-poi3u3qv/bootloader-week4.elf', '-x', '/Users/charton/Projects/Siemens_Intern/codes/logs/week4-20261022-164438-430084/dirty-state-handoff-and-app-crt.gdb'], 30)"
+}

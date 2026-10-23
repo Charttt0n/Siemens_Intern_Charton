@@ -1,0 +1,7 @@
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+BOOT: week3 UART RX IRQ; simulated NOR; host checkpoints
+> PARAM 0xffffffff
+> OK
+> PARAM 0x4b4f3357
+> Saved: /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/week3-cli-wk3i47sk/flash.bin

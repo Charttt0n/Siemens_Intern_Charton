@@ -1,0 +1,17 @@
+$ arm-none-eabi-gdb --batch -q /Users/charton/Projects/Siemens_Intern/codes/build/week2-b4bgnwk4/bootloader.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261023-211716/corrupt-data.gdb
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/startup.S:34
+34	  ldr r0, =_sidata
+Breakpoint 1 at 0x208: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 47.
+
+Breakpoint 1, main () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:47
+47	int main(void) {
+INJECTED: runtime_data[4]=0xdeadbeef
+Breakpoint 2 at 0x1f0: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 15.
+
+Breakpoint 2, boot_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:15
+15	    for (;;) __asm__ volatile ("wfi");
+BOOT_STATUS=2 (expected failure)
+CHECK_PASS:corrupt-data
+[Inferior 1 (process 1) detached]
+
+EXIT_CODE=0

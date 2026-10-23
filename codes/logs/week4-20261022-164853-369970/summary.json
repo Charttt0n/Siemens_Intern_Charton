@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "actual_week": 2,
+  "plan_stage": 4,
+  "started_at": "20261022-164853-369970",
+  "checks": [
+    "fresh build; distinct boot/app memory; no semihosting",
+    "CRC known vectors and 8 deterministic lengths match independent zlib oracle under sanitizers",
+    "native and QEMU image valid",
+    "native and QEMU image blank",
+    "native and QEMU image bad-magic",
+    "native and QEMU image unsupported-format",
+    "native and QEMU image bad-header-size",
+    "native and QEMU image bad-header-crc",
+    "native and QEMU image empty-payload",
+    "native and QEMU image oversize-payload",
+    "native and QEMU image wrong-load-address",
+    "native and QEMU image payload-corruption",
+    "native and QEMU image unaligned-msp",
+    "native and QEMU image boot-ram-msp",
+    "native and QEMU image even-reset",
+    "native and QEMU image outside-reset",
+    "native and QEMU image vector-table-reset",
+    "native and QEMU image bad-irq-vector",
+    "native and QEMU image reserved-vector",
+    "native and QEMU image maximum-payload",
+    "dirty-state-handoff-and-app-crt",
+    "reject-corrupted-loaded-copy",
+    "no QEMU guest errors in all boot and rejection cases"
+  ],
+  "elf_sha256": {
+    "bootloader-week4.elf": "4c1647c2bfc95772f87663cd7fa0506e1900527584e7b1bf34ffdf851e08d3b1",
+    "application.elf": "8dadeb6b0425978c8ab265570ef4cedc413abeb56bcc75fcca4c70bf0db92ec7"
+  },
+  "payload_bytes": 972
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-10-22T23:03:56.784552+08:00",
+  "method": "Build and run from independent delivery source copy",
+  "commands": [
+    "bash scripts/build-week4.sh",
+    "python3 scripts/run-week4.py"
+  ],
+  "exit_code": 0,
+  "output_markers": [
+    "IMAGE: CRC32 PASS",
+    "LOAD: verified at 0x00010000",
+    "APP: CRT PASS",
+    "APP: HANDOFF PASS",
+    "APP: SVC PASS",
+    "APP: RUNNING"
+  ],
+  "scope": "Same macOS host, fresh copied source and build directory; not a cross-platform validation"
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "return": {}
+  },
+  {
+    "timestamp": {
+      "seconds": 1792761446,
+      "microseconds": 518269
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

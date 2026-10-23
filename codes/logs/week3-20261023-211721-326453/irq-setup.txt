@@ -1,0 +1,4 @@
+lock () at /Users/charton/Projects/Siemens_Intern/codes/src/week3/uart.c:19
+19	    return state;
+GDB_ASSERTIONS_PASS
+[Inferior 1 (process 1) detached]

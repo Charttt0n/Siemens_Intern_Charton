@@ -1,0 +1,43 @@
+$ cmake --build /Users/charton/Projects/Siemens_Intern/codes/build/week2-ih27fhh3 --parallel
+[  2%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[  8%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/uart.c.obj
+[  8%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/flash.c.obj
+[ 11%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[ 17%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/uart.c.obj
+[ 17%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj
+[ 20%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/main.c.obj
+[ 23%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj
+[ 29%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/board.c.obj
+[ 29%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/main.c.obj
+[ 32%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 41%] Building ASM object CMakeFiles/week3-test.elf.dir/src/week3/startup.S.obj
+[ 44%] Building C object CMakeFiles/demo.elf.dir/src/main.c.obj
+[ 44%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 47%] Building ASM object CMakeFiles/bootloader.elf.dir/src/week2/startup.S.obj
+[ 50%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[ 52%] Building C object CMakeFiles/week3-test.elf.dir/src/week2/board.c.obj
+[ 52%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 58%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[ 61%] Building ASM object CMakeFiles/demo.elf.dir/src/startup.S.obj
+[ 64%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj
+[ 67%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[ 70%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 73%] Building C object CMakeFiles/week3-test.elf.dir/tests/test_flash.c.obj
+[ 76%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[ 79%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 82%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[ 91%] Linking C executable application.elf
+[ 91%] Linking C executable demo.elf
+[ 91%] Linking C executable bootloader.elf
+[ 94%] Linking C executable bootloader-week3.elf
+[ 97%] Linking C executable bootloader-week4.elf
+[100%] Linking C executable week3-test.elf
+[100%] Built target demo.elf
+[100%] Built target bootloader.elf
+[100%] Built target application.elf
+[100%] Built target bootloader-week3.elf
+[100%] Built target week3-test.elf
+[100%] Built target bootloader-week4.elf
+
+EXIT_CODE=0

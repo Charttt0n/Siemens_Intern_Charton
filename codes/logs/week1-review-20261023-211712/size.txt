@@ -1,0 +1,5 @@
+$ arm-none-eabi-size /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-0h779qul/demo.elf
+   text	   data	    bss	    dec	    hex	filename
+    368	      4	      8	    380	    17c	/Users/charton/Projects/Siemens_Intern/codes/build/week1-review-0h779qul/demo.elf
+
+EXIT_CODE=0

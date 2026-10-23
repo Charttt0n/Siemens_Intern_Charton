@@ -24,8 +24,21 @@ OUT = ROOT / 'logs' / ('week2-' + STAMP)
 HEADER = (b'BOOT: week2 mps2-an500 Cortex-M7\r\n'
           b'CLOCK: 25000000 Hz (QEMU fixed)\r\n'
           b'UART0: 115200 requested, divisor=217, 8N1\r\n')
-GOOD = HEADER + b'PASS: C runtime; UART boot ready\r\n'
-BAD = HEADER + b'FAIL: CPU or C runtime\r\n'
+def expected_uart(data=0xa55aa55a, bss=0, ok=True):
+    details = (
+        '[INIT] board ready; UART TX enabled; semihosting off\r\n'
+        '[CPU] PartNo=0x00000c27\r\n'
+        f'[CRT] data[4]=0x{data:08x}\r\n'
+        f'[CRT] bss[6]=0x{bss:08x}\r\n'
+        + ('[CHECK] data[5] and bss[7]: PASS\r\n' if ok else
+           '[CHECK] data[5] or bss[7]: FAIL\r\n')
+        + f'[STATE] boot_status=0x{1 if ok else 2:08x}\r\n'
+        '[NEXT] enter boot_idle (WFI)\r\n'
+        + ('PASS: C runtime; UART boot ready\r\n' if ok else
+           'FAIL: CPU or C runtime\r\n'))
+    return HEADER + details.encode('ascii')
+
+GOOD = expected_uart()
 summary = {'started_at': NOW(), 'status': 'RUNNING', 'checks': [],
            'semihosting': False, 'platform': 'mps2-an500',
            'termination': 'host stops QEMU after output/state assertions; exit is not the verdict'}
@@ -250,7 +263,7 @@ require(int(gdb.parse_and_eval('boot_status')) == 2, 'must reject corrupt runtim
 print('BOOT_STATUS=2 (expected failure)')
 end
 '''
-            qemu_case(name, elf, BAD, body)
+            qemu_case(name, elf, expected_uart(data=0xdeadbeef, ok=False) if name == 'corrupt-data' else expected_uart(bss=0xdeadbeef, ok=False), body)
         disabled = '''break uart_write
 continue
 set {unsigned int}0x40004008 = 0

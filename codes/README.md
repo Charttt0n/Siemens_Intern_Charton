@@ -2,6 +2,42 @@
 
 目标：在 Apple Silicon macOS 上完成 GNU Arm GCC + CMake/Make → ELF → QEMU Cortex-M7 → GDB 的验证闭环。
 
+## 实际第二周交付（2026-10-22）
+
+实际实习处于第二周，已提前完成原计划前四阶段的 QEMU 实现。目录和脚本中的 week1 至 week4 是计划阶段编号。2026-10-22复验分别通过 6、12、11、23 项检查。2026-10-23的[全部计划核查](../planning/week1-4-plan-audit.md)确认功能已有证据，Week1指定手册学习及S7/工业要求研究仍有资料缺口；完整计划尚未全部闭环。
+
+```sh
+bash scripts/build-week4.sh
+python3 scripts/run-week4.py
+python3 scripts/verify-week4.py
+```
+
+完整演示已覆盖镜像头与 CRC32 校验、应用加载、再次校验、处理器状态交接、应用 C 初始化及 SVC 异常验证。CRC 不提供签名认证，存储仍使用显式宿主检查点。
+
+- [第二周实习周报](../reports/week02/week2-report.md)
+- [第二周周报 Word 提交版](../reports/week02/第二周实习周报.docx)
+- [前四阶段交付说明与复现步骤](docs/week2-delivery.md)
+- [交付说明 Word 版](docs/前四阶段交付说明.docx)
+- [第四阶段技术指南](docs/week4-guide.md)
+- [第四阶段测试报告](docs/week4-test-report.md)
+- [实际周次与计划阶段进度](../planning/stage-progress.md)
+
+## 计划第三阶段 UART 中断与存储管理（2026-10-19）
+
+已新增独立第三周目标：UART 接收中断与环形缓冲区、1 MiB 模拟 NOR Flash 分区、读写擦除接口，以及宿主机检查点保存与重启恢复。第三周自动验收 11 项通过；第二周回归见最新测试报告。
+
+```sh
+bash scripts/build-week3.sh
+python3 scripts/run-week3.py
+# 自动验收，使用独立测试镜像：
+python3 scripts/verify-week3.py
+```
+
+- [第三周架构、分区与操作指南](docs/week3-guide.md)
+- [第三周测试报告与覆盖边界](docs/week3-test-report.md)
+
+持久化依赖显式保存检查点，尚不具备真实 Flash 掉电恢复能力。CRC 与应用跳转现已由第四阶段实现；升级协议仍待后续阶段推进。
+
 ## 第二周：最小 Bootloader（2026-10-14）
 
 已新增汇编启动、完整 AN500 向量表、板级初始化与 CMSDK UART0 驱动，关闭 semihosting 仍能输出启动和 C 环境自检日志。最终 12 项检查通过，包括本机时钟核对、全新构建、第一周回归以及 9 个第二周固件运行场景。

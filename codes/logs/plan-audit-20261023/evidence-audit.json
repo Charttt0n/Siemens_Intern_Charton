@@ -1,0 +1,54 @@
+{
+  "audit_date": "2026-10-23",
+  "scope": "Read-only traceability and evidence audit, not a new firmware test run",
+  "evidence": [
+    {
+      "path": "codes/logs/week1-review-20261022-164544/summary.json",
+      "status": "PASS",
+      "check_groups": 6,
+      "recorded_source_hashes_checked": 6
+    },
+    {
+      "path": "codes/logs/week2-20261022-164548/summary.json",
+      "status": "PASS",
+      "check_groups": 12,
+      "recorded_source_hashes_checked": 10
+    },
+    {
+      "path": "codes/logs/week3-20261022-164553-309176/summary.json",
+      "status": "PASS",
+      "check_groups": 11,
+      "recorded_source_hashes_checked": 0
+    },
+    {
+      "path": "codes/logs/week4-20261022-164853-369970/summary.json",
+      "status": "PASS",
+      "check_groups": 23,
+      "recorded_source_hashes_checked": 0
+    }
+  ],
+  "delivery_snapshot": {
+    "path": "reports/week02/第二周交付包_20261022.zip",
+    "status": "MATCH",
+    "compared_files": 729
+  },
+  "markdown_word_content": [
+    {
+      "markdown": "reports/week01/week1-report.md",
+      "word": "reports/week01/第一周实习周报.docx",
+      "status": "MATCH",
+      "markdown_images": 3,
+      "word_inline_images": 3
+    },
+    {
+      "markdown": "reports/week02/week2-report.md",
+      "word": "reports/week02/第二周实习周报.docx",
+      "status": "MATCH"
+    },
+    {
+      "markdown": "codes/docs/week2-delivery.md",
+      "word": "codes/docs/前四阶段交付说明.docx",
+      "status": "MATCH"
+    }
+  ]
+}

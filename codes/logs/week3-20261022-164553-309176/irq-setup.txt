@@ -1,0 +1,4 @@
+0x00000390 in unlock (state=0) at /Users/charton/Projects/Siemens_Intern/codes/src/week3/uart.c:23
+23	}
+GDB_ASSERTIONS_PASS
+[Inferior 1 (process 1) detached]
