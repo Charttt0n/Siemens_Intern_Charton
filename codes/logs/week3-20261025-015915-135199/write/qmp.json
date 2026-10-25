@@ -1,0 +1,111 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 2993352625,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 2993643000,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792864758,
+      "microseconds": 31227
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3999739958,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792864759,
+      "microseconds": 37405
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4000036541,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-8gwhu2y3/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4003915458,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792864759,
+      "microseconds": 41563
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4005729583,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792864759,
+      "microseconds": 43373
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4005952666,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-8gwhu2y3/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4009508166,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792864759,
+      "microseconds": 47324
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

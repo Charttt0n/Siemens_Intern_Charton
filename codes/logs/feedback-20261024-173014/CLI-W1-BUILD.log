@@ -1,0 +1,20 @@
+$ bash scripts/build.sh
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-4yyjui9q/codes/build
+[ 66%] Building C object CMakeFiles/demo.elf.dir/src/main.c.obj
+[ 66%] Building ASM object CMakeFiles/demo.elf.dir/src/startup.S.obj
+[100%] Linking C executable demo.elf
+[100%] Built target demo.elf
+   text	   data	    bss	    dec	    hex	filename
+    368	      4	      8	    380	    17c	build/demo.elf
+
+EXIT=0 TIMEOUT=False

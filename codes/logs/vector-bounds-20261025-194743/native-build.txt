@@ -1,0 +1,3 @@
+$ cc -std=c99 -Wall -Wextra -Werror -fsanitize=address,undefined -Isrc/week4 -Isrc/week3 src/week4/image.c src/week4/crc32.c src/week3/flash.c tests/test_vector_bounds.c -o /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/vector-bounds-_5_hxv0b/vector-test
+
+EXIT=0

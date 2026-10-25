@@ -1,0 +1,4 @@
+$ bash scripts/run-week2.sh -S
+qemu-system-arm: terminating on signal 15 from pid 81108 (<unknown process>)
+
+EXIT=0 TIMEOUT=True

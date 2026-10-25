@@ -1,0 +1,3 @@
+$ cc -std=c99 -Wall -Wextra -Werror -fsanitize=address,undefined -DUART_NATIVE_TEST -Isrc/week2 src/week2/uart.c tests/test_uart_timeout.c -o /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zgzr66lb/uart-test
+
+EXIT=0 TIMEOUT=False

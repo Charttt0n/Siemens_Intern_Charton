@@ -1,0 +1,3 @@
+   text	   data	    bss	    dec	    hex	filename
+   2172	      0	   4256	   6428	   191c	/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/week3-build-3l4jlgjh/bootloader-week3.elf
+   3512	      0	   4260	   7772	   1e5c	/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/week3-build-3l4jlgjh/week3-test.elf

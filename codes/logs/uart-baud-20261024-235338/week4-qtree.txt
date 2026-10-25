@@ -1,0 +1,206 @@
+bus: main-system-bus
+  type System
+  dev: lan9118-phy, id ""
+    gpio-out "" 1
+  dev: lan9118, id ""
+    gpio-out "sysbus-irq" 1
+    mac = "52:54:00:12:34:56"
+    netdev = "hub0port0"
+    mode_16bit = 0 (0x0)
+    mmio 00000000a0000000/0000000000000100
+  dev: unimplemented-device, id ""
+    size = 1024 (0x400)
+    name = "i2s"
+    mmio 0000000040024000/0000000000000400
+  dev: versatile_i2c, id ""
+    mmio 000000004002a000/0000000000001000
+    bus: i2c
+      type i2c-bus
+  dev: versatile_i2c, id ""
+    mmio 0000000040029000/0000000000001000
+    bus: i2c
+      type i2c-bus
+  dev: versatile_i2c, id ""
+    mmio 0000000040023000/0000000000001000
+    bus: i2c
+      type i2c-bus
+  dev: versatile_i2c, id ""
+    mmio 0000000040022000/0000000000001000
+    bus: i2c
+      type i2c-bus
+  dev: pl022, id ""
+    gpio-out "sysbus-irq" 1
+    mmio 0000000040027000/0000000000001000
+    bus: ssi
+      type SSI
+  dev: pl022, id ""
+    gpio-out "sysbus-irq" 1
+    mmio 0000000040026000/0000000000001000
+    bus: ssi
+      type SSI
+  dev: pl022, id ""
+    gpio-out "sysbus-irq" 1
+    mmio 0000000040021000/0000000000001000
+    bus: ssi
+      type SSI
+  dev: pl022, id ""
+    gpio-out "sysbus-irq" 1
+    mmio 0000000040020000/0000000000001000
+    bus: ssi
+      type SSI
+  dev: pl022, id ""
+    gpio-out "sysbus-irq" 1
+    mmio 0000000040025000/0000000000001000
+    bus: ssi
+      type SSI
+  dev: mps2-fpgaio, id ""
+    prescale-clk = 25000000 (0x17d7840)
+    num-leds = 2 (0x2)
+    has-switches = false
+    has-dbgctrl = false
+    mmio 0000000040028000/0000000000001000
+  dev: mps2-scc, id ""
+    gpio-out "remap" 1
+    scc-cfg4 = 2 (0x2)
+    scc-aid = 2097160 (0x200008)
+    scc-id = 1090801664 (0x41045000)
+    scc-cfg0 = 0 (0x0)
+    oscclk = 24576000,25000000,50000000 (0x1770000,0x17d7840,0x2faf080)
+    mmio 000000004002f000/0000000000001000
+  dev: cmsdk-apb-watchdog, id ""
+    gpio-out "sysbus-irq" 1
+    clock-in "WDOGCLK" freq_hz=25 MHz
+    mmio 0000000040008000/0000000000001000
+  dev: cmsdk-apb-dualtimer, id ""
+    gpio-out "sysbus-irq" 3
+    clock-in "TIMCLK" freq_hz=25 MHz
+    mmio 0000000040002000/0000000000001000
+  dev: cmsdk-apb-timer, id ""
+    gpio-out "sysbus-irq" 1
+    clock-in "pclk" freq_hz=25 MHz
+    mmio 0000000040001000/0000000000001000
+  dev: cmsdk-apb-timer, id ""
+    gpio-out "sysbus-irq" 1
+    clock-in "pclk" freq_hz=25 MHz
+    mmio 0000000040000000/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 4096 (0x1000)
+    name = "cmsdk-ahb-gpio"
+    mmio 0000000040013000/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 4096 (0x1000)
+    name = "cmsdk-ahb-gpio"
+    mmio 0000000040012000/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 4096 (0x1000)
+    name = "cmsdk-ahb-gpio"
+    mmio 0000000040011000/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 4096 (0x1000)
+    name = "cmsdk-ahb-gpio"
+    mmio 0000000040010000/0000000000001000
+  dev: cmsdk-apb-uart, id ""
+    gpio-out "sysbus-irq" 5
+    chardev = ""
+    pclk-frq = 25000000 (0x17d7840)
+    mmio 0000000040009000/0000000000001000
+  dev: cmsdk-apb-uart, id ""
+    gpio-out "sysbus-irq" 5
+    chardev = ""
+    pclk-frq = 25000000 (0x17d7840)
+    mmio 0000000040007000/0000000000001000
+  dev: cmsdk-apb-uart, id ""
+    gpio-out "sysbus-irq" 5
+    chardev = ""
+    pclk-frq = 25000000 (0x17d7840)
+    mmio 0000000040006000/0000000000001000
+  dev: cmsdk-apb-uart, id ""
+    gpio-out "sysbus-irq" 5
+    chardev = ""
+    pclk-frq = 25000000 (0x17d7840)
+    mmio 0000000040005000/0000000000001000
+  dev: cmsdk-apb-uart, id ""
+    gpio-out "sysbus-irq" 5
+    chardev = "uart"
+    pclk-frq = 25000000 (0x17d7840)
+    mmio 0000000040004000/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 2097152 (0x200000)
+    name = "VGA"
+    mmio 0000000041000000/0000000000200000
+  dev: unimplemented-device, id ""
+    size = 1900544 (0x1d0000)
+    name = "RESERVED 4"
+    mmio 0000000040030000/00000000001d0000
+  dev: unimplemented-device, id ""
+    size = 65536 (0x10000)
+    name = "Extra peripheral region @0x40020000"
+    mmio 0000000040020000/0000000000010000
+  dev: unimplemented-device, id ""
+    size = 65536 (0x10000)
+    name = "CMSDK AHB peripheral region @0x40010000"
+    mmio 0000000040010000/0000000000010000
+  dev: unimplemented-device, id ""
+    size = 65536 (0x10000)
+    name = "CMSDK APB peripheral region @0x40000000"
+    mmio 0000000040000000/0000000000010000
+  dev: unimplemented-device, id ""
+    size = 16777216 (0x1000000)
+    name = "PSRAM"
+    mmio 0000000021000000/0000000001000000
+  dev: unimplemented-device, id ""
+    size = 8388608 (0x800000)
+    name = "RESERVED 3"
+    mmio 0000000020800000/0000000000800000
+  dev: unimplemented-device, id ""
+    size = 520028160 (0x1eff0000)
+    name = "RESERVED 2"
+    mmio 0000000001010000/000000001eff0000
+  dev: unimplemented-device, id ""
+    size = 65536 (0x10000)
+    name = "Block RAM"
+    mmio 0000000001000000/0000000000010000
+  dev: unimplemented-device, id ""
+    size = 8388608 (0x800000)
+    name = "RESERVED 1"
+    mmio 0000000000800000/0000000000800000
+  dev: unimplemented-device, id ""
+    size = 4194304 (0x400000)
+    name = "zbtsmram mirror"
+    mmio 0000000000400000/0000000000400000
+  dev: ARM-bitband-memory, id ""
+    base = 1073741824 (0x40000000)
+    source-memory = "/machine/unattached/system[0]"
+    mmio ffffffffffffffff/0000000002000000
+  dev: ARM-bitband-memory, id ""
+    base = 536870912 (0x20000000)
+    source-memory = "/machine/unattached/system[0]"
+    mmio ffffffffffffffff/0000000002000000
+  dev: armv7m_systick, id ""
+    gpio-out "sysbus-irq" 1
+    clock-in "cpuclk" freq_hz=25 MHz
+    clock-in "refclk" freq_hz=1 MHz
+    mmio ffffffffffffffff/00000000000000e0
+  dev: armv7m_nvic, id ""
+    gpio-in "systick-trigger" 2
+    gpio-out "sysbus-irq" 1
+    num-irq = 48 (0x30)
+    num-prio-bits = 8 (0x8)
+    mmio ffffffffffffffff/0000000000001000
+  dev: armv7m, id ""
+    gpio-in "NMI" 1
+    gpio-out "SYSRESETREQ" 1
+    gpio-in "" 32
+    clock-in "cpuclk" freq_hz=25 MHz
+    clock-in "refclk" freq_hz=1 MHz
+    cpu-type = "cortex-m7-arm-cpu"
+    memory = "/machine/unattached/system[0]"
+    idau = ""
+    init-svtor = 0 (0x0)
+    init-nsvtor = 0 (0x0)
+    enable-bitband = true
+    start-powered-off = false
+    vfp = true
+    dsp = true
+    mpu-ns-regions = 16 (0x10)
+    mpu-s-regions = 4294967295 (0xffffffff)

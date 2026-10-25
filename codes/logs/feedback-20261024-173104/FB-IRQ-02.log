@@ -1,0 +1,5 @@
+$ qemu-system-arm -M mps2-an500 -display none -monitor none -serial none -semihosting-config enable=on,target=native -kernel /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/irq.elf
+PRIMASK initial=0 nested/init/getc restored=0 PASS
+PRIMASK initial=1 nested/init/getc restored=1 PASS
+
+EXIT=0 TIMEOUT=False

@@ -1,0 +1,31 @@
+$ python3 scripts/run-week4.py
+ERROR: timed out
+
+{
+  "id": "CLI34-W4-UART-TIMEOUT",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "仅将副本ELF换成无限循环固件；运行真实QEMU",
+  "input": "有效ELF，无UART输出",
+  "expected": "约5秒内部UART超时；入口退出1；QEMU和资源清理完成",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 5.086,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4506,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-jrin33wn"
+    ],
+    "lock_released": true
+  },
+  "actual": "ERROR: timed out\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-UART-TIMEOUT.log"
+}

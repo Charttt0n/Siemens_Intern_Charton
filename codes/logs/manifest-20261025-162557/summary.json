@@ -1,0 +1,785 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "MF-VALID",
+      "input": "valid.json + README.txt",
+      "expected": "accepted",
+      "actual": "accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-SCHEMA_VERSION",
+      "input": {
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-PLAN_GROUP",
+      "input": {
+        "schema_version": 1,
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-GENERATED_AT",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-FILES",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-IMAGE_FORMAT",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-APPROVAL_STATUS",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-UNKNOWN",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review",
+        "extra": 1
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $: unknown field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-VERSION",
+      "input": {
+        "schema_version": 2,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.schema_version: const",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-BOOLEAN-VERSION",
+      "input": {
+        "schema_version": true,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.schema_version: const",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-GROUP",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week5",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.plan_group: enum",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FORMAT",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v2",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.image_format: const",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-APPROVAL",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "approved"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.approval_status: const",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DATE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-02-30T12:00:00+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.generated_at: date-time",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DATE-TEXT",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25Tgarbage+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.generated_at: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-ZONE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T12:00:00Z",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.generated_at: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FILES-TYPE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": {},
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files: type",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-EMPTY",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files: empty",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FILE-UNKNOWN",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb",
+            "extra": 1
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0]: unknown field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-HASH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "xyz"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].sha256: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-HASH-UPPER",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].sha256: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-SIZE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": -1,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].size: range",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-BOOL-SIZE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": true,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].size: type",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FLOAT-SIZE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 1.5,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].size: type",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-TRAVERSAL",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "../escape",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-ABSOLUTE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "/tmp/escape",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-BACKSLASH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "a\\b",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DRIVE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "C:/escape",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DOT",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "./README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DOUBLE-SLASH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "a//b",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-TRAILING-SLASH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt/",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: noncanonical path",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-NEWLINE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "a\nb",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0].path: pattern",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-DUPLICATE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          },
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: duplicate file",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-TAMPERED",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25,
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: file mismatch: README.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-BAD-LENGTH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 0,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: file mismatch: README.txt",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FILE-MISSING-PATH",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0]: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FILE-MISSING-SIZE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0]: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-FILE-MISSING-SHA256",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "README.txt",
+            "size": 25
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: $.files[0]: missing field",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-MISSING-FILE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "not-found.txt",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "FileNotFoundError",
+      "actual": "FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/manifest-3h5x2wrg/not-found.txt'",
+      "status": "PASS"
+    },
+    {
+      "id": "MF-SYMLINK-ESCAPE",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-25T16:25:57.971860+08:00",
+        "files": [
+          {
+            "path": "escape",
+            "size": 25,
+            "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "ValueError: path escape",
+      "status": "PASS"
+    }
+  ]
+}

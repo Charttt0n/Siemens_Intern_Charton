@@ -1,0 +1,1 @@
+["qemu-system-arm", "-M", "mps2-an500", "-cpu", "cortex-m7", "-display", "none", "-monitor", "none", "-serial", "file:/Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261025-194740/corrupt-data-uart.log", "-d", "guest_errors", "-kernel", "/Users/charton/Projects/Siemens_Intern/codes/build/week2-bma_9b05/bootloader.elf", "-S", "-gdb", "tcp:127.0.0.1:55059"]

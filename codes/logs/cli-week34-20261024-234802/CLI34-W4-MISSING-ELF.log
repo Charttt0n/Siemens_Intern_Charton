@@ -1,0 +1,26 @@
+$ python3 scripts/run-week4.py
+ERROR: ELF not found: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4/bootloader-week4.elf
+
+{
+  "id": "CLI34-W4-MISSING-ELF",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "保留镜像；仅移走ELF；直接运行",
+  "input": "ELF不存在",
+  "expected": "退出1；ELF not found；不启动QEMU",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 0.033,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null,
+    "lock_released": true
+  },
+  "actual": "ERROR: ELF not found: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4/bootloader-week4.elf\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-MISSING-ELF.log"
+}

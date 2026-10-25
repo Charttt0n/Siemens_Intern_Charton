@@ -1,0 +1,17 @@
+$ arm-none-eabi-gdb --batch -q /Users/charton/Projects/Siemens_Intern/codes/build/week2-bma_9b05/bootloader.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261025-194740/undefined-instruction.gdb
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/startup.S:34
+34	  ldr r0, =_sidata
+Breakpoint 1 at 0x208: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 47.
+
+Breakpoint 1, main () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:47
+47	int main(void) {
+INJECTED: UDF #0 at main
+Breakpoint 2 at 0x1f4: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 19.
+
+Breakpoint 2, fault_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:19
+19	    for (;;) __asm__ volatile ("wfi");
+EXCEPTION_NUMBER=3 (HardFault); xPSR=0x61000003
+CHECK_PASS:undefined-instruction
+[Inferior 1 (process 1) detached]
+
+EXIT_CODE=0

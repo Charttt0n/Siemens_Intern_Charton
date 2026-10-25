@@ -1,0 +1,111 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 1621465725337583,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621465725538916,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792916726,
+      "microseconds": 410700
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466731307500,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792916727,
+      "microseconds": 416522
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466731587500,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-6ejnc08f/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466734147166,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792916727,
+      "microseconds": 419329
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466735671916,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792916727,
+      "microseconds": 420878
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466735984916,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-6ejnc08f/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1621466737722458,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792916727,
+      "microseconds": 422886
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

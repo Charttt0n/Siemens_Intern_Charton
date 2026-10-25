@@ -1,0 +1,54 @@
+$ bash scripts/build-week4.sh
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4
+[ 22%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 55%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[ 77%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[ 88%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[100%] Linking C executable bootloader-week4.elf
+[100%] Built target bootloader-week4.elf
+[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj
+[100%] Linking C executable application.elf
+[100%] Built target application.elf
+Packaged build/week4/application.bin into build/week4/demo-flash.bin (1048576 bytes)
+   text	   data	    bss	    dec	    hex	filename
+   2320	      0	   4276	   6596	   19c4	build/week4/bootloader-week4.elf
+    960	     12	   4132	   5104	   13f0	build/week4/application.elf
+
+{
+  "id": "CLI34-W4-BUILD",
+  "command": [
+    "bash",
+    "scripts/build-week4.sh"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "确认不存在 build；执行交付构建命令",
+  "input": "原始工程，无构建缓存",
+  "expected": "退出0，生成该阶段ELF及所需镜像",
+  "expected_exit": 0,
+  "actual_exit": 0,
+  "seconds": 0.413,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null
+  },
+  "actual": " C compile features\n-- Detecting C compile features - done\n-- Configuring done (0.1s)\n-- Generating done (0.0s)\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4\n[ 22%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj\n[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj\n[ 55%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj\n[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj\n[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj\n[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj\n[ 77%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj\n[ 88%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj\n[100%] Linking C executable bootloader-week4.elf\n[100%] Built target bootloader-week4.elf\n[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj\n[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj\n[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj\n[100%] Linking C executable application.elf\n[100%] Built target application.elf\nPackaged build/week4/application.bin into build/week4/demo-flash.bin (1048576 bytes)\n   text\t   data\t    bss\t    dec\t    hex\tfilename\n   2320\t      0\t   4276\t   6596\t   19c4\tbuild/week4/bootloader-week4.elf\n    960\t     12\t   4132\t   5104\t   13f0\tbuild/week4/application.elf\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-BUILD.log"
+}

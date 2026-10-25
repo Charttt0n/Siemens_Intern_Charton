@@ -1,0 +1,4 @@
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/run-week4.py --image /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/blank.bin
+ERROR: image missing; run bash scripts/build-week4.sh first
+
+EXIT=1 TIMEOUT=False

@@ -1,0 +1,4 @@
+main () at /Users/charton/Projects/Siemens_Intern/codes/src/week3/main.c:79
+79	        if (test_pause_rx) continue;
+GDB_ASSERTIONS_PASS
+[Inferior 1 (process 1) detached]

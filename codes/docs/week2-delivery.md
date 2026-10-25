@@ -1,18 +1,20 @@
 # 第二周前四阶段交付说明
 
+2026-10-25入口更新：本文保留2026-10-22历史交付说明；当前Week3与Week4已分周，正式材料和包路径见[分周交付总索引](../../planning/week3-week4-delivery-index.md)。旧合并周报已归档。
+
 项目：基于 QEMU 的 Cortex M7 工业 Bootloader
 
-交付日期：2026 年 10 月 22 日　实际周次：第二周
+交付日期：2026 年 10 月 22 日　计划周次：Week 3–4
 
 ## 一 交付范围和阅读顺序
 
-本次交付覆盖原八周规划的前四个任务阶段：环境与学习、最小启动、驱动与存储、镜像校验与应用跳转。其中第三、第四阶段在实际第二周提前完成。week1 至 week4 是源码及脚本中的计划阶段编号，周报统一保存在 reports/week02。
+本次交付覆盖原八周规划的前四个任务阶段：环境与学习、最小启动、驱动与存储、镜像校验与应用跳转。其中第三、第四阶段归入 Week 3–4。week1 至 week4 是源码及脚本中的计划阶段编号，周报分别保存在 reports/week1-2、reports/week3 与 reports/week4。
 
-建议先阅读第二周周报了解完成情况，再按本文运行完整启动演示，随后查阅第四阶段技术指南和各阶段测试摘要。该工程是 QEMU AN500 仿真实验，不是 SIMATIC S7 设备固件。
+建议先阅读Week 3–4 周报了解完成情况，再按本文运行完整启动演示，随后查阅第四阶段技术指南和各阶段测试摘要。该工程是 QEMU AN500 仿真实验，不是 SIMATIC S7 设备固件。
 
 | 交付项 | 包内路径 | 验收依据 |
 |---|---|---|
-| 周报 | reports/week02/week2-report.md 和第二周实习周报.docx | 内容一致的文本与提交版 |
+| 周报 | reports/week3/week3-report.md、reports/week4/week4-report.md及各自Word | 内容一致的文本与提交版 |
 | 主代码 | codes/src、codes/CMakeLists.txt、codes/cmake | 四阶段独立目标可构建 |
 | 构建运行工具 | codes/scripts | 可重建镜像并运行示例 |
 | 自动测试 | codes/tests 及 verify 系列脚本 | 正常与故障检查 |
@@ -103,3 +105,5 @@ shasum -a 256 -c SHA256SUMS.txt
 ```
 
 源码、脚本、Markdown 和 Word 为正式交付内容；需要修改周报时，应同步维护两种格式。个人笔记放在 notes，任务进度放在 planning，技术指南和测试报告放在 codes/docs。
+
+注：本Markdown页首2026-10-25导航说明不修改同目录历史Word交付快照；当前周报的Word/Markdown/PDF另在各周目录同步维护。

@@ -1,0 +1,29 @@
+$ qemu-system-arm -M mps2-an500 -display none -monitor none -serial none -semihosting-config enable=on,target=native -kernel /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zgzr66lb/irq.elf
+GROUP initial=0
+ENTRY actual=0x00000000 expected=0x00000000 OK
+SAVE_RETURN actual=0x00000000 expected=0x00000000 OK
+SAVE_MASK actual=0x00000001 expected=0x00000001 OK
+NEST_RETURN actual=0x00000001 expected=0x00000001 OK
+NEST_MASK actual=0x00000001 expected=0x00000001 OK
+INNER_RESTORE actual=0x00000001 expected=0x00000001 OK
+OUTER_RESTORE actual=0x00000000 expected=0x00000000 OK
+UART_INIT_RETURN actual=0x00000000 expected=0x00000000 OK
+UART_INIT_MASK actual=0x00000000 expected=0x00000000 OK
+UART_GETC_RETURN actual=0x00000000 expected=0x00000000 OK
+UART_GETC_MASK actual=0x00000000 expected=0x00000000 OK
+PRIMASK initial=0 nested/init/getc restored=0 PASS
+GROUP initial=1
+ENTRY actual=0x00000001 expected=0x00000001 OK
+SAVE_RETURN actual=0x00000001 expected=0x00000001 OK
+SAVE_MASK actual=0x00000001 expected=0x00000001 OK
+NEST_RETURN actual=0x00000001 expected=0x00000001 OK
+NEST_MASK actual=0x00000001 expected=0x00000001 OK
+INNER_RESTORE actual=0x00000001 expected=0x00000001 OK
+OUTER_RESTORE actual=0x00000001 expected=0x00000001 OK
+UART_INIT_RETURN actual=0x00000000 expected=0x00000000 OK
+UART_INIT_MASK actual=0x00000001 expected=0x00000001 OK
+UART_GETC_RETURN actual=0x00000000 expected=0x00000000 OK
+UART_GETC_MASK actual=0x00000001 expected=0x00000001 OK
+PRIMASK initial=1 nested/init/getc restored=1 PASS
+
+EXIT=0 TIMEOUT=False

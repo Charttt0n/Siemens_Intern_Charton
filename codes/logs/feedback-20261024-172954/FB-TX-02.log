@@ -1,0 +1,6 @@
+$ /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-72qttlhh/uart-test
+TX_FULL=1: flush/putc/write=-1; DATA=0x55 unchanged; bounded return PASS
+TX_FULL=0 after timeout: write=0 DATA=0x41 PASS
+disabled TX and NULL: -1 PASS
+
+EXIT=0 TIMEOUT=False

@@ -1,0 +1,11 @@
+$ arm-none-eabi-gdb --batch -q /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/tx-application.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/tx-full-20261025-194740/TX-W4-APP.gdb
+0x000000c0 in ?? ()
+Hardware assisted breakpoint 1 at 0x1010c: file /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/app/main.c, line 8.
+
+Breakpoint 1, app_idle () at /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/app/main.c:8
+8	__attribute__((noreturn)) void app_idle(void) { for (;;) __asm__ volatile ("wfi"); }
+app_status=4 handoff_ok=1 reads=1000000 DATA=0x55
+TX_FAILURE_PATH_PASS
+[Inferior 1 (process 1) detached]
+
+EXIT=0

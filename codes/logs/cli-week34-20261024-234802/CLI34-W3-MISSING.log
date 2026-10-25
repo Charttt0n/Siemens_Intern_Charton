@@ -1,0 +1,27 @@
+$ python3 scripts/run-week3.py
+ERROR: ELF not found: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w3/build/week3/bootloader-week3.elf
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+
+{
+  "id": "CLI34-W3-MISSING",
+  "command": [
+    "python3",
+    "scripts/run-week3.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "复制工程时排除 build；直接运行默认命令",
+  "input": "ELF 和镜像均不存在",
+  "expected": "退出1；不启动QEMU",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 0.038,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null
+  },
+  "actual": "ERROR: ELF not found: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w3/build/week3/bootloader-week3.elf\nCommands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help\nHost: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.\n",
+  "status": "PASS",
+  "evidence": "CLI34-W3-MISSING.log"
+}

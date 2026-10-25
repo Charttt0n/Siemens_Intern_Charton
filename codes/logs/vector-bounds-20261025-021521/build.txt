@@ -1,0 +1,18 @@
+$ cmake --build /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/vector-bounds-y02iyy7d --target bootloader-week4.elf application.elf --parallel
+[ 22%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 22%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 55%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[ 55%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 77%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[ 88%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[100%] Linking C executable bootloader-week4.elf
+[100%] Built target bootloader-week4.elf
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj
+[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj
+[100%] Linking C executable application.elf
+[100%] Built target application.elf
+
+EXIT=0

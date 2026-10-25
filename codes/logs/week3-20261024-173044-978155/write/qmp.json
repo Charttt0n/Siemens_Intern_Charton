@@ -1,0 +1,111 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 2061402000,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 2061594791,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834246,
+      "microseconds": 980052
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3065453291,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834247,
+      "microseconds": 983932
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3065643000,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ppt35bkm/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3067644916,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834247,
+      "microseconds": 986098
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3068713208,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834247,
+      "microseconds": 987226
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3068980208,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ppt35bkm/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 3070679583,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834247,
+      "microseconds": 989136
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

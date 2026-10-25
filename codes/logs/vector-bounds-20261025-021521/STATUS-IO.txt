@@ -1,0 +1,12 @@
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week3/startup.S:35
+35	  ldr r0, =_sidata
+Breakpoint 1 at 0x5f8: file /Users/charton/Projects/Siemens_Intern/codes/src/week4/image.c, line 21.
+
+Breakpoint 1, image_validate (dev=dev@entry=0x2000fff4, info=info@entry=0x20000094 <boot_image>) at /Users/charton/Projects/Siemens_Intern/codes/src/week4/image.c:21
+21	int image_validate(const flash_device *dev, image_info *info) {
+Breakpoint 2 at 0x3c0: file /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c, line 7.
+
+Breakpoint 2, boot_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c:7
+7	__attribute__((noreturn)) void boot_idle(void) { for (;;) __asm__ volatile ("wfi"); }
+DEBUG_PASS
+[Inferior 1 (process 1) detached]

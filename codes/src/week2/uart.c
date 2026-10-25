@@ -1,11 +1,24 @@
 #include "uart.h"
 
+#ifdef UART_NATIVE_TEST
+extern volatile uint32_t uart_test_regs[5];
+#define REG(offset) uart_test_regs[(offset)/4]
+#else
 #define REG(offset) (*(volatile uint32_t *)(0x40004000u + (offset)))
+#endif
 #define DATA REG(0x00u)
 #define STATE REG(0x04u)
 #define CTRL REG(0x08u)
 #define INTSTATUS REG(0x0cu)
 #define BAUDDIV REG(0x10u)
+#ifdef UART_TX_FAULT_TEST
+#include "uart_tx_test.h"
+#undef DATA
+#define DATA uart_tx_test_data
+#define TX_STATE() uart_tx_test_read_state()
+#else
+#define TX_STATE() STATE
+#endif
 #define TX_ENABLE 1u
 #define TX_FULL 1u
 #define POLL_LIMIT 1000000u
@@ -28,7 +41,7 @@ int uart_init(uint32_t clock_hz, uint32_t baud) {
 int uart_flush(void) {
     if ((CTRL & TX_ENABLE) == 0u) return -1;
     for (uint32_t n = 0; n < POLL_LIMIT; ++n) {
-        if ((STATE & TX_FULL) == 0u) return 0;
+        if ((TX_STATE() & TX_FULL) == 0u) return 0;
     }
     return -1;
 }

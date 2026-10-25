@@ -1,0 +1,25 @@
+$ bash scripts/build-week3.sh
+
+{
+  "id": "CLI34-W3-FAIL-CONFIGURE",
+  "command": [
+    "bash",
+    "scripts/build-week3.sh"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "保留旧产物；注入cmake失败；运行交付构建命令",
+  "input": "cmake configure 返回42",
+  "expected": "退出42；不被旧产物掩盖；不启动QEMU",
+  "expected_exit": 42,
+  "actual_exit": 42,
+  "seconds": 0.026,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null,
+    "lock_released": true
+  },
+  "actual": "",
+  "status": "PASS",
+  "evidence": "CLI34-W3-FAIL-CONFIGURE.log"
+}

@@ -1,0 +1,33 @@
+$ python3 scripts/run-week3.py
+ERROR: QEMU exited before opening sockets
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+
+{
+  "id": "CLI34-W3-QEMU-FAIL",
+  "command": [
+    "python3",
+    "scripts/run-week3.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "只在副本替换QEMU启动依赖；执行原运行命令",
+  "input": "子命令返回42",
+  "expected": "入口退出1；无成功标记；清理子进程、临时目录和文件锁",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 0.055,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4268,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-q4btn_rf"
+    ],
+    "lock_released": true
+  },
+  "actual": "ERROR: QEMU exited before opening sockets\nCommands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help\nHost: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.\n",
+  "status": "PASS",
+  "evidence": "CLI34-W3-QEMU-FAIL.log"
+}

@@ -1,0 +1,20 @@
+$ cmake --build /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/baud-build-2t566ouw --target bootloader-week3.elf bootloader-week4.elf --parallel
+[ 83%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[100%] Linking C executable bootloader-week3.elf
+[100%] Built target bootloader-week3.elf
+[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[ 66%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 88%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[100%] Linking C executable bootloader-week4.elf
+[100%] Built target bootloader-week4.elf
+
+EXIT=0

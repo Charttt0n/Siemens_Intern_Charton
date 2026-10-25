@@ -1,0 +1,31 @@
+$ python3 scripts/run-week4.py
+ERROR: QEMU socket startup timeout
+
+{
+  "id": "CLI34-W4-START-TIMEOUT",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "只在副本替换QEMU启动依赖；执行原运行命令",
+  "input": "子进程不建socket且忽略SIGTERM",
+  "expected": "入口退出1；无成功标记；清理子进程、临时目录和文件锁",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 8.052,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4478,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-_ia845a8"
+    ],
+    "lock_released": true
+  },
+  "actual": "ERROR: QEMU socket startup timeout\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-START-TIMEOUT.log"
+}

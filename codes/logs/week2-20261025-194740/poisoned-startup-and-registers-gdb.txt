@@ -1,0 +1,19 @@
+$ arm-none-eabi-gdb --batch -q /Users/charton/Projects/Siemens_Intern/codes/build/week2-bma_9b05/bootloader.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/week2-20261025-194740/poisoned-startup-and-registers.gdb
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/startup.S:34
+34	  ldr r0, =_sidata
+RESET: MSP=0x20400000 PC=0xc0 VECTOR=0xc1; data=20 BSS=36; vectors=48
+Breakpoint 1 at 0x208: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 47.
+
+Breakpoint 1, main () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:47
+47	int main(void) {
+DATA_RESTORED=78563412efcdab89df9b5713e0ac68245aa55aa5
+BSS_ZERO_BYTES=36 UPPER_SENTINEL=0x12345678
+Breakpoint 2 at 0x1f0: file /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c, line 15.
+
+Breakpoint 2, boot_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week2/main.c:15
+15	    for (;;) __asm__ volatile ("wfi");
+BOOT_STATUS=1 VTOR=0x0 UART_CTRL=0x1 BAUDDIV=217
+CHECK_PASS:poisoned-startup-and-registers
+[Inferior 1 (process 1) detached]
+
+EXIT_CODE=0

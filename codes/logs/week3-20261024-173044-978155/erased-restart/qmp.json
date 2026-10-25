@@ -1,0 +1,25 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 4140935500,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 4141113333,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792834249,
+      "microseconds": 59550
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

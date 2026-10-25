@@ -1,0 +1,8 @@
+$ arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -g -Og -ffreestanding -nostdlib -Isrc/week2 -Isrc/week3 -Tsrc/week3/linker.ld src/week3/startup.S src/week3/uart.c tests/test_irq.c -o /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-72qttlhh/irq.elf
+tests/test_irq.c: In function 'main':
+tests/test_irq.c:20:15: error: implicit declaration of function 'uart_getc'; did you mean 'uart_putc'? [-Wimplicit-function-declaration]
+   20 |         ok &= uart_getc(&byte)==0 && mask()==initial;
+      |               ^~~~~~~~~
+      |               uart_putc
+
+EXIT=1 TIMEOUT=False

@@ -1,0 +1,186 @@
+[
+  {
+    "id": "MANIFEST-missing",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$: missing field",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-unknown",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": 4,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review",
+      "extra": 1
+    },
+    "expected": "ValueError",
+    "actual": "$: unknown field",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-version",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 2,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": 4,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$.schema_version: const",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-hash",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": 4,
+          "sha256": "xyz"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$.files[0].sha256: pattern",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-traversal",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "../escape",
+          "size": 4,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$.files[0].path: pattern",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-size",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": -1,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$.files[0].size: range",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-boolean-size",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": true,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "$.files[0].size: type",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-duplicate",
+    "method": "schema and file verification",
+    "input": {
+      "schema_version": 1,
+      "plan_group": "week3-4",
+      "generated_at": "2026-10-24T17:31:11.391259+08:00",
+      "files": [
+        {
+          "path": "firmware.bin",
+          "size": 4,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        },
+        {
+          "path": "firmware.bin",
+          "size": 4,
+          "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+        }
+      ],
+      "image_format": "M7IM-v1",
+      "approval_status": "pending-teacher-review"
+    },
+    "expected": "ValueError",
+    "actual": "duplicate file",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  },
+  {
+    "id": "MANIFEST-tampered-file",
+    "method": "hash verification",
+    "input": "file bytes test -> bad",
+    "expected": "file mismatch",
+    "actual": "file mismatch: firmware.bin",
+    "status": "PASS",
+    "evidence": "manifest-cases.json"
+  }
+]

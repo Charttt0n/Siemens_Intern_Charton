@@ -60,7 +60,7 @@ def main():
                 run([tool, '--version'], tool + '-version')
             run(['cmake', '-S', str(ROOT), '-B', str(build), '-G', 'Unix Makefiles',
                  '-DCMAKE_TOOLCHAIN_FILE=' + str(ROOT / 'cmake/arm-none-eabi.cmake')], 'configure')
-            run(['cmake', '--build', str(build), '--parallel'], 'build')
+            run(['cmake', '--build', str(build), '--target', 'bootloader-week3.elf', 'week3-test.elf', '--parallel'], 'build')
             production = build / 'bootloader-week3.elf'
             test_elf = build / 'week3-test.elf'
             summary['elf_sha256'] = hashlib.sha256(production.read_bytes()).hexdigest()

@@ -1,0 +1,367 @@
+{
+  "prepared_at": "2026-10-25T19:27:24.920615+08:00",
+  "plan_week": 3,
+  "scope": "memory partition definition and storage-operation validation",
+  "requirement_basis": "planning/Industrial Embedded Systems Bootloader Development.pdf pages 3-4; supplemental plan Week3",
+  "current_stage_evidence": "codes/logs/week3-20261025-192322-302943",
+  "status": "PASS",
+  "stage_check_groups": 11,
+  "elf_sha256": "a8b558aab31f286f01b3e643c236ce6568064ec0c10ce3763192bc580fc24477",
+  "sources": [
+    {
+      "path": "codes/src/week3/flash.c",
+      "sha256": "135d5ef788d2b0ddbf34f9a882a7b4773f817424ada739906323747df3e886c9"
+    },
+    {
+      "path": "codes/src/week3/flash.h",
+      "sha256": "34152820617921541d55d584dfaa2192ad4b37a970a536bbd0a2220c389222f7"
+    },
+    {
+      "path": "codes/src/week3/linker.ld",
+      "sha256": "e24501f439a8e136736271fc9791fc1e2e3305404615179d6b8547c8f43155f4"
+    },
+    {
+      "path": "codes/src/week3/main.c",
+      "sha256": "abb6bf6c8e1fcc026523b0dff4235edb6c6a27844e1dde75bbcb3ae061a01e65"
+    },
+    {
+      "path": "codes/src/week3/startup.S",
+      "sha256": "a281c0dea4a7547770733fb08a675cf075293ad40647e80f8b114e103b97e1c6"
+    },
+    {
+      "path": "codes/tests/test_flash.c",
+      "sha256": "1145282071a31f874d2d8d44594a4c3d5a56042654e51a6c2b747842a470cd15"
+    },
+    {
+      "path": "codes/scripts/verify-week3.py",
+      "sha256": "4df63c48fdad74866b939a707c8878d0218b08842ca8a2332511bc1e9dd0b632"
+    },
+    {
+      "path": "codes/scripts/week3_session.py",
+      "sha256": "e6ed8e83e2e4a018ea3c8ee05bf34fde5d0e481ec8c33607ad80dec1d339f828"
+    }
+  ],
+  "flash_check_source_sites": [
+    {
+      "source_line": 10,
+      "expression": "flash_sim_bind(0, memory, FLASH_SIZE) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 11,
+      "expression": "flash_sim_bind(&dev, 0, FLASH_SIZE) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 12,
+      "expression": "flash_sim_bind(&dev, memory, FLASH_SIZE-1) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 13,
+      "expression": "flash_read(&dev, FLASH_APP, 0, output, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 14,
+      "expression": "flash_sim_bind(&dev, memory, FLASH_SIZE) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 18,
+      "expression": "part && part->offset == end",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 19,
+      "expression": "part->offset % FLASH_ERASE_SIZE == 0 && part->size % FLASH_ERASE_SIZE == 0",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 22,
+      "expression": "end == FLASH_SIZE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 23,
+      "expression": "!flash_partition_get((flash_partition_id)-1)",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 24,
+      "expression": "!flash_partition_get(FLASH_PARTITION_COUNT)",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 25,
+      "expression": "flash_read(&dev, FLASH_PARTITION_COUNT, 0, output, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 26,
+      "expression": "flash_read(0, FLASH_APP, 0, output, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 27,
+      "expression": "flash_read(&dev, FLASH_APP, 0, 0, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 28,
+      "expression": "flash_read(&dev, FLASH_APP, 0x70000, 0, 0) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 29,
+      "expression": "flash_read(&dev, FLASH_APP, 0x70000, output, 1) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 30,
+      "expression": "flash_read(&dev, FLASH_APP, UINT32_MAX, output, 4) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 31,
+      "expression": "flash_program(&dev, FLASH_APP, 4, data, UINT32_MAX) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 32,
+      "expression": "flash_erase(&dev, FLASH_APP, UINT32_MAX, FLASH_ERASE_SIZE) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 33,
+      "expression": "flash_program(&dev, FLASH_APP, 1, data, 4) == FLASH_ALIGNMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 34,
+      "expression": "flash_program(&dev, FLASH_APP, 0, data, 3) == FLASH_ALIGNMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 35,
+      "expression": "flash_program(&dev, FLASH_APP, 0, data, 0) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 36,
+      "expression": "flash_program(&dev, FLASH_APP, 0, 0, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 37,
+      "expression": "flash_erase(&dev, FLASH_APP, 1, FLASH_ERASE_SIZE) == FLASH_ALIGNMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 38,
+      "expression": "flash_erase(&dev, FLASH_APP, 0, 4) == FLASH_ALIGNMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 39,
+      "expression": "flash_erase(&dev, FLASH_APP, 0, 0) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 40,
+      "expression": "flash_program(&dev, FLASH_BOOT, 0, data, 4) == FLASH_PROTECTED",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 41,
+      "expression": "flash_erase(&dev, FLASH_BOOT, 0, FLASH_ERASE_SIZE) == FLASH_PROTECTED",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 42,
+      "expression": "flash_read(&dev, FLASH_APP, 0, (void *)memory, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 43,
+      "expression": "flash_program(&dev, FLASH_APP, 0, (const void *)memory, 4) == FLASH_ARGUMENT",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 47,
+      "expression": "flash_program(&dev, id, part->size-4, data, 8) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 48,
+      "expression": "flash_erase(&dev, id, part->size-FLASH_ERASE_SIZE, 2*FLASH_ERASE_SIZE) == FLASH_RANGE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 50,
+      "expression": "flash_program(&dev, id, 0, data, 8) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 51,
+      "expression": "flash_program(&dev, id, 0, data, 8) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 52,
+      "expression": "flash_read(&dev, id, 0, output, 8) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 53,
+      "expression": "output[i] == data[i]",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 54,
+      "expression": "flash_program(&dev, id, 0, ones, 8) == FLASH_NEEDS_ERASE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 57,
+      "expression": "flash_program(&dev, id, 0, mixed, 8) == FLASH_NEEDS_ERASE",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 58,
+      "expression": "flash_read(&dev, id, 0, output, 8) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 59,
+      "expression": "output[i] == data[i]",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 60,
+      "expression": "flash_program(&dev, id, part->size-4, data, 4) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 61,
+      "expression": "flash_erase(&dev, id, 0, FLASH_ERASE_SIZE) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 63,
+      "expression": "memory[part->offset+i] == 255",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 64,
+      "expression": "memory[part->offset+part->size-4] == data[0]",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 65,
+      "expression": "flash_erase(&dev, id, part->size-FLASH_ERASE_SIZE, FLASH_ERASE_SIZE) == FLASH_OK",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    },
+    {
+      "source_line": 68,
+      "expression": "memory[i] == 255",
+      "expected": "true",
+      "actual": "true: native exit 0 and QEMU SELFTEST PASS; fail-fast CHECK would return its line on false",
+      "scope": "Loop sites may execute repeatedly; source site count is not dynamic assertion count."
+    }
+  ],
+  "limitations": [
+    "SRAM NOR model; not on-chip Flash controller",
+    "explicit checkpoints; not automatic power-loss persistence",
+    "SIMATIC public memory-role analogy; physical firmware layout alignment unconfirmed"
+  ],
+  "teacher_confirmation": "pending"
+}

@@ -1,0 +1,4 @@
+$ python3 scripts/pack-week4.py --app /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/app.bin --output /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/valid.bin
+Packaged /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/app.bin into /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/valid.bin (1048576 bytes)
+
+EXIT=0

@@ -16,3 +16,7 @@
 
 # Generated local delivery bundles
 /reports/week02/*交付包*.zip
+
+# Generated delivery snapshots; canonical reports and docs live under reports/ and codes/docs/.
+/output/
+**/*交付包*.zip

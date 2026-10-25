@@ -1,0 +1,3 @@
+$ arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -g -Og -Wall -Wextra -Werror -ffreestanding -nostdlib -DUART_TX_FAULT_TEST -Isrc/week2 -Isrc/week2 -Itests -Tsrc/week3/linker.ld src/week2/startup.S src/week2/uart.c tests/tx_fault_state.c tests/test_uart_tx_full.c -o /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/week2-contract.elf
+
+EXIT=0

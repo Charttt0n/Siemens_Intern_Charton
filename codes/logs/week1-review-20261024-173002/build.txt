@@ -1,0 +1,9 @@
+$ cmake --build /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-oh0o_8f8 --target demo.elf --parallel
+gmake[1]: Entering directory '/Users/charton/Projects/Siemens_Intern/codes/build/week1-review-oh0o_8f8'
+[ 66%] Building ASM object CMakeFiles/demo.elf.dir/src/startup.S.obj
+[ 66%] Building C object CMakeFiles/demo.elf.dir/src/main.c.obj
+[100%] Linking C executable demo.elf
+[100%] Built target demo.elf
+gmake[1]: Leaving directory '/Users/charton/Projects/Siemens_Intern/codes/build/week1-review-oh0o_8f8'
+
+EXIT_CODE=0

@@ -1,0 +1,17 @@
+$ arm-none-eabi-nm -n /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-48reqinv/demo.elf
+00000000 R vectors
+00000040 t semihost
+00000044 T main
+000000c4 T Reset_Handler
+000000ee t Default_Handler
+00000170 A _sidata
+20000000 D _sdata
+20000000 D initialized_data
+20000004 D _edata
+20000004 B _sbss
+20000004 B demo_result
+20000008 B zero_data
+2000000c B _ebss
+20400000 R _stack_top
+
+EXIT_CODE=0

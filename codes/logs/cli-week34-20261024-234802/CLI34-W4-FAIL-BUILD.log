@@ -1,0 +1,34 @@
+$ bash scripts/build-week4.sh
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    CMAKE_TOOLCHAIN_FILE
+
+
+-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4
+
+{
+  "id": "CLI34-W4-FAIL-BUILD",
+  "command": [
+    "bash",
+    "scripts/build-week4.sh"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "保留旧产物；注入cmake失败；运行交付构建命令",
+  "input": "cmake build 返回42",
+  "expected": "退出42；不被旧产物掩盖；不启动QEMU",
+  "expected_exit": 42,
+  "actual_exit": 42,
+  "seconds": 0.048,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null,
+    "lock_released": true
+  },
+  "actual": "-- Configuring done (0.0s)\n-- Generating done (0.0s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_TOOLCHAIN_FILE\n\n\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/cli-week34-2idxqa5s/w4/build/week4\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-FAIL-BUILD.log"
+}

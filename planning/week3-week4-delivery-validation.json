@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-25",
+  "stage_reproduction": [
+    {
+      "plan_week": 3,
+      "status": "PASS",
+      "checks": 11,
+      "evidence": "codes/logs/delivery-split-20261025/week3",
+      "package_cmake": "stage target subset",
+      "firmware_source_changed": false
+    },
+    {
+      "plan_week": 4,
+      "status": "PASS",
+      "checks": 27,
+      "evidence": "codes/logs/delivery-split-20261025/week4",
+      "package_cmake": "stage target subset",
+      "firmware_source_changed": false
+    }
+  ],
+  "manifest_regression": {
+    "checks": 41,
+    "status": "PASS",
+    "evidence": "codes/logs/manifest-20261025-162557"
+  },
+  "word_markdown": "zero missing normalized Markdown body lines/cells; checked separately",
+  "rendering": "Word-generated PDFs inspected; Chinese fonts supplied via explicit fontconfig",
+  "teacher_status": "pending",
+  "document_checks": [
+    {
+      "week": 3,
+      "markdown_docx_missing_items": 0,
+      "pdf_pages": 12,
+      "absolute_local_pdf_links": 0,
+      "page_orientation": "portrait",
+      "paper": "A4 210 x 297 mm",
+      "tables": 11,
+      "current_word_text_preserved": true,
+      "format_updated_at": "2026-10-25T19:04:51.651223+08:00"
+    },
+    {
+      "week": 4,
+      "markdown_docx_missing_items": 0,
+      "pdf_pages": 17,
+      "absolute_local_pdf_links": 0
+    }
+  ],
+  "report_and_index_broken_links": [],
+  "week3_format_update": {
+    "updated_at": "2026-10-25T19:04:51.651223+08:00",
+    "content_source": "current user-edited Word; exact paragraph/cell text preserved",
+    "changes": [
+      "all A4 portrait",
+      "table widths and cell spacing",
+      "repeating table headers"
+    ],
+    "firmware_tests_rerun": false,
+    "backup": "archive/week3-portrait-20261025-190451"
+  },
+  "week3_storage_deliverables": {
+    "checked_at": "2026-10-25T19:33:58.880834+08:00",
+    "stage_run": "codes/logs/week3-20261025-192322-302943",
+    "stage_check_groups": 11,
+    "status": "PASS",
+    "pdfs": [
+      {
+        "source": "codes/docs/week3-memory-layout.md",
+        "pdf": "output/pdf/2026-10-25-week3-存储交付/Week3_内存分区说明.pdf",
+        "pages": 3,
+        "paper": "A4 portrait",
+        "missing_source_items": 0,
+        "visual_review": "all pages inspected; no clipping or overlap"
+      },
+      {
+        "source": "codes/docs/week3-test-report.md",
+        "pdf": "output/pdf/2026-10-25-week3-存储交付/Week3_存储操作测试记录.pdf",
+        "pages": 4,
+        "paper": "A4 portrait",
+        "missing_source_items": 0,
+        "visual_review": "all pages inspected; no clipping or overlap"
+      }
+    ],
+    "source_sites": 45,
+    "requirement_status": "complete documentation for current simulation scope; strict on-chip flash and SIMATIC physical mapping remain pending teacher acceptance",
+    "firmware_source_changed": false
+  },
+  "week3_latest_word_pdf_conversion": {
+    "converted_at": "2026-10-25T19:50:55.274572+08:00",
+    "source_docx_sha256": "ae6134dca89a35442c45e3458478ed9070266064531239aec43b401645092061",
+    "pdf_pages": 12,
+    "paper": "A4 portrait",
+    "missing_word_body_paragraphs": 0,
+    "missing_word_table_cells": 0,
+    "source": "reports/week3/Week3实习周报.docx",
+    "pdf": "reports/week3/Week3实习周报.pdf",
+    "visual_review": "all 12 pages inspected; no clipping or overlap"
+  }
+}

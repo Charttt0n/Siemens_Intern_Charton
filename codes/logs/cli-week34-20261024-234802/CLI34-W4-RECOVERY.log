@@ -1,0 +1,38 @@
+$ python3 scripts/run-week4.py
+BOOT: stage4 image validation
+IMAGE: CRC32 PASS
+LOAD: verified at 0x00010000
+JUMP: application
+APP: CRT PASS
+APP: HANDOFF PASS
+APP: SVC PASS
+APP: RUNNING
+> 
+{
+  "id": "CLI34-W4-RECOVERY",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "恢复依赖和ELF后再次运行，检验无残留锁/进程干扰",
+  "input": "原有效ELF和镜像；Week3输入quit",
+  "expected": "退出0并完成清理",
+  "expected_exit": 0,
+  "actual_exit": 0,
+  "seconds": 0.087,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4536,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-3chb7qol"
+    ],
+    "lock_released": true
+  },
+  "actual": "BOOT: stage4 image validation\r\nIMAGE: CRC32 PASS\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+  "status": "PASS",
+  "evidence": "CLI34-W4-RECOVERY.log"
+}

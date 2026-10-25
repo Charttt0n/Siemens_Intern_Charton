@@ -1,0 +1,35 @@
+$ bash scripts/build-week4.sh
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zgzr66lb/codes/build/week4
+gmake[1]: Entering directory '/private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zgzr66lb/codes/build/week4'
+[ 11%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 77%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[ 88%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[100%] Linking C executable bootloader-week4.elf
+[100%] Built target bootloader-week4.elf
+[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj
+[100%] Linking C executable application.elf
+[100%] Built target application.elf
+gmake[1]: Leaving directory '/private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zgzr66lb/codes/build/week4'
+Packaged build/week4/application.bin into build/week4/demo-flash.bin (1048576 bytes)
+   text	   data	    bss	    dec	    hex	filename
+   2320	      0	   4276	   6596	   19c4	build/week4/bootloader-week4.elf
+    960	     12	   4132	   5104	   13f0	build/week4/application.elf
+
+EXIT=0 TIMEOUT=False

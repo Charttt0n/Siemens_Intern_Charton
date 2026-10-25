@@ -1,0 +1,14 @@
+$ cmake -S /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes -B /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build -G Unix Makefiles -DCMAKE_TOOLCHAIN_FILE=/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/cmake/arm-none-eabi.cmake
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build
+
+EXIT=0

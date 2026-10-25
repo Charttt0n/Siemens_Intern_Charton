@@ -1,0 +1,50 @@
+$ cmake --build /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build --target tx-week3.elf tx-week4.elf tx-application.elf bootloader-week3.elf bootloader-week4.elf application.elf --parallel
+[ 42%] Building ASM object CMakeFiles/tx-week3.elf.dir/src/week3/startup.S.obj
+[ 85%] Building C object CMakeFiles/tx-week3.elf.dir/tests/tx_fault_state.c.obj
+[ 85%] Building C object CMakeFiles/tx-week3.elf.dir/src/week3/uart.c.obj
+[ 85%] Building C object CMakeFiles/tx-week3.elf.dir/src/week3/flash.c.obj
+[ 85%] Building C object CMakeFiles/tx-week3.elf.dir/src/week2/board.c.obj
+[ 85%] Building C object CMakeFiles/tx-week3.elf.dir/src/week3/main.c.obj
+[100%] Linking C executable tx-week3.elf
+[100%] Built target tx-week3.elf
+[ 20%] Building ASM object CMakeFiles/tx-week4.elf.dir/src/week3/startup.S.obj
+[ 20%] Building C object CMakeFiles/tx-week4.elf.dir/src/week3/uart.c.obj
+[ 30%] Building C object CMakeFiles/tx-week4.elf.dir/src/week3/flash.c.obj
+[ 50%] Building C object CMakeFiles/tx-week4.elf.dir/src/week4/main.c.obj
+[ 50%] Building C object CMakeFiles/tx-week4.elf.dir/src/week2/board.c.obj
+[ 60%] Building C object CMakeFiles/tx-week4.elf.dir/src/week4/image.c.obj
+[ 90%] Building C object CMakeFiles/tx-week4.elf.dir/tests/tx_fault_state.c.obj
+[ 90%] Building ASM object CMakeFiles/tx-week4.elf.dir/src/week4/handoff.S.obj
+[ 90%] Building C object CMakeFiles/tx-week4.elf.dir/src/week4/crc32.c.obj
+[100%] Linking C executable tx-week4.elf
+[100%] Built target tx-week4.elf
+[ 80%] Building C object CMakeFiles/tx-application.elf.dir/src/week2/uart.c.obj
+[ 80%] Building C object CMakeFiles/tx-application.elf.dir/src/week4/app/main.c.obj
+[ 80%] Building C object CMakeFiles/tx-application.elf.dir/tests/tx_fault_state.c.obj
+[ 80%] Building ASM object CMakeFiles/tx-application.elf.dir/src/week4/app/startup.S.obj
+[100%] Linking C executable tx-application.elf
+[100%] Built target tx-application.elf
+[ 83%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[100%] Linking C executable bootloader-week3.elf
+[100%] Built target bootloader-week3.elf
+[ 22%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj
+[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj
+[ 77%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj
+[ 88%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj
+[100%] Linking C executable bootloader-week4.elf
+[100%] Built target bootloader-week4.elf
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj
+[100%] Linking C executable application.elf
+[100%] Built target application.elf
+
+EXIT=0

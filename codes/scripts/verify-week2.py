@@ -200,7 +200,7 @@ def main():
         build = Path(tempfile.mkdtemp(prefix='week2-', dir=ROOT / 'build'))
         run(['cmake', '-S', str(ROOT), '-B', str(build), '-G', 'Unix Makefiles',
              '-DCMAKE_TOOLCHAIN_FILE=' + str(ROOT/'cmake/arm-none-eabi.cmake')], 'configure')
-        run(['cmake', '--build', str(build), '--parallel'], 'build')
+        run(['cmake', '--build', str(build), '--target', 'demo.elf', 'bootloader.elf', '--parallel'], 'build')
         elf = build / 'bootloader.elf'
         summary['elf'] = str(elf.relative_to(ROOT))
         summary['elf_sha256'] = hashlib.sha256(elf.read_bytes()).hexdigest()

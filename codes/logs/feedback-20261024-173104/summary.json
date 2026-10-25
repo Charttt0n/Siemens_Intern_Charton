@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "FB-TX-01",
+      "method": "compile real driver with fake volatile MMIO",
+      "input": "UART_NATIVE_TEST",
+      "expected": "compiler exit=0",
+      "actual": "exit=0, timeout=False; ",
+      "evidence": "FB-TX-01.log",
+      "status": "PASS"
+    },
+    {
+      "id": "FB-TX-02",
+      "method": "native driver assertions",
+      "input": "CTRL=1 STATE=1 DATA=0x55 then STATE=0",
+      "expected": "bounded -1, no DATA write; recovery writes 0x41",
+      "actual": "exit=0, timeout=False; TX_FULL=1: flush/putc/write=-1; DATA=0x55 unchanged; bounded return PASS\nTX_FULL=0 after timeout: write=0 DATA=0x41 PASS\ndisabled TX and NULL: -1 PASS\n",
+      "evidence": "FB-TX-02.log",
+      "status": "PASS"
+    },
+    {
+      "id": "FB-IRQ-01",
+      "method": "cross compile production IRQ/UART",
+      "input": "nested masks 0 and 1",
+      "expected": "build succeeds",
+      "actual": "exit=0, timeout=False; ",
+      "evidence": "FB-IRQ-01.log",
+      "status": "PASS"
+    },
+    {
+      "id": "FB-IRQ-02",
+      "method": "real Cortex-M7 instructions under QEMU",
+      "input": "initial mask=0/1; nested save/restore, uart_init, empty uart_getc",
+      "expected": "both original masks restored; exit=0",
+      "actual": "exit=0, timeout=False; PRIMASK initial=0 nested/init/getc restored=0 PASS\nPRIMASK initial=1 nested/init/getc restored=1 PASS\n",
+      "evidence": "FB-IRQ-02.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W1-MISSING",
+      "method": "run before build",
+      "input": "clean copy, ELF/image absent",
+      "expected": "nonzero error, no PASS",
+      "actual": "exit=1, timeout=False; build/demo.elf: No such file or directory\nqemu-system-arm: Could not load kernel 'build/demo.elf'\n",
+      "evidence": "CLI-W1-MISSING.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W1-BUILD",
+      "method": "actual build entry",
+      "input": "clean stage output",
+      "expected": "exit=0",
+      "actual": "exit=0, timeout=False; -- The C compiler identification is GNU 16.2.0\n-- The ASM compiler identification is GNU\n-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Configuring done (0.1s)\n-- Generating done (0.0s)\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build\n[ 66%] Building ASM object CMakeFiles/demo.elf.dir/src/startup.S.obj\n[ 66%] Building C object CMakeFiles/demo.elf.dir/src/main.c.obj\n[100%] Linking C executable demo.elf\n[100%] Built target demo.elf\n   text\t   data\t    bss\t    dec\t    hex\tfilename\n    368\t      4\t      8\t    380\t    17c\tbuild/demo.elf\n",
+      "evidence": "CLI-W1-BUILD.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W1-RUN",
+      "method": "actual run entry",
+      "input": "default demo",
+      "expected": "expected firmware marker; W2 host stops intentional idle",
+      "actual": "exit=0, timeout=False; PASS: Cortex-M7; .data initialized; .bss zero; bare-metal C99\n",
+      "evidence": "CLI-W1-RUN.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W2-MISSING",
+      "method": "run before build",
+      "input": "clean copy, ELF/image absent",
+      "expected": "nonzero error, no PASS",
+      "actual": "exit=1, timeout=False; build/bootloader.elf: No such file or directory\nqemu-system-arm: Could not load kernel 'build/bootloader.elf'\n",
+      "evidence": "CLI-W2-MISSING.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W2-BUILD",
+      "method": "actual build entry",
+      "input": "clean stage output",
+      "expected": "exit=0",
+      "actual": "exit=0, timeout=False; -- Configuring done (0.0s)\n-- Generating done (0.0s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_TOOLCHAIN_FILE\n\n\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build\n[ 80%] Building ASM object CMakeFiles/bootloader.elf.dir/src/week2/startup.S.obj\n[ 80%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/main.c.obj\n[ 80%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/board.c.obj\n[ 80%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/uart.c.obj\n[100%] Linking C executable bootloader.elf\n[100%] Built target bootloader.elf\n   text\t   data\t    bss\t    dec\t    hex\tfilename\n   1488\t     20\t   4132\t   5640\t   1608\tbuild/bootloader.elf\n",
+      "evidence": "CLI-W2-BUILD.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W2-RUN",
+      "method": "actual run entry",
+      "input": "default demo",
+      "expected": "expected firmware marker; W2 host stops intentional idle",
+      "actual": "exit=0, timeout=True; BOOT: week2 mps2-an500 Cortex-M7\r\nCLOCK: 25000000 Hz (QEMU fixed)\r\nUART0: 115200 requested, divisor=217, 8N1\r\n[INIT] board ready; UART TX enabled; semihosting off\r\n[CPU] PartNo=0x00000c27\r\n[CRT] data[4]=0xa55aa55a\r\n[CRT] bss[6]=0x00000000\r\n[CHECK] data[5] and bss[7]: PASS\r\n[STATE] boot_status=0x00000001\r\n[NEXT] enter boot_idle (WFI)\r\nPASS: C runtime; UART boot ready\r\nqemu-system-arm: terminating on signal 15 from pid 81108 (<unknown process>)\n",
+      "evidence": "CLI-W2-RUN.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W3-MISSING",
+      "method": "run before build",
+      "input": "clean copy, ELF/image absent",
+      "expected": "nonzero error, no PASS",
+      "actual": "exit=1, timeout=False; ERROR: ELF not found: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week3/bootloader-week3.elf\nCommands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help\nHost: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.\n",
+      "evidence": "CLI-W3-MISSING.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W3-BUILD",
+      "method": "actual build entry",
+      "input": "clean stage output",
+      "expected": "exit=0",
+      "actual": "exit=0, timeout=False; -- The C compiler identification is GNU 16.2.0\n-- The ASM compiler identification is GNU\n-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Configuring done (0.1s)\n-- Generating done (0.0s)\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week3\n[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj\n[ 66%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj\n[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj\n[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj\n[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj\n[100%] Linking C executable bootloader-week3.elf\n[100%] Built target bootloader-week3.elf\n   text\t   data\t    bss\t    dec\t    hex\tfilename\n   2172\t      0\t   4256\t   6428\t   191c\tbuild/week3/bootloader-week3.elf\n",
+      "evidence": "CLI-W3-BUILD.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W3-RUN",
+      "method": "actual run entry",
+      "input": "p, save, quit",
+      "expected": "expected firmware marker; W2 host stops intentional idle",
+      "actual": "exit=0, timeout=False; Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help\nHost: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.\nBOOT: week3 UART RX IRQ; simulated NOR; host checkpoints\r\n> PONG\r\n> Saved: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week3-flash.bin\n> Saved: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week3-flash.bin\n",
+      "evidence": "CLI-W3-RUN.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W4-MISSING",
+      "method": "run before build",
+      "input": "clean copy, ELF/image absent",
+      "expected": "nonzero error, no PASS",
+      "actual": "exit=1, timeout=False; ERROR: image missing; run bash scripts/build-week4.sh first\n",
+      "evidence": "CLI-W4-MISSING.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W4-BUILD",
+      "method": "actual build entry",
+      "input": "clean stage output",
+      "expected": "exit=0",
+      "actual": "exit=0, timeout=False; opt/homebrew/bin/arm-none-eabi-gcc\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Configuring done (0.1s)\n-- Generating done (0.0s)\n-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week4\n[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/uart.c.obj\n[ 33%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week2/board.c.obj\n[ 44%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week3/startup.S.obj\n[ 44%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/image.c.obj\n[ 66%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/main.c.obj\n[ 66%] Building ASM object CMakeFiles/bootloader-week4.elf.dir/src/week4/handoff.S.obj\n[ 88%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week3/flash.c.obj\n[ 88%] Building C object CMakeFiles/bootloader-week4.elf.dir/src/week4/crc32.c.obj\n[100%] Linking C executable bootloader-week4.elf\n[100%] Built target bootloader-week4.elf\n[ 75%] Building ASM object CMakeFiles/application.elf.dir/src/week4/app/startup.S.obj\n[ 75%] Building C object CMakeFiles/application.elf.dir/src/week4/app/main.c.obj\n[ 75%] Building C object CMakeFiles/application.elf.dir/src/week2/uart.c.obj\n[100%] Linking C executable application.elf\n[100%] Built target application.elf\nPackaged build/week4/application.bin into build/week4/demo-flash.bin (1048576 bytes)\n   text\t   data\t    bss\t    dec\t    hex\tfilename\n   2320\t      0\t   4276\t   6596\t   19c4\tbuild/week4/bootloader-week4.elf\n    960\t     12\t   4132\t   5104\t   13f0\tbuild/week4/application.elf\n",
+      "evidence": "CLI-W4-BUILD.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W4-RUN",
+      "method": "actual run entry",
+      "input": "default demo",
+      "expected": "expected firmware marker; W2 host stops intentional idle",
+      "actual": "exit=0, timeout=False; BOOT: stage4 image validation\r\nIMAGE: CRC32 PASS\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "evidence": "CLI-W4-RUN.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W4-MISSING-IMAGE",
+      "method": "actual runner missing image",
+      "input": "missing explicit image path",
+      "expected": "exit=1 and image missing",
+      "actual": "exit=1, timeout=False; ERROR: image missing; run bash scripts/build-week4.sh first\n",
+      "evidence": "CLI-W4-MISSING-IMAGE.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W4-BLANK",
+      "method": "actual runner rejected image",
+      "input": "1 MiB all ff",
+      "expected": "exit=1 and REJECT: 0x00000002",
+      "actual": "exit=1, timeout=False; BOOT: stage4 image validation\r\nREJECT: 0x00000002\r\n> ",
+      "evidence": "CLI-W4-BLANK.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-W2-PAUSED",
+      "method": "paused emulator deadline",
+      "input": "-S; CPU never starts",
+      "expected": "no PASS; watchdog terminates process",
+      "actual": "exit=0, timeout=True; qemu-system-arm: terminating on signal 15 from pid 81108 (<unknown process>)\n",
+      "evidence": "CLI-W2-PAUSED.log",
+      "status": "PASS"
+    },
+    {
+      "id": "CLI-BUILD-FAIL",
+      "method": "controlled tool failure",
+      "input": "cmake returns 42",
+      "expected": "build script returns 42; no stale success",
+      "actual": "exit=42, timeout=False; ",
+      "evidence": "CLI-BUILD-FAIL.log",
+      "status": "PASS"
+    },
+    {
+      "id": "MANIFEST-valid",
+      "method": "schema and file verification",
+      "input": "valid v1 manifest and file bytes test",
+      "expected": "accepted",
+      "actual": "accepted",
+      "status": "PASS",
+      "evidence": "manifest-example.json"
+    },
+    {
+      "id": "MANIFEST-missing",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$: missing field",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-unknown",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": 4,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review",
+        "extra": 1
+      },
+      "expected": "ValueError",
+      "actual": "$: unknown field",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-version",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 2,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": 4,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$.schema_version: const",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-hash",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": 4,
+            "sha256": "xyz"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$.files[0].sha256: pattern",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-traversal",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "../escape",
+            "size": 4,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$.files[0].path: pattern",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-size",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": -1,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$.files[0].size: range",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-boolean-size",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": true,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "$.files[0].size: type",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-duplicate",
+      "method": "schema and file verification",
+      "input": {
+        "schema_version": 1,
+        "plan_group": "week3-4",
+        "generated_at": "2026-10-24T17:31:11.391259+08:00",
+        "files": [
+          {
+            "path": "firmware.bin",
+            "size": 4,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          },
+          {
+            "path": "firmware.bin",
+            "size": 4,
+            "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+          }
+        ],
+        "image_format": "M7IM-v1",
+        "approval_status": "pending-teacher-review"
+      },
+      "expected": "ValueError",
+      "actual": "duplicate file",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    },
+    {
+      "id": "MANIFEST-tampered-file",
+      "method": "hash verification",
+      "input": "file bytes test -> bad",
+      "expected": "file mismatch",
+      "actual": "file mismatch: firmware.bin",
+      "status": "PASS",
+      "evidence": "manifest-cases.json"
+    }
+  ]
+}

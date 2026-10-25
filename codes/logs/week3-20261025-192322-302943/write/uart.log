@@ -1,0 +1,7 @@
+BOOT: week3 UART RX IRQ; simulated NOR; host checkpoints
+> PARAM 0xffffffff
+> OK
+> PARAM 0x4b4f3357
+> OK
+> PONG
+> 

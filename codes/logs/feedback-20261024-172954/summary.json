@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "id": "FB-TX-01",
+      "method": "compile real driver with fake volatile MMIO",
+      "input": "UART_NATIVE_TEST",
+      "expected": "compiler exit=0",
+      "actual": "exit=0, timeout=False; ",
+      "evidence": "FB-TX-01.log",
+      "status": "PASS"
+    },
+    {
+      "id": "FB-TX-02",
+      "method": "native driver assertions",
+      "input": "CTRL=1 STATE=1 DATA=0x55 then STATE=0",
+      "expected": "bounded -1, no DATA write; recovery writes 0x41",
+      "actual": "exit=0, timeout=False; TX_FULL=1: flush/putc/write=-1; DATA=0x55 unchanged; bounded return PASS\nTX_FULL=0 after timeout: write=0 DATA=0x41 PASS\ndisabled TX and NULL: -1 PASS\n",
+      "evidence": "FB-TX-02.log",
+      "status": "PASS"
+    },
+    {
+      "id": "FB-IRQ-01",
+      "method": "cross compile production IRQ/UART",
+      "input": "nested masks 0 and 1",
+      "expected": "build succeeds",
+      "actual": "exit=1, timeout=False; tests/test_irq.c: In function 'main':\ntests/test_irq.c:20:15: error: implicit declaration of function 'uart_getc'; did you mean 'uart_putc'? [-Wimplicit-function-declaration]\n   20 |         ok &= uart_getc(&byte)==0 && mask()==initial;\n      |               ^~~~~~~~~\n      |               uart_putc\n",
+      "evidence": "FB-IRQ-01.log",
+      "status": "FAIL"
+    }
+  ]
+}

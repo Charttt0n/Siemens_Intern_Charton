@@ -1,0 +1,17 @@
+gmake[1]: Entering directory '/private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/week3-build-u8cvckzw'
+[ 83%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[100%] Linking C executable bootloader-week3.elf
+[100%] Built target bootloader-week3.elf
+[ 42%] Building ASM object CMakeFiles/week3-test.elf.dir/src/week3/startup.S.obj
+[ 57%] Building C object CMakeFiles/week3-test.elf.dir/tests/test_flash.c.obj
+[ 42%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/uart.c.obj
+[ 71%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/main.c.obj
+[ 71%] Building C object CMakeFiles/week3-test.elf.dir/src/week2/board.c.obj
+[ 85%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/flash.c.obj
+[100%] Linking C executable week3-test.elf
+[100%] Built target week3-test.elf
+gmake[1]: Leaving directory '/private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/week3-build-u8cvckzw'

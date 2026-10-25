@@ -1,0 +1,4 @@
+main () at /private/tmp/siemens-weekly-split/project/output/2026-10-25-week3-交付材料/codes/src/week3/main.c:79
+79	        if (test_pause_rx) continue;
+GDB_ASSERTIONS_PASS
+[Inferior 1 (process 1) detached]

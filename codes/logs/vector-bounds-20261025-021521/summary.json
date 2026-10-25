@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "VEC-MATRIX",
+      "status": "PASS",
+      "actual": 321,
+      "evidence": "matrix.txt"
+    },
+    {
+      "id": "MSP-AT-BASE",
+      "index": 0,
+      "value": 536936448,
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "MSP-AT-BASE/uart.log"
+    },
+    {
+      "id": "RESERVED-13",
+      "index": 13,
+      "value": 65729,
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "RESERVED-13/uart.log"
+    },
+    {
+      "id": "IRQ31-END",
+      "index": 47,
+      "value": 66509,
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "IRQ31-END/uart.log"
+    },
+    {
+      "id": "RESET-BELOW",
+      "index": 1,
+      "value": 65727,
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "RESET-BELOW/uart.log"
+    },
+    {
+      "id": "LOAD-VECTOR-MSP",
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "LOAD-VECTOR-MSP.txt"
+    },
+    {
+      "id": "LOAD-VECTOR-IRQ31",
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "LOAD-VECTOR-IRQ31.txt"
+    },
+    {
+      "id": "STATUS-IO",
+      "status": "PASS",
+      "actual_code": 1,
+      "evidence": "STATUS-IO.txt"
+    },
+    {
+      "id": "STATUS-HARDFAULT",
+      "status": "PASS",
+      "actual_code": 256,
+      "evidence": "STATUS-HARDFAULT.txt"
+    }
+  ],
+  "elf_sha256": {
+    "bootloader-week4.elf": "96a01d646ce5b9613763f3c92e0147a9b7db5f5af59653a0ed9ed9ebc6e62048",
+    "application.elf": "b22e6076da1316663b8824cef452c7ce4e474292626adf60972760d013bbd1c9"
+  },
+  "matrix_assertions": 321
+}

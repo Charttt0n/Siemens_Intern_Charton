@@ -1,0 +1,68 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 1633607440028666,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1633607440210083,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792928868,
+      "microseconds": 154234
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1633608441914916,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792928869,
+      "microseconds": 156008
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1633608442118791,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-u_vismoe/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 1633608444225958,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1792928869,
+      "microseconds": 158251
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

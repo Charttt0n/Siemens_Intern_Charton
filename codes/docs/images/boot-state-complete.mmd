@@ -1,0 +1,24 @@
+flowchart TD
+ INIT[初始化 C / board / UART] --> BIND[绑定存储]
+ BIND --> VALID[头 / 长度 / 地址 / CRC / 向量校验]
+ BIND -->|1| REJECT
+ VALID --> LOAD[加载 payload]
+ LOAD --> VERIFY[运行区 CRC / 向量复核]
+ VERIFY --> FLUSH[排空 UART]
+ FLUSH --> HANDOFF[清理中断 / VTOR / MSP / boot_status=0]
+ HANDOFF --> APPINIT[应用 CRT / 交接检查 / UART]
+ APPINIT --> SVC[启用中断并检查 SVC]
+ SVC --> RUN[APP RUNNING / app_status=1 / app_idle]
+ INIT -->|UART失败| TX[boot_status=0x101]
+ VALID -->|1..7| REJECT[写 boot_status / REJECT 十六进制输出]
+ LOAD -->|1或4| REJECT
+ VERIFY -->|4或7或8| REJECT
+ FLUSH -->|失败| TX
+ REJECT -->|输出失败| TX
+ REJECT --> IDLE[boot_idle]
+ TX --> IDLE
+ EXC[Bootloader异常 / exception_number / status=0x100] --> IDLE
+ APPINIT -->|CRT或交接失败| A2[app_status=2 / app_idle]
+ APPINIT -->|UART失败| A4[app_status=4 / app_idle]
+ SVC -->|计数失败| A2
+ AEXC[应用异常 / app_exception] --> A3[app_status=3 / app_idle]

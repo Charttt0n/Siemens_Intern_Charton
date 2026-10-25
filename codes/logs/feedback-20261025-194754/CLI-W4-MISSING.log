@@ -1,0 +1,4 @@
+$ /Users/charton/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/run-week4.py
+ERROR: image missing; run bash scripts/build-week4.sh first
+
+EXIT=1 TIMEOUT=False

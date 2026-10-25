@@ -1,0 +1,4 @@
+uart_getc (byte=byte@entry=0x202ffff7 "") at /Users/charton/Projects/Siemens_Intern/codes/src/week3/uart.c:57
+57	    int available = head != tail;
+GDB_ASSERTIONS_PASS
+[Inferior 1 (process 1) detached]

@@ -1,6 +1,6 @@
 # 计划第四阶段 固件校验与应用跳转
 
-2026-10-22 实现并验收，实际归入实习第二周提前完成的任务。week4 为原计划阶段编号。
+2026-10-22 实现并验收，按规划书归入 Week 3–4。week4 为原计划阶段编号。
 
 ## 1 运行与目标
 
@@ -41,6 +41,8 @@ Bootloader 初始 MSP 为 `0x20010000`，示例应用初始 MSP 为 `0x20200000`
 
 第三阶段的逻辑 Bootloader 存储分区仍为预留只读区，不等于运行地址 0 的 ELF 副本。备份分区尚不参与启动选择；本阶段只从主应用区启动。
 
+SIMATIC 的公开装载／运行存储职责与本阶段地址设计的关系，见 [SIMATIC 存储对应依据](simatic-memory-mapping.md)。应用代码与数据运行区为 AN500 实验布局，不使用或复刻 S7 内部固件地址。
+
 ## 4 验证和交接顺序
 
 1. 初始化 C 环境、板级状态和 UART。
@@ -67,3 +69,23 @@ Bootloader 初始 MSP 为 `0x20010000`，示例应用初始 MSP 为 `0x20200000`
 - [Arm CMSIS Cortex M7 Core 定义](https://github.com/ARM-software/CMSIS_6/blob/main/CMSIS/Core/Include/core_cm7.h)
 - [Arm CMSIS GCC 寄存器与屏障操作](https://github.com/ARM-software/CMSIS_6/blob/main/CMSIS/Core/Include/cmsis_gcc.h)
 - [第三阶段存储契约](week3-guide.md)
+
+## 一键入口与失败处理复验
+
+在 codes/ 执行 `python3 scripts/verify-cli-week34.py`，直接测试本指南构建和运行入口。干净构建、正常运行、产物缺失、CMake/QEMU失败、启动和UART超时、进程及文件锁清理的22项记录见 [入口专项报告](cli-week34-test-report.md)。故障注入仅在临时副本进行。
+
+## UART 波特率依据与读回
+
+25000000 / 115200 = 217余1600，按最近整数取217；推导波特率115207.3733 baud，误差+0.0064004%。UART0的BAUDDIV地址0x40004010读回0xD9，CTRL地址0x40004008读回0x0B。完整公式、操作步骤、专项日志及仿真边界见 [UART波特率验证报告](uart-baud-validation.md)。复验：在codes/执行 `python3 scripts/verify-uart-baud.py`。字符后端收发成功不代表已测得物理串口位宽。
+
+## TX持续阻塞与轮询上限
+
+持续TX_FULL注入已验证：每次uart_flush最多读取状态1000000次后返回-1；putc不写DATA，write向上返回失败。Week3设置boot_status=3；Week4设置0x101，应用设置app_status=4。此预算不是准确毫秒超时。操作、预期/实际、上层取证及仿真边界见 [TX专项报告](tx-full-validation.md)；在codes/执行 `python3 scripts/verify-tx-full.py`复验。
+
+## 镜像输入与结果对照
+
+[第四阶段测试报告](week4-test-report.md)已将原有18种镜像输入逐行列明偏移、具体数值、CRC处理、预期错误码、实际结果和两类日志；另列4种新增边界输入。精确CRC、SIZE、SHA256及UART见week4-image-inputs.json。所有偏移均为镜像文件偏移，向量修改重算内容与头CRC。
+
+## 范围状态与交付清单复核
+
+完整向量规则、状态转移图、REJECT字节格式、manifest与反馈闭环见 [复核报告](week34-review-closure.md)。独立验证入口为scripts/verify-vector-bounds.py与scripts/verify-manifest.py，分别覆盖321项向量矩阵及CPU拒绝/复核/异常路径、41项清单约束与文件校验。

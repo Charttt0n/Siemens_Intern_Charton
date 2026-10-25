@@ -1,0 +1,15 @@
+$ cmake --build /Users/charton/Projects/Siemens_Intern/codes/build/week2-99f25fef --target demo.elf bootloader.elf --parallel
+gmake[1]: Entering directory '/Users/charton/Projects/Siemens_Intern/codes/build/week2-99f25fef'
+[ 66%] Building C object CMakeFiles/demo.elf.dir/src/main.c.obj
+[ 66%] Building ASM object CMakeFiles/demo.elf.dir/src/startup.S.obj
+[100%] Linking C executable demo.elf
+[100%] Built target demo.elf
+[ 60%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/board.c.obj
+[ 60%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/uart.c.obj
+[ 80%] Building C object CMakeFiles/bootloader.elf.dir/src/week2/main.c.obj
+[ 80%] Building ASM object CMakeFiles/bootloader.elf.dir/src/week2/startup.S.obj
+[100%] Linking C executable bootloader.elf
+[100%] Built target bootloader.elf
+gmake[1]: Leaving directory '/Users/charton/Projects/Siemens_Intern/codes/build/week2-99f25fef'
+
+EXIT_CODE=0

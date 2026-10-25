@@ -1,0 +1,38 @@
+$ python3 scripts/run-week4.py
+BOOT: stage4 image validation
+IMAGE: CRC32 PASS
+LOAD: verified at 0x00010000
+JUMP: application
+APP: CRT PASS
+APP: HANDOFF PASS
+APP: SVC PASS
+APP: RUNNING
+> 
+{
+  "id": "CLI34-W4-RUN",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "构建后执行默认运行命令；检查输出及清理",
+  "input": "默认有效镜像",
+  "expected": "退出0；固件成功标记；QEMU退出、临时目录删除、文件锁释放",
+  "expected_exit": 0,
+  "actual_exit": 0,
+  "seconds": 0.226,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4471,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-avp3xz4v"
+    ],
+    "lock_released": true
+  },
+  "actual": "BOOT: stage4 image validation\r\nIMAGE: CRC32 PASS\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+  "status": "PASS",
+  "evidence": "CLI34-W4-RUN.log"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "plan_group": "week3-4",
+  "generated_at": "2026-10-25T19:47:46.928067+08:00",
+  "files": [
+    {
+      "path": "README.txt",
+      "size": 25,
+      "sha256": "798fea15a540e232f4ae06c1888d0467da504195abb547083ebfec97ceb955fb"
+    }
+  ],
+  "image_format": "M7IM-v1",
+  "approval_status": "pending-teacher-review"
+}

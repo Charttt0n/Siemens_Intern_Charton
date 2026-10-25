@@ -1,0 +1,4 @@
+BOOT: stage4 image validation
+IMAGE: CRC32 PASS
+REJECT: 0x00000007
+> 

@@ -1,0 +1,14 @@
+Reset_Handler () at /Users/charton/Projects/Siemens_Intern/codes/src/week3/startup.S:35
+35	  ldr r0, =_sidata
+Breakpoint 1 at 0x4d4: file /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c, line 42.
+
+Breakpoint 1, main () at /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c:42
+42	int main(void) {
+Breakpoint 2 at 0x3c0: file /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c, line 7.
+warning: ARM M in lockup state, stack unwinding terminated.
+
+Breakpoint 2, boot_idle () at /Users/charton/Projects/Siemens_Intern/codes/src/week4/main.c:7
+7	__attribute__((noreturn)) void boot_idle(void) { for (;;) __asm__ volatile ("wfi"); }
+boot_status=0x100 exception_number=3
+DEBUG_PASS
+[Inferior 1 (process 1) detached]

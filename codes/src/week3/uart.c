@@ -1,10 +1,19 @@
 #include "uart.h"
+#include "irq.h"
 #define REG(offset) (*(volatile uint32_t *)(0x40004000u + (offset)))
 #define DATA REG(0x00u)
 #define STATE REG(0x04u)
 #define CTRL REG(0x08u)
 #define INTSTATUS REG(0x0cu)
 #define BAUDDIV REG(0x10u)
+#ifdef UART_TX_FAULT_TEST
+#include "uart_tx_test.h"
+#undef DATA
+#define DATA uart_tx_test_data
+#define TX_STATE() uart_tx_test_read_state()
+#else
+#define TX_STATE() STATE
+#endif
 #define NVIC_ISER (*(volatile uint32_t *)0xe000e100u)
 #define NVIC_ICER (*(volatile uint32_t *)0xe000e180u)
 #define NVIC_ICPR (*(volatile uint32_t *)0xe000e280u)
@@ -13,21 +22,12 @@ static volatile uint8_t rx[UART_RX_CAPACITY];
 static volatile uint32_t head, tail;
 volatile uint32_t uart_rx_count, uart_rx_dropped, uart_rx_overruns;
 
-static uint32_t lock(void) {
-    uint32_t state;
-    __asm__ volatile ("mrs %0, primask\ncpsid i" : "=r"(state) :: "memory");
-    return state;
-}
-static void unlock(uint32_t state) {
-    __asm__ volatile ("msr primask, %0" :: "r"(state) : "memory");
-}
-
 int uart_init(uint32_t clock_hz, uint32_t baud) {
     if (!baud || !clock_hz) return -1;
     uint32_t divisor = clock_hz / baud;
     if (clock_hz % baud >= baud - baud / 2u) ++divisor;
     if (divisor < 16u || divisor > 0xfffffu) return -1;
-    uint32_t saved = lock();
+    uint32_t saved = irq_save();
     NVIC_ICER = 1u;
     CTRL = 0u;
     head = tail = 0u;
@@ -41,7 +41,7 @@ int uart_init(uint32_t clock_hz, uint32_t baud) {
     CTRL = 0xbu; /* TX + RX + RX interrupt; TX remains bounded polling. */
     NVIC_ISER = 1u; /* AN500 UART0 RX = external IRQ 0. */
     __asm__ volatile ("dsb\nisb" ::: "memory");
-    unlock(saved);
+    irq_restore(saved);
     return 0;
 }
 
@@ -61,17 +61,17 @@ void UART0_RX_Handler(void) {
 
 int uart_getc(uint8_t *byte) {
     if (!byte) return -1;
-    uint32_t saved = lock();
+    uint32_t saved = irq_save();
     int available = head != tail;
     if (available) { *byte = rx[tail]; tail = (tail + 1u) % UART_RX_CAPACITY; }
-    unlock(saved);
+    irq_restore(saved);
     return available;
 }
 
 int uart_flush(void) {
     if (!(CTRL & 1u)) return -1;
     for (uint32_t n = 0; n < 1000000u; ++n)
-        if (!(STATE & 1u)) return 0;
+        if (!(TX_STATE() & 1u)) return 0;
     return -1;
 }
 int uart_putc(char ch) {

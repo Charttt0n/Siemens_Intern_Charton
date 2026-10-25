@@ -1,0 +1,14 @@
+$ qemu-system-arm -M mps2-an500 -display none -monitor none -serial none -semihosting-config enable=on,target=native -kernel /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-xk4bne8v/week2-contract.elf
+INIT OK
+FULL_FLUSH_RETURN=-1 OK
+FULL_FLUSH_READS=1000000 OK
+FULL_PUTC_RETURN=-1 OK
+FULL_PUTC_TOTAL_READS=2000000 OK
+FULL_WRITE_RETURN=-1 OK
+FULL_WRITE_TOTAL_READS=3000000 OK
+FULL_DATA_UNCHANGED=0x55 OK
+RECOVER_WRITE_RETURN=0 OK
+RECOVER_DATA=0x41_READS=1 OK
+TX_FULL_CONTRACT_PASS
+
+EXIT=0

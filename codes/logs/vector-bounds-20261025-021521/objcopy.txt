@@ -1,0 +1,3 @@
+$ arm-none-eabi-objcopy -O binary /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/vector-bounds-y02iyy7d/application.elf /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/vector-bounds-y02iyy7d/app.bin
+
+EXIT=0

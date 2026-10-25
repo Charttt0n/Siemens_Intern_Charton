@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "started_at": "20261025-015915-135199",
+  "checks": [
+    "fresh cross-build; no semihosting BKPT",
+    "native flash API and boundary tests with ASan/UBSan",
+    "same flash assertions execute on Cortex-M7",
+    "real UART RX IRQ, binary byte order, 127-byte queue, drop-new overflow and recovery",
+    "300 serial command responses across ring wraps; unknown-command rejection",
+    "exact 1 MiB checkpoint and exclusive image lock",
+    "failed checkpoint preserves old image and resumes QEMU",
+    "new QEMU process restores checkpoint; unsaved erase lost after SIGKILL",
+    "erasure persists after explicit checkpoint and restart",
+    "wrong-size image rejected without modification",
+    "no QEMU guest-error diagnostics"
+  ],
+  "storage_model": "SRAM NOR rules + explicit host checkpoint; not power-loss-safe Flash",
+  "elf_sha256": "27ca7fdb6d6cf130d47731b359e1018de7f219bc04e038b1c61c3ccb916fff63"
+}

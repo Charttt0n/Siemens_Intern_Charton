@@ -1,0 +1,26 @@
+$ python3 scripts/run-week4.py
+ERROR: image missing; run bash scripts/build-week4.sh first
+
+{
+  "id": "CLI34-W4-MISSING-IMAGE",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "保留ELF；移走镜像；直接运行",
+  "input": "默认镜像不存在",
+  "expected": "退出1；image missing；不启动QEMU",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 0.033,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": false,
+    "pid": null,
+    "lock_released": true
+  },
+  "actual": "ERROR: image missing; run bash scripts/build-week4.sh first\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-MISSING-IMAGE.log"
+}

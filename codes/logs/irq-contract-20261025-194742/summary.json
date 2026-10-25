@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "IRQ-INIT-0",
+      "initial": 0,
+      "expected_final": 0,
+      "status": "PASS",
+      "assertions": 11,
+      "evidence": "qemu.txt"
+    },
+    {
+      "id": "IRQ-INIT-1",
+      "initial": 1,
+      "expected_final": 1,
+      "status": "PASS",
+      "assertions": 11,
+      "evidence": "qemu.txt"
+    }
+  ],
+  "elf_sha256": "e7a7471c6103269d2f743b90b6587b37306de410d161826a300a7e0ddf4f05ef"
+}

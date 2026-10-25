@@ -1,0 +1,20 @@
+$ arm-none-eabi-gdb --batch -q /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/build/tx-week4.elf -x /Users/charton/Projects/Siemens_Intern/codes/logs/tx-full-20261025-194740/TX-W4-FLUSH.gdb
+Reset_Handler () at /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week3/startup.S:35
+35	  ldr r0, =_sidata
+Hardware assisted breakpoint 1 at 0x4e8: file /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c, line 42.
+
+Breakpoint 1, main () at /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c:42
+42	int main(void) {
+Hardware assisted breakpoint 2 at 0x55e: file /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c, line 55.
+
+Breakpoint 2, main () at /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c:55
+55	    if (uart_flush()) { boot_status = 0x101u; boot_idle(); }
+Hardware assisted breakpoint 3 at 0x3d4: file /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c, line 7.
+
+Breakpoint 3, boot_idle () at /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-r9x7n3p2/codes/src/week4/main.c:7
+7	__attribute__((noreturn)) void boot_idle(void) { for (;;) __asm__ volatile ("wfi"); }
+boot_status=0x101 final_flush_reads=1000000
+TX_FAILURE_PATH_PASS
+[Inferior 1 (process 1) detached]
+
+EXIT=0

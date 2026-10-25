@@ -1,0 +1,127 @@
+{
+  "base_commit": "ef7d99cc9b91e53e19515cd32c70f3b3aa94bc59",
+  "revision_status": "uncommitted-local-changes",
+  "teacher_status": "pending",
+  "items": [
+    {
+      "id": "FB-01",
+      "feedback": "阶段测试细节与周报同步",
+      "locations": "codes/docs/week3-test-report.md；week4-test-report.md；reports/week3/week3-report.md；reports/week4/week4-report.md",
+      "tests": "W3-01..11；W4五项+IMG-01..22",
+      "evidence": "codes/logs/week3-20261024-173044-978155；week4-20261024-173015-915034",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-02",
+      "feedback": "一键入口失败与清理",
+      "locations": "codes/scripts/verify-cli-week34.py；codes/docs/cli-week34-test-report.md",
+      "tests": "CLI34-W3/W4各11项",
+      "evidence": "codes/logs/cli-week34-20261024-234802",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-03",
+      "feedback": "波特率公式与读回",
+      "locations": "codes/docs/uart-baud-validation.md；scripts/verify-uart-baud.py",
+      "tests": "BAUD-W3；BAUD-W4",
+      "evidence": "codes/logs/uart-baud-20261024-235338",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-04",
+      "feedback": "PRIMASK契约与恢复",
+      "locations": "codes/src/week2/irq.h；tests/test_irq.c；docs/irq-contract-validation.md",
+      "tests": "IRQ-INIT-0/1；22个断言",
+      "evidence": "codes/logs/irq-contract-20261024-235737",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-05",
+      "feedback": "命令至QMP cont时序",
+      "locations": "codes/docs/images/uart-checkpoint-sequence.png；scripts/week3_session.py",
+      "tests": "W3-06；W3-07",
+      "evidence": "codes/logs/week3-20261024-173044-978155/write/qmp.json",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-06",
+      "feedback": "TX持续阻塞传播",
+      "locations": "codes/tests/test_uart_tx_full.c；scripts/verify-tx-full.py；docs/tx-full-validation.md",
+      "tests": "两驱动20断言；四错误路径；生产符号隔离",
+      "evidence": "codes/logs/tx-full-20261025-015904",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-07",
+      "feedback": "镜像输入逐行表",
+      "locations": "codes/docs/week4-test-report.md；week4-image-inputs.json",
+      "tests": "18行原输入+4边界；22镜像还原哈希一致",
+      "evidence": "codes/logs/week4-20261025-015917-068252",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-08",
+      "feedback": "向量范围完整覆盖",
+      "locations": "codes/tests/test_vector_bounds.c；scripts/verify-vector-bounds.py；docs/vector-boundary-cases.json",
+      "tests": "VEC-001..321；四CPU拒绝；两LOAD-VECTOR",
+      "evidence": "codes/logs/vector-bounds-20261025-021521",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-09",
+      "feedback": "完整状态转移图",
+      "locations": "codes/docs/images/boot-state-complete.png及.mmd；scripts/render-boot-state.py",
+      "tests": "正常W4-HANDOFF；错误码/TX/异常路径核对",
+      "evidence": "codes/logs/week4-20261025-015917-068252；codes/logs/vector-bounds-20261025-021521",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-10",
+      "feedback": "REJECT与状态字典",
+      "locations": "codes/docs/week34-review-closure.md；teacher-feedback-technical.md",
+      "tests": "IMG负向；W4-COPY；STATUS-IO；STATUS-HARDFAULT；TX-W4",
+      "evidence": "codes/logs/vector-bounds-20261025-021521；codes/logs/tx-full-20261025-015904",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-11",
+      "feedback": "manifest schema与实例",
+      "locations": "codes/schemas/delivery-manifest.schema.json；schemas/examples；scripts/delivery_manifest.py",
+      "tests": "MF-VALID及40个负向约束/文件用例",
+      "evidence": "codes/logs/manifest-20261025-021604",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    },
+    {
+      "id": "FB-12",
+      "feedback": "逐项闭环与版本",
+      "locations": "planning/teacher-feedback-2026-10-24.md；feedback-version.json",
+      "tests": "12项引用存在性；源文件内容指纹；包manifest和ZIP校验",
+      "evidence": "planning/feedback-version.json；output交付包/delivery-manifest.json",
+      "teacher_confirmation": "pending",
+      "confirmed_at": null,
+      "commit": null
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+$ bash scripts/build-week3.sh
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /private/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/feedback-zp_c3lyi/codes/build/week3
+[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 66%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[100%] Linking C executable bootloader-week3.elf
+[100%] Built target bootloader-week3.elf
+   text	   data	    bss	    dec	    hex	filename
+   2172	      0	   4256	   6428	   191c	build/week3/bootloader-week3.elf
+
+EXIT=0 TIMEOUT=False

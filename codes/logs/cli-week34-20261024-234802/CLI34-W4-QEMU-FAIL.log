@@ -1,0 +1,31 @@
+$ python3 scripts/run-week4.py
+ERROR: QEMU exited before opening sockets
+
+{
+  "id": "CLI34-W4-QEMU-FAIL",
+  "command": [
+    "python3",
+    "scripts/run-week4.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "只在副本替换QEMU启动依赖；执行原运行命令",
+  "input": "子命令返回42",
+  "expected": "入口退出1；无成功标记；清理子进程、临时目录和文件锁",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 0.06,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4476,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-cbuaf2kt"
+    ],
+    "lock_released": true
+  },
+  "actual": "ERROR: QEMU exited before opening sockets\n",
+  "status": "PASS",
+  "evidence": "CLI34-W4-QEMU-FAIL.log"
+}

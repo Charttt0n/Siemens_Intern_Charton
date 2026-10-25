@@ -93,6 +93,7 @@ class Session:
         request = {'execute': name}
         if arguments is not None:
             request['arguments'] = arguments
+        self.events.append({'direction': 'request', 'monotonic_ns': time.monotonic_ns(), **request})
         self.qfile.write(json.dumps(request).encode() + b'\n')
         self.qfile.flush()
         while True:

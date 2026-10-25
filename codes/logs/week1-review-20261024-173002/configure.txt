@@ -1,0 +1,14 @@
+$ cmake -S /Users/charton/Projects/Siemens_Intern/codes -B /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-oh0o_8f8 -G Unix Makefiles -DCMAKE_TOOLCHAIN_FILE=/Users/charton/Projects/Siemens_Intern/codes/cmake/arm-none-eabi.cmake
+-- The C compiler identification is GNU 16.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/charton/Projects/Siemens_Intern/codes/build/week1-review-oh0o_8f8
+
+EXIT_CODE=0

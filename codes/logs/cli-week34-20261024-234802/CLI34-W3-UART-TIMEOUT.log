@@ -1,0 +1,33 @@
+$ python3 scripts/run-week3.py
+ERROR: timed out
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+
+{
+  "id": "CLI34-W3-UART-TIMEOUT",
+  "command": [
+    "python3",
+    "scripts/run-week3.py"
+  ],
+  "cwd": "isolated codes copy",
+  "steps": "仅将副本ELF换成无限循环固件；运行真实QEMU",
+  "input": "有效ELF，无UART输出",
+  "expected": "约5秒内部UART超时；入口退出1；QEMU和资源清理完成",
+  "expected_exit": 1,
+  "actual_exit": 1,
+  "seconds": 5.096,
+  "watchdog": false,
+  "cleanup": {
+    "qemu_started": true,
+    "pid": 4306,
+    "process_gone": true,
+    "temporary_dirs_removed": true,
+    "temporary_dirs": [
+      "/tmp/w3-_s5kgabr"
+    ],
+    "lock_released": true
+  },
+  "actual": "ERROR: timed out\nCommands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help\nHost: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.\n",
+  "status": "PASS",
+  "evidence": "CLI34-W3-UART-TIMEOUT.log"
+}

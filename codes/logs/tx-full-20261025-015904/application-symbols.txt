@@ -1,0 +1,28 @@
+$ arm-none-eabi-nm /var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/tx-full-xk4bne8v/build/application.elf
+00010104 T App_Default_Handler
+000100c0 T App_Reset_Handler
+00010128 T App_SVC_Handler
+20010030 B _ebss
+2001000c D _edata
+2001000c B _sbss
+20010000 D _sdata
+000103c0 A _sidata
+201ff000 A _stack_bottom
+20200000 R _stack_top
+2001001c B app_bss
+20010000 D app_data
+20010010 B app_exception
+00010138 T app_exception_handler
+2001000c B app_handoff_ok
+0001010c T app_idle
+00010150 T app_main
+20010018 B app_status
+20010014 B app_svc_count
+00010000 R app_vectors
+00010110 t print
+000102e0 T uart_flush
+00010298 T uart_init
+00010314 T uart_putc
+0001032c T uart_write
+
+EXIT=0

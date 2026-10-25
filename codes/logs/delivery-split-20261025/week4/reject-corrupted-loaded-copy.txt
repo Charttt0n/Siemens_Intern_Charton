@@ -1,0 +1,12 @@
+Reset_Handler () at /private/tmp/siemens-weekly-split/project/output/2026-10-25-week4-交付材料/codes/src/week3/startup.S:35
+35	  ldr r0, =_sidata
+Breakpoint 1 at 0x788: file /private/tmp/siemens-weekly-split/project/output/2026-10-25-week4-交付材料/codes/src/week4/image.c, line 57.
+
+Breakpoint 1, boot_verify_loaded (info=info@entry=0x20000094 <boot_image>) at /private/tmp/siemens-weekly-split/project/output/2026-10-25-week4-交付材料/codes/src/week4/image.c:57
+57	    if (!info || info->load != APP_EXEC_BASE || info->size < APP_VECTOR_SIZE ||
+Breakpoint 2 at 0x3c0: file /private/tmp/siemens-weekly-split/project/output/2026-10-25-week4-交付材料/codes/src/week4/main.c, line 7.
+
+Breakpoint 2, boot_idle () at /private/tmp/siemens-weekly-split/project/output/2026-10-25-week4-交付材料/codes/src/week4/main.c:7
+7	__attribute__((noreturn)) void boot_idle(void) { for (;;) __asm__ volatile ("wfi"); }
+DEBUG_PASS
+[Inferior 1 (process 1) detached]

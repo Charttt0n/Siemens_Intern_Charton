@@ -1,0 +1,3 @@
+   text	   data	    bss	    dec	    hex	filename
+   2320	      0	   4276	   6596	   19c4	/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/stage4-rd7b3qh8/bootloader-week4.elf
+    960	     12	   4132	   5104	   13f0	/var/folders/7d/fk0m_4z93zjdx1fc0f71fbzc0000gn/T/stage4-rd7b3qh8/application.elf

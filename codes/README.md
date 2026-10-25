@@ -2,9 +2,9 @@
 
 目标：在 Apple Silicon macOS 上完成 GNU Arm GCC + CMake/Make → ELF → QEMU Cortex-M7 → GDB 的验证闭环。
 
-## 实际第二周交付（2026-10-22）
+## Week 1–4 分组交付（2026-10-22）
 
-实际实习处于第二周，已提前完成原计划前四阶段的 QEMU 实现。目录和脚本中的 week1 至 week4 是计划阶段编号。2026-10-22复验分别通过 6、12、11、23 项检查。2026-10-23的[全部计划核查](../planning/week1-4-plan-audit.md)确认功能已有证据，Week1指定手册学习及S7/工业要求研究仍有资料缺口；完整计划尚未全部闭环。
+现有 QEMU 实现按规划书 Week 1–2、Week 3–4 分组交付。目录和脚本中的 week1 至 week4 是计划阶段编号。2026-10-22复验分别通过 6、12、11、23 项检查。2026-10-23的[全部计划核查](../planning/week1-4-plan-audit.md)确认功能已有证据，Week1指定手册学习及S7/工业要求研究仍有资料缺口；完整计划尚未全部闭环。
 
 ```sh
 bash scripts/build-week4.sh
@@ -14,8 +14,11 @@ python3 scripts/verify-week4.py
 
 完整演示已覆盖镜像头与 CRC32 校验、应用加载、再次校验、处理器状态交接、应用 C 初始化及 SVC 异常验证。CRC 不提供签名认证，存储仍使用显式宿主检查点。
 
-- [第二周实习周报](../reports/week02/week2-report.md)
-- [第二周周报 Word 提交版](../reports/week02/第二周实习周报.docx)
+- [Week3 驱动与存储周报](../reports/week3/week3-report.md)
+- [Week4 固件校验与应用跳转周报](../reports/week4/week4-report.md)
+- [Week3 Word提交版](../reports/week3/Week3实习周报.docx)
+- [Week4 Word提交版](../reports/week4/Week4实习周报.docx)
+- [分周交付总索引](../planning/week3-week4-delivery-index.md)
 - [前四阶段交付说明与复现步骤](docs/week2-delivery.md)
 - [交付说明 Word 版](docs/前四阶段交付说明.docx)
 - [第四阶段技术指南](docs/week4-guide.md)
@@ -34,6 +37,7 @@ python3 scripts/verify-week3.py
 ```
 
 - [第三周架构、分区与操作指南](docs/week3-guide.md)
+- [SIMATIC 存储职责与本项目内存布局对应依据](docs/simatic-memory-mapping.md)
 - [第三周测试报告与覆盖边界](docs/week3-test-report.md)
 
 持久化依赖显式保存检查点，尚不具备真实 Flash 掉电恢复能力。CRC 与应用跳转现已由第四阶段实现；升级协议仍待后续阶段推进。
@@ -51,7 +55,8 @@ python3 scripts/verify-week2.py
 
 - [启动架构、操作指南与学习笔记](docs/week2-guide.md)
 - [逐步测试报告与覆盖边界](docs/week2-test-report.md)
-- [第二周实习周报](../reports/week02/week2-report.md)
+- [Week3 驱动与存储周报](../reports/week3/week3-report.md)
+- [Week4 固件校验与应用跳转周报](../reports/week4/week4-report.md)
 - [最终验收摘要](logs/week2-20261014-003543/summary.json)
 
 时钟按 QEMU 固定 25 MHz 模型适配，代码区仍为模拟 SRAM。本阶段不包括真实 PLL 调频、Flash 擦写或应用跳转。第一周工具链说明及原示例入口保留如下。
@@ -69,8 +74,8 @@ python3 scripts/verify-week2.py
 2026-10-13 已完成逐项核查和增强验证：6 项检查通过，其中 4 个独立固件运行场景，包括启动前内存污染和两个预期失败用例。
 
 - [查漏补缺及测试证据](docs/week1-audit.md)
-- [第一周周报](../reports/week01/week1-report.md)
-- [第一周周报 Word 版](../reports/week01/第一周实习周报.docx)
+- [Week 1–2 周报](../reports/week1-2/week1-2-report.md)
+- [Week 1–2 周报 Word 版](../reports/week1-2/Week1-2实习周报.docx)
 
 重新验证：`python3 scripts/verify-startup.py`。每次新建构建与证据目录，最新位置见 `logs/week1-review-latest.txt`，通过与否见对应 `summary.json`。
 
@@ -149,3 +154,7 @@ QEMU 自带 GDB server，直接连接 `arm-none-eabi-gdb`；本周无需 OpenOCD
 - https://docs.brew.sh/Installation
 - https://formulae.brew.sh/formula/arm-none-eabi-gcc
 - https://formulae.brew.sh/formula/arm-none-eabi-gdb
+
+## 2026-10-24 老师反馈修订
+
+在codes执行`make verify-all`重新验收；逐阶段使用`make verify-week1`至`make verify-week4`，反馈补测使用`make verify-feedback`。用例明细见docs/week1-test-report.md至week4-test-report.md及feedback-test-report.md，技术图示与格式见docs/teacher-feedback-technical.md。交付清单使用schemas/delivery-manifest.schema.json；生成及核验命令见技术说明。

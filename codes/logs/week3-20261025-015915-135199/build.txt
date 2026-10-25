@@ -1,0 +1,15 @@
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/uart.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week2/board.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/flash.c.obj
+[ 83%] Building C object CMakeFiles/bootloader-week3.elf.dir/src/week3/main.c.obj
+[ 83%] Building ASM object CMakeFiles/bootloader-week3.elf.dir/src/week3/startup.S.obj
+[100%] Linking C executable bootloader-week3.elf
+[100%] Built target bootloader-week3.elf
+[ 28%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/uart.c.obj
+[ 42%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/main.c.obj
+[ 42%] Building ASM object CMakeFiles/week3-test.elf.dir/src/week3/startup.S.obj
+[ 85%] Building C object CMakeFiles/week3-test.elf.dir/src/week3/flash.c.obj
+[ 85%] Building C object CMakeFiles/week3-test.elf.dir/src/week2/board.c.obj
+[ 85%] Building C object CMakeFiles/week3-test.elf.dir/tests/test_flash.c.obj
+[100%] Linking C executable week3-test.elf
+[100%] Built target week3-test.elf

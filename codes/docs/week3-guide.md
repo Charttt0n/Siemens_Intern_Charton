@@ -1,6 +1,6 @@
 # 第三周：UART 中断与模拟 Flash 存储
 
-周次说明：标题中的第三周为原计划第三阶段，实际在第二周提前完成；截至 2026-10-22 的后续校验与应用跳转见 week4-guide.md。历史测试日期与结论保持原意。
+周次说明：本文对应原计划Week3驱动与存储管理；Week4固件校验与应用跳转另见week4-guide.md。更新日期：2026-10-25；历史实现日期保留。独立内存分区交付说明见[week3-memory-layout.md](week3-memory-layout.md)，最新操作证据见[week3-test-report.md](week3-test-report.md)。
 实现日期：2026-10-19。任务依据为 `planning/项目理解＆W1理解&八周规划_工时补充版.docx` 中的第三周：UART 收发与中断、Flash 抽象层、Bootloader／主应用／备份／参数分区，以及读写、擦除和持久化验证。
 
 ## 1. 运行
@@ -76,7 +76,11 @@ AN500 UART0 为 CMSDK APB UART，基址 `0x40004000`；RX 为外部 IRQ 0，向�
 | `FLASH_BACKUP` | `[0x80000, 0xf0000)` | `0x20380000` | 448 KiB | 读／写／擦除 |
 | `FLASH_PARAMS` | `[0xf0000, 0x100000)` | `0x203f0000` | 64 KiB | 读／写／擦除 |
 
-这里的 Bootloader 分区是预留的逻辑区域，不含当前运行 ELF 的副本；当前代码从地址 0 启动。APP/BACKUP 是固件镜像存储槽，尚未确定第四周应用执行地址，也没有直接从这些槽跳转。
+这里的 Bootloader 分区是预留的逻辑区域，不含当前运行 ELF 的副本；当前代码从地址 0 启动。APP/BACKUP是存储槽；Week3不将槽地址作为应用执行地址或实施跳转。现有Week4运行地址约定见week4-guide.md，不计入Week3成果。
+
+### 4.1 SIMATIC 存储职责对应依据（2026-10-23补充）
+
+[SIMATIC 存储职责与本项目内存布局对应依据](simatic-memory-mapping.md)列出了研究样本 CPU 1511-1 PN（6ES7511-1AK02-0AB0）、官方资料、四分区及运行区对应表、容量设计理由和测试证据。对应限于装载、运行和保持性数据的职责；地址、容量、主备槽及显式检查点为本项目设计，不代表 SIMATIC 内部固件布局。严格物理布局对齐仍缺指定硬件和内部资料。
 
 ## 5. Flash 接口契约
 
@@ -98,7 +102,7 @@ AN500 UART0 为 CMSDK APB UART，基址 `0x40004000`；RX 为外部 IRQ 0，向�
 
 保存只允许在上一条 UART 命令已完成后进行；停止 CPU 后导出完整存储区，写入同目录临时文件，刷新内容，再替换镜像并刷新目录。写入或替换之前失败不会损坏已有检查点。已有镜像通过文件锁排除本工具的并发写入。
 
-这验证的是**显式检查点持久化**。它不模拟真实 Flash 控制器、擦写耗时、寿命、掉电撕裂写入或自动落盘。SIGKILL 后恢复到最后一次保存是预期行为；保存之后的修改会丢失。没有做宿主机突然断电的实机实验，也没有声明抗掉电能力。同大小镜像的内容损坏目前不会被检测，CRC 与签名校验属于后续任务。
+这验证的是**显式检查点持久化**。它不模拟真实 Flash 控制器、擦写耗时、寿命、掉电撕裂写入或自动落盘。SIGKILL 后恢复到最后一次保存是预期行为；保存之后的修改会丢失。没有做宿主机突然断电的实机实验，也没有声明抗掉电能力。Week3存储层不检测同大小镜像的内容损坏；CRC镜像校验归Week4，签名校验归后续安全阶段。
 
 ## 7. 验收与下一步
 
@@ -117,3 +121,19 @@ python3 scripts/verify-week2.py
 
 - [QEMU MPS2：AN500 内存映射和 UART IRQ 绑定](https://github.com/qemu/qemu/blob/master/hw/arm/mps2.c)
 - [QEMU CMSDK APB UART：RX 标志、DATA 读取和中断语义](https://github.com/qemu/qemu/blob/master/hw/char/cmsdk-apb-uart.c)
+
+## 一键入口与失败处理复验
+
+在 codes/ 执行 `python3 scripts/verify-cli-week34.py`，直接测试本指南构建和运行入口。干净构建、正常运行、产物缺失、CMake/QEMU失败、启动和UART超时、进程及文件锁清理的22项记录见 [入口专项报告](cli-week34-test-report.md)。故障注入仅在临时副本进行。
+
+## UART 波特率依据与读回
+
+25000000 / 115200 = 217余1600，按最近整数取217；推导波特率115207.3733 baud，误差+0.0064004%。UART0的BAUDDIV地址0x40004010读回0xD9，CTRL地址0x40004008读回0x0B。完整公式、操作步骤、专项日志及仿真边界见 [UART波特率验证报告](uart-baud-validation.md)。复验：在codes/执行 `python3 scripts/verify-uart-baud.py`。字符后端收发成功不代表已测得物理串口位宽。
+
+## PRIMASK接口契约与复验
+
+irq_save/irq_restore位于src/week2/irq.h；每层保存原值、按后进先出恢复，所有出口必须配对。原值为1时不能无条件打开中断。两个初始值及嵌套、UART调用的22个读回断言已通过，见 [PRIMASK专项报告](irq-contract-validation.md)。复验：在codes/执行 `python3 scripts/verify-irq-contract.py`。
+
+## TX持续阻塞与轮询上限
+
+持续TX_FULL注入已验证：每次uart_flush最多读取状态1000000次后返回-1；putc不写DATA，write向上返回失败。Week3设置boot_status=3；Week4设置0x101，应用设置app_status=4。此预算不是准确毫秒超时。操作、预期/实际、上层取证及仿真边界见 [TX专项报告](tx-full-validation.md)；在codes/执行 `python3 scripts/verify-tx-full.py`复验。

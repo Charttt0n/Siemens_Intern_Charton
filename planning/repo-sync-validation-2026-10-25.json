@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-25T19:54:36.428038+08:00",
+  "base_commit": "ef7d99cc9b91e53e19515cd32c70f3b3aa94bc59",
+  "runs": [
+    {
+      "summary": "codes/logs/week1-review-20261025-194736/summary.json",
+      "status": "PASS",
+      "check_groups": 6,
+      "summary_sha256": "71c0676f3d641a4b9aaf29a13f1b35e488f1a9b5b981d9add98082ce4ed2603a"
+    },
+    {
+      "summary": "codes/logs/week2-20261025-194740/summary.json",
+      "status": "PASS",
+      "check_groups": 12,
+      "summary_sha256": "587b1bc23ad7e53ac1a58c73b85fc403d57cf2ad8a6c50b011106122d1d4e903"
+    },
+    {
+      "summary": "codes/logs/week3-20261025-194745-069670/summary.json",
+      "status": "PASS",
+      "check_groups": 11,
+      "summary_sha256": "496ca7b3393c21aa0ae75bef0a906f5635913519f95b77b2cd9c28a313c1ea4c"
+    },
+    {
+      "summary": "codes/logs/week4-20261025-194750-235697/summary.json",
+      "status": "PASS",
+      "check_groups": 27,
+      "summary_sha256": "f07e750bcfb7b83ce4e4c6c3c437e847193f1dd3514e7028ae54e713e1c5b207"
+    },
+    {
+      "summary": "codes/logs/feedback-20261025-194754/summary.json",
+      "status": "PASS",
+      "check_groups": 30,
+      "summary_sha256": "bb59941a1616a9c38ca7baa68858194f95f688d22b6486cad4331cbc90f13854"
+    },
+    {
+      "summary": "codes/logs/tx-full-20261025-194740/summary.json",
+      "status": "PASS",
+      "check_groups": 7,
+      "summary_sha256": "5e75c7784b8c9d716db9ea61bf7516f0bfcd3dcf637a9cf9059cf16b504ef335"
+    },
+    {
+      "summary": "codes/logs/irq-contract-20261025-194742/summary.json",
+      "status": "PASS",
+      "check_groups": 2,
+      "summary_sha256": "33e33047f821e7b0d09b18ba32f0a47b0fd29b68c5293e78ef1cc3e8a26f131a"
+    },
+    {
+      "summary": "codes/logs/vector-bounds-20261025-194743/summary.json",
+      "status": "PASS",
+      "check_groups": 9,
+      "summary_sha256": "6ca581e97e5dc10b6adc077eed6367cc15db4812e156a53e4028f3a0a3cf9f7e"
+    },
+    {
+      "summary": "codes/logs/uart-baud-20261025-194746/summary.json",
+      "status": "PASS",
+      "check_groups": 2,
+      "summary_sha256": "9b2b26121f787d6a7a6169d5241d5c8839977362c18bf0f6337314587f645f09"
+    },
+    {
+      "summary": "codes/logs/manifest-20261025-194746/summary.json",
+      "status": "PASS",
+      "check_groups": 41,
+      "summary_sha256": "4a91037e3cc348ed733d51b518f69933c0abf4b912e40f87887d346a8908ccd9"
+    }
+  ],
+  "week3_pdf_qa": {
+    "source_docx_sha256": "ae6134dca89a35442c45e3458478ed9070266064531239aec43b401645092061",
+    "pdf_pages": 12,
+    "paper": "A4 portrait",
+    "missing_word_body_paragraphs": 0,
+    "missing_word_table_cells": 0,
+    "pdf_sha256": "0ce75839fa05d4003ed0bbe01ae788917edd170fe09ca5471b0d89973c59674e"
+  },
+  "notes": "Check groups are independent suite counts; do not sum overlapping tests. CLI34 earlier evidence is preserved without claiming a new run. Teacher confirmation remains pending."
+}

@@ -23,7 +23,7 @@ OUT=ROOT/'logs'/('week4-'+STAMP)
 GOOD=(b'BOOT: stage4 image validation\r\nIMAGE: CRC32 PASS\r\n'
       b'LOAD: verified at 0x00010000\r\nJUMP: application\r\n'
       b'APP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ')
-summary={'status':'RUNNING','actual_week':2,'plan_stage':4,'started_at':STAMP,'checks':[]}
+summary={'status':'RUNNING','plan_group':'week3-4','plan_stage':4,'started_at':STAMP,'checks':[]}
 
 
 def save():
@@ -88,7 +88,7 @@ def main():
                 run([tool,'--version'],tool+'-version')
             run(['cmake','-S',str(ROOT),'-B',str(build),'-G','Unix Makefiles',
                  '-DCMAKE_TOOLCHAIN_FILE='+str(ROOT/'cmake/arm-none-eabi.cmake')],'configure')
-            run(['cmake','--build',str(build),'--parallel'],'build')
+            run(['cmake','--build',str(build),'--target','bootloader-week4.elf','application.elf','--parallel'],'build')
             boot=build/'bootloader-week4.elf'; app=build/'application.elf'
             run(['arm-none-eabi-objcopy','-O','binary',str(app),str(build/'application.bin')],'objcopy')
             payload=(build/'application.bin').read_bytes()
@@ -134,18 +134,20 @@ def main():
             for name,index,value in [('unaligned-msp',0,0x20200004),('boot-ram-msp',0,0x20010000),
                                      ('even-reset',1,0x100c0),('outside-reset',1,0x80001),
                                      ('vector-table-reset',1,0x10001),('bad-irq-vector',16,0),
-                                     ('reserved-vector',7,0x100c1)]:
+                                     ('reserved-vector',7,0x100c1), ('msp-above-top',0,0x20200008), ('msp-below-base',0,0x2000fff8), ('reset-at-end',1,0x10000+len(payload)|1), ('irq-before-code',16,0xffff)]:
                 data=bytearray(base); struct.pack_into('<I',data,APP_OFFSET+32+index*4,value)
                 struct.pack_into('<I',data,APP_OFFSET+24,zlib.crc32(data[APP_OFFSET+32:APP_OFFSET+32+len(payload)]))
                 struct.pack_into('<I',data,APP_OFFSET+28,zlib.crc32(data[APP_OFFSET:APP_OFFSET+28]))
                 cases.append((name,bytes(data),7))
             cases.append(('maximum-payload',package(payload+b'\xff'*(SLOT_SIZE-HEADER_SIZE-len(payload))),0))
+            summary['image_cases'] = []
             for name,data,expected in cases:
                 seed=build/(name+'.bin'); seed.write_bytes(data)
                 run([str(native_image),str(seed),str(expected)],name+'-native')
                 with Session(boot,seed,OUT/name) as vm:
                     wanted=GOOD if expected==0 else f'BOOT: stage4 image validation\r\nREJECT: 0x{expected:08x}\r\n> '.encode()
                     assert vm.banner==wanted, (name,vm.banner)
+                summary['image_cases'].append({'name':name,'sha256':hashlib.sha256(data).hexdigest(),'expected_code':expected,'actual_uart':vm.banner.decode('ascii'),'header_hex':data[APP_OFFSET:APP_OFFSET+32].hex(),'vectors_hex':data[APP_OFFSET+32:APP_OFFSET+32+192].hex(),'status':'PASS'})
                 record('native and QEMU image '+name)
             seed=build/'valid.bin'
             debug_case(boot,seed,'dirty-state-handoff-and-app-crt',f'''
