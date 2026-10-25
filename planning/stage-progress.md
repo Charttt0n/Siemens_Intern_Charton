@@ -25,3 +25,5 @@
 2026-10-24反馈修订：各阶段6/12/11/27个检查分组通过，反馈补测30项通过；Word、Markdown和PDF已同步，记录见 [反馈修改记录](teacher-feedback-2026-10-24.md)。此状态为本地验证完成，待老师审核，Week5尚不推进。
 
 2026-10-25分周整理：Week3与Week4分别维护独立周报、交付索引及ZIP，旧合并版移至archive/reports/week3-4-pre-split-20261025。当前交付入口以[分周总索引](week3-week4-delivery-index.md)为准；未开始Week5，老师确认仍待填写。
+
+2026-10-25仓库同步：源文件修订 `b0ddeec19a7cbebcf5c43ba746a769a3e8db9142` 已推送 `origin/main`。Week1–4验收、反馈补测及TX_FULL/PRIMASK/向量范围/波特率/manifest专项均通过，复测证据见 [仓库同步验证记录](repo-sync-validation-2026-10-25.json)。最新Week3 Word与PDF已同步。老师确认仍待完成，Week5未开始；此前“未提交”描述为当时的历史状态。

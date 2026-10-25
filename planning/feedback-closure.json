@@ -1,6 +1,6 @@
 {
   "base_commit": "ef7d99cc9b91e53e19515cd32c70f3b3aa94bc59",
-  "revision_status": "uncommitted-local-changes",
+  "revision_status": "committed",
   "teacher_status": "pending",
   "items": [
     {
@@ -11,7 +11,7 @@
       "evidence": "codes/logs/week3-20261024-173044-978155；week4-20261024-173015-915034",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-02",
@@ -21,7 +21,7 @@
       "evidence": "codes/logs/cli-week34-20261024-234802",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-03",
@@ -31,7 +31,7 @@
       "evidence": "codes/logs/uart-baud-20261024-235338",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-04",
@@ -41,7 +41,7 @@
       "evidence": "codes/logs/irq-contract-20261024-235737",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-05",
@@ -51,7 +51,7 @@
       "evidence": "codes/logs/week3-20261024-173044-978155/write/qmp.json",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-06",
@@ -61,7 +61,7 @@
       "evidence": "codes/logs/tx-full-20261025-015904",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-07",
@@ -71,7 +71,7 @@
       "evidence": "codes/logs/week4-20261025-015917-068252",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-08",
@@ -81,7 +81,7 @@
       "evidence": "codes/logs/vector-bounds-20261025-021521",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-09",
@@ -91,7 +91,7 @@
       "evidence": "codes/logs/week4-20261025-015917-068252；codes/logs/vector-bounds-20261025-021521",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-10",
@@ -101,7 +101,7 @@
       "evidence": "codes/logs/vector-bounds-20261025-021521；codes/logs/tx-full-20261025-015904",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-11",
@@ -111,7 +111,7 @@
       "evidence": "codes/logs/manifest-20261025-021604",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     },
     {
       "id": "FB-12",
@@ -121,7 +121,9 @@
       "evidence": "planning/feedback-version.json；output交付包/delivery-manifest.json",
       "teacher_confirmation": "pending",
       "confirmed_at": null,
-      "commit": null
+      "commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142"
     }
-  ]
+  ],
+  "source_revision": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142",
+  "pushed": true
 }

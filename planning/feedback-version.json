@@ -1,10 +1,10 @@
 {
   "base_commit": "ef7d99cc9b91e53e19515cd32c70f3b3aa94bc59",
-  "revision_status": "uncommitted-local-changes",
-  "pushed": false,
+  "revision_status": "committed",
+  "pushed": true,
   "teacher_confirmation": "pending",
-  "captured_at": "2026-10-25T19:54:36.525377+08:00",
-  "source_tree_sha256": "1a7f2c4ed89c8e2b86a32874292a5151644be4d17636db59310731a0e9e553f5",
+  "captured_at": "2026-10-25T19:55:08.281395+08:00",
+  "source_tree_sha256": "a7c3d56f74a630a328c5983ccf7ac68c244c83b84044dadd85ea8a652ef2ab98",
   "hash_scope": "codes/reports/planning/notes + README/AGENTS/.gitignore/.vscode; exclude logs/build/downloads/caches/ZIP and this self-referential file; raw evidence remains in Git",
   "change_context": "Week3/Week4 split reports; teacher-feedback fixes and full regression; current Week3 Word/PDF synchronized; canonical storage PDFs added; generated delivery snapshots excluded from Git",
   "previous_fingerprint": "archive/delivery-split-20261025/before/feedback-version-pre-split.json",
@@ -616,8 +616,8 @@
     },
     {
       "path": "planning/feedback-closure.json",
-      "size": 5002,
-      "sha256": "dff4799d53e82390286a0c80af59ff4c162c1aa9d67b21af013b91927be0c769"
+      "size": 5525,
+      "sha256": "0334bc97a393da39ce0e40a6c52a7b223ba5fca21ff3bce8809c40383be3a709"
     },
     {
       "path": "planning/repo-sync-validation-2026-10-25.json",
@@ -626,13 +626,13 @@
     },
     {
       "path": "planning/stage-progress.md",
-      "size": 2991,
-      "sha256": "5e2c26787dcd3536d1ed86cfa60932062da9abd05a3b060ac584823c8a6111b7"
+      "size": 3416,
+      "sha256": "53334765d6fc06f3cc392d3a5a4e4a6023c8debc97e894b240e006a7218da8ca"
     },
     {
       "path": "planning/teacher-feedback-2026-10-24.md",
-      "size": 4636,
-      "sha256": "6979bf8cb868f8a53e84475616567e16a84e696b2b12979a990b4d14fb274c28"
+      "size": 4563,
+      "sha256": "3f4787736b473a422d7eb54781fdf6abcb94dfef6d180dcc20b294db40833293"
     },
     {
       "path": "planning/week1-4-plan-audit.md",
@@ -739,5 +739,8 @@
       "size": 34080,
       "sha256": "4a7aa8bffca494fab3b8b2ec1f6c31a57fa655e97a551d0035f89f409a09e9e0"
     }
-  ]
+  ],
+  "revision_commit": "b0ddeec19a7cbebcf5c43ba746a769a3e8db9142",
+  "publication_recorded_at": "2026-10-25T19:55:08.180702+08:00",
+  "revision_note": "revision_commit identifies the pushed functional/source snapshot. This metadata follow-up records its publication; resolve the containing commit through Git history."
 }
