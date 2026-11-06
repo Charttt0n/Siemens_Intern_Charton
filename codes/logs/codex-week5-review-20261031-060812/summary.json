@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "scope": "independent duplicate no-progress bound review",
+  "build_exit": 0,
+  "test_exit": 1,
+  "expected": "retry_limit=3 must terminate repeated non-progress frames without injected IO",
+  "actual": "result=1 reads=20001 sink_writes=1 (retry budget=3)",
+  "source_sha256": "e9cca45f556d952a9bfaca9f6fd95e8bb864204ecf06982b27efa164f7c45653",
+  "baseline_acceptance": "week5-20261031-055336-038519/summary.json",
+  "ownership": "luo writes only this evidence directory; yang owns production fixes"
+}

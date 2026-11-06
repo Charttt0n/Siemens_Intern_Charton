@@ -1,0 +1,22 @@
+gmake[1]: Entering directory '/private/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-zek4h_1p'
+[ 66%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week4/image.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week4/crc32.c.obj
+[ 88%] Building ASM object CMakeFiles/bootloader-week5.elf.dir/src/week4/handoff.S.obj
+[ 88%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week3/uart.c.obj
+[ 88%] Building ASM object CMakeFiles/bootloader-week5.elf.dir/src/week3/startup.S.obj
+[ 88%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/main.c.obj
+[ 88%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week3/flash.c.obj
+[ 88%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week2/board.c.obj
+[100%] Linking C executable bootloader-week5.elf
+[100%] Built target bootloader-week5.elf
+[ 75%] Building ASM object CMakeFiles/application-v1.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application-v1.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building C object CMakeFiles/application-v1.elf.dir/src/week2/uart.c.obj
+[100%] Linking C executable application-v1.elf
+[100%] Built target application-v1.elf
+[ 75%] Building C object CMakeFiles/application-v2.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building ASM object CMakeFiles/application-v2.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application-v2.elf.dir/src/week2/uart.c.obj
+[100%] Linking C executable application-v2.elf
+[100%] Built target application-v2.elf
+gmake[1]: Leaving directory '/private/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-zek4h_1p'

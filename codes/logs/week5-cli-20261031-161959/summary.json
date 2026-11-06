@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "seed",
+    "upload-v2",
+    "cold-boot-v2",
+    "seed-refuses-overwrite",
+    "upload-invalid-package"
+  ]
+}

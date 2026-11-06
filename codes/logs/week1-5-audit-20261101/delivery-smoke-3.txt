@@ -1,0 +1,12 @@
+UPGRADE: READY
+UPGRADE: COMMITTED
+IMAGE: SLOT A CRC32 PASS
+IMAGE: VERSION 0x00000003
+LOAD: verified at 0x00010000
+JUMP: application
+APP: CRT PASS
+APP: HANDOFF PASS
+APP: VERSION v3
+APP: SVC PASS
+APP: RUNNING
+> {"status": "PASS", "metadata": {"generation": 13, "active": 1, "target": 4294967295, "state": 0, "state_name": "IDLE", "progress": 0, "expected": 0, "version": 0, "error": 0}, "image": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-smoke-nor.bin"}

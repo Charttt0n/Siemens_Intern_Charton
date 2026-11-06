@@ -1,0 +1,109 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 178058621623791,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058621824291,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434798,
+      "microseconds": 535282
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058622567708,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434798,
+      "microseconds": 536007
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058622649125,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434798,
+      "microseconds": 536087
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058622909125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058643736083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000001\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058644006625,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434798,
+      "microseconds": 557449
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178058644334166,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261031-161743-695241/target-erase-prefix73/tmpwenuh8ap"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "fault_snapshot": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261031-161743-695241/target-erase-prefix73/nor-at-fault.bin",
+    "bytes": 1048576
+  }
+]

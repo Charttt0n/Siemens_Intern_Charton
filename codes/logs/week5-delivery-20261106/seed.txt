@@ -1,0 +1,1 @@
+Created NOR seed: /private/tmp/siemens-week5-package.v77mNH/demo-nor.bin (active A after initialization)

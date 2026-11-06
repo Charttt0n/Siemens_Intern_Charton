@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "scope": "week5-step1-2",
+  "started_at": "20261031-040313-404379",
+  "checks": [
+    "fresh Week-5 build; boot stack below APP_RAM_BASE; app linked at 0x10000",
+    "v1/v2 payloads differ; packages are exactly header + payload",
+    "package framing, CRC, vector, capacity and seed boundaries",
+    "packer rejects ELF input and a 1 MiB flash dump",
+    "native slot API: A/B, illegal slots, bad CRC/length/vector, wrappers",
+    "native boot_meta: transactions, damage, IO states, torn writes, wrap",
+    "QEMU boot case boot-slot-a",
+    "QEMU boot case boot-slot-b",
+    "QEMU boot case both-valid-prefers-a",
+    "QEMU boot case a-payload-corrupt-boots-b",
+    "QEMU boot case a-header-crc-stale",
+    "QEMU boot case a-length-zero",
+    "QEMU boot case a-length-over-slot",
+    "QEMU boot case a-load-address",
+    "QEMU boot case a-vector-even-reset",
+    "QEMU boot case b-invalid-ignored-while-a-valid",
+    "QEMU boot case both-invalid",
+    "all slot A/B boot and rejection banners match exactly",
+    "no QEMU guest errors in any boot case"
+  ],
+  "boot_cases": [
+    {
+      "name": "boot-slot-a",
+      "seed_sha256": "a144b69a4805264eed12c2830fa952d76dbf54c344e9e19d38a5db5d0a4bf0e2",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "boot-slot-b",
+      "seed_sha256": "d687e2e9e4f9703d0cdf69ff74cb7759c3e576c52c2cff9153632cd9c1e51881",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "both-valid-prefers-a",
+      "seed_sha256": "fb2eeff64e1efec049ceb97c387373ec5c919c6a114b3e4f30040f1b06c2fb23",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-payload-corrupt-boots-b",
+      "seed_sha256": "32a0fbcf4041ee5a98cd2d9b3eebfa2707b14b9888a882e29f368d5ee896dce1",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000006\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000006\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-header-crc-stale",
+      "seed_sha256": "ca64a147532219ff17d31f8f7ba76f347cd43b545ac29b902cd880e0ad587174",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000003\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000003\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000003\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000003\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-length-zero",
+      "seed_sha256": "92561313a3206c3bcebe408e3bb1bc9eaab3e863479f967a3aa9d4a9920217e5",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-length-over-slot",
+      "seed_sha256": "f6ada1e268234bc538180cbe3b1e50217c79eeebd05dd71b6807cca7daef931f",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-load-address",
+      "seed_sha256": "bbfc4abd0dc4b32d7aa6340bbcf73cc9c792fd08abd112899944e1077fe535eb",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000005\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000005\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000005\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000005\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-vector-even-reset",
+      "seed_sha256": "7bae2ac812e701753ca5523302c4227d38cd5bd22e00163146076313f5154cba",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000007\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000007\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000007\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000007\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "b-invalid-ignored-while-a-valid",
+      "seed_sha256": "5f3db346ec0804057943323110df4fda737d597068275b0f8f5b8a688df49f4e",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "both-invalid",
+      "seed_sha256": "13aa51e4b403809c0380eeb3a50e60d5d39210ca28c6a351eaa80176c40b5195",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B REJECT 0x00000007\r\nREJECT: 0x00000002\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B REJECT 0x00000007\r\nREJECT: 0x00000002\r\n> ",
+      "status": "PASS"
+    }
+  ],
+  "elf_sha256": {
+    "bootloader-week5.elf": "906d7b366b26cbc830fe0b740d3879fa105f622df2b0459e7473cfd13780298f",
+    "application-v1.elf": "b1ac9e90a639f4d545d016b50416f02ca1012157f70d52d61c31c7d62ec41cae",
+    "application-v2.elf": "12654f5208290fbfe80f2bc71a0374325a159d3b225cdfcf80b93dc0bc2a2781"
+  },
+  "payload_bytes": {
+    "v1": 1004,
+    "v2": 1004
+  },
+  "package_bytes": {
+    "v1": 1036,
+    "v2": 1036
+  }
+}

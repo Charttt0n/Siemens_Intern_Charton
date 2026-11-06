@@ -1,0 +1,9 @@
+$ /Users/charton/.local/bin/python3 scripts/run-week3.py
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+BOOT: week3 UART RX IRQ; simulated NOR; host checkpoints
+> PONG
+> Saved: /private/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/feedback-545n1vda/codes/build/week3-flash.bin
+> Saved: /private/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/feedback-545n1vda/codes/build/week3-flash.bin
+
+EXIT=0 TIMEOUT=False

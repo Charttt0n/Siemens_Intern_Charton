@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "clock_hz": 25000000,
+  "target_baud": 115200,
+  "divisor": 217,
+  "calculated_baud": 115207.3732718894,
+  "error_percent": 0.006400409626228232,
+  "checks": [
+    {
+      "id": "BAUD-W3",
+      "status": "PASS",
+      "elf_sha256": "67b0b012b41b53dee7b7c2ba4a4a01bda01d60debf10c94d91d176649e8cb55e",
+      "clock_hz": 25000000,
+      "bauddiv": 217,
+      "ctrl": 11,
+      "phase": "Week3 banner",
+      "evidence": [
+        "week3-qtree.txt",
+        "week3-registers.txt",
+        "week3/uart.log"
+      ]
+    },
+    {
+      "id": "BAUD-W4",
+      "status": "PASS",
+      "elf_sha256": "b513f9fdc0ce0a87cc613090e7f1a0f935ba00aaa9629ee64e8c4bf8cc5526cc",
+      "clock_hz": 25000000,
+      "bauddiv": 217,
+      "ctrl": 11,
+      "phase": "Week4 rejection idle; blank image (no app UART re-init)",
+      "evidence": [
+        "week4-qtree.txt",
+        "week4-registers.txt",
+        "week4/uart.log"
+      ]
+    }
+  ]
+}

@@ -29,6 +29,12 @@ int app_main(void) {
         app_status=2; print("APP: CRT or handoff FAIL\r\n> "); app_idle();
     }
     print("APP: CRT PASS\r\nAPP: HANDOFF PASS\r\n");
+    /* Week-5 upgrade demos build three variants from this source. The version
+       line makes the running program, not just the image header, identifiable;
+       the Week-4 application target leaves the macro undefined on purpose. */
+#ifdef APP_VERSION_STRING
+    print("APP: VERSION " APP_VERSION_STRING "\r\n");
+#endif
     __asm__ volatile ("cpsie i\nsvc #0" ::: "memory");
     if (app_svc_count != 1) { app_status=2; print("APP: SVC FAIL\r\n> "); app_idle(); }
     print("APP: SVC PASS\r\nAPP: RUNNING\r\n> ");

@@ -1,5 +1,8 @@
 # Cortex-M7 工业 Bootloader 学习工程
 
+
+2026-11-01 当前交付：[前五周阶段交付总索引](../planning/week1-5-delivery-index.md)。Week1–5 主要仿真功能已复验；Week5 周报和升级测试报告已编写。Week1 研究资料及平台适配确认仍有未闭环项，详见总索引中的符合性核查。
+
 目标：在 Apple Silicon macOS 上完成 GNU Arm GCC + CMake/Make → ELF → QEMU Cortex-M7 → GDB 的验证闭环。
 
 ## Week 1–4 分组交付（2026-10-22）
@@ -158,3 +161,8 @@ QEMU 自带 GDB server，直接连接 `arm-none-eabi-gdb`；本周无需 OpenOCD
 ## 2026-10-24 老师反馈修订
 
 在codes执行`make verify-all`重新验收；逐阶段使用`make verify-week1`至`make verify-week4`，反馈补测使用`make verify-feedback`。用例明细见docs/week1-test-report.md至week4-test-report.md及feedback-test-report.md，技术图示与格式见docs/teacher-feedback-technical.md。交付清单使用schemas/delivery-manifest.schema.json；生成及核验命令见技术说明。
+
+
+## Week 5 串口升级
+
+[Week 5 操作指南](docs/week5-guide.md) 包含构建、单固件打包、YMODEM 发送、连续 A/B 槽切换与恢复方法。`bash scripts/build-week5.sh` 构建 v1/v2/v3；`make verify-week5` 验证完整升级及受控中断冷启动。`make verify-all` 现包含 Week 1–5 与反馈回归。当前工作只含代码、测试与使用说明，未生成 Week 5 周报或交付包。

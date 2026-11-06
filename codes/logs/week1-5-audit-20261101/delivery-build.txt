@@ -1,0 +1,17 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/charton/Projects/Siemens_Intern_Charton/codes/build/week5
+[100%] Built target bootloader-week5.elf
+[100%] Built target bootloader-week5-upgrade.elf
+[100%] Built target application-v1.elf
+[100%] Built target application-v2.elf
+[100%] Built target application-v3.elf
+Packed build/week5/application-v1.bin (1004 payload bytes) into build/week5/application-v1.pkg (1036 bytes, version 1)
+Packed build/week5/application-v2.bin (1004 payload bytes) into build/week5/application-v2.pkg (1036 bytes, version 2)
+Packed build/week5/application-v3.bin (1004 payload bytes) into build/week5/application-v3.pkg (1036 bytes, version 3)
+   text	   data	    bss	    dec	    hex	filename
+   9452	      0	   4284	  13736	   35a8	build/week5/bootloader-week5.elf
+   9160	      0	   4284	  13444	   3484	build/week5/bootloader-week5-upgrade.elf
+    992	     12	   4132	   5136	   1410	build/week5/application-v1.elf
+    992	     12	   4132	   5136	   1410	build/week5/application-v2.elf
+    992	     12	   4132	   5136	   1410	build/week5/application-v3.elf

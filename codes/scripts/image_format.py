@@ -21,8 +21,8 @@ def package(payload, version=1):
         if i in (7,8,9,10,13):
             if entry:
                 raise ValueError('reserved vector must be zero')
-        elif not (entry & 1) or not APP_BASE+192 <= (entry & ~1) < APP_BASE+len(payload):
-            raise ValueError('application vector outside payload or not Thumb')
+        elif not (entry & 1) or not APP_BASE + 192 <= (entry & ~1) <= APP_BASE + len(payload) - 2:
+            raise ValueError('application vector has no complete Thumb halfword inside payload')
     header = struct.pack('<7I', MAGIC, 1, HEADER_SIZE, len(payload), APP_BASE,
                          version, zlib.crc32(payload))
     image = bytearray(b'\xff' * FLASH_SIZE)

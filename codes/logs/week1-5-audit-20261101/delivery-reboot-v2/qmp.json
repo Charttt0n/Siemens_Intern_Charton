@@ -1,0 +1,98 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 189024022926416,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024023714208,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793466239,
+      "microseconds": 502212
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024024734291,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793466239,
+      "microseconds": 503226
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024024831000,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793466239,
+      "microseconds": 503328
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024025826500,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793466239,
+      "microseconds": 504322
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024025925750,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-newsgqi1/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 189024027750416,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793466239,
+      "microseconds": 506247
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

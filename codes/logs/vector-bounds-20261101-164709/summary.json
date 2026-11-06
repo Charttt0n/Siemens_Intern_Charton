@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "VEC-MATRIX",
+      "status": "PASS",
+      "actual": 321,
+      "evidence": "matrix.txt"
+    },
+    {
+      "id": "MSP-AT-BASE",
+      "index": 0,
+      "value": 536936448,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "MSP-AT-BASE/uart.log"
+    },
+    {
+      "id": "RESERVED-13",
+      "index": 13,
+      "value": 65729,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "RESERVED-13/uart.log"
+    },
+    {
+      "id": "IRQ31-END",
+      "index": 47,
+      "value": 66509,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "IRQ31-END/uart.log"
+    },
+    {
+      "id": "RESET-BELOW",
+      "index": 1,
+      "value": 65727,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "RESET-BELOW/uart.log"
+    },
+    {
+      "id": "VB-04-MSP-ABOVE-TOP",
+      "index": 0,
+      "value": 538968080,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "VB-04-MSP-ABOVE-TOP/uart.log"
+    },
+    {
+      "id": "VB-05-RESERVED-8",
+      "index": 8,
+      "value": 65729,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "VB-05-RESERVED-8/uart.log"
+    },
+    {
+      "id": "VB-06-IRQ31-EVEN",
+      "index": 47,
+      "value": 65728,
+      "status": "PASS",
+      "expected_code": 7,
+      "actual_code": 7,
+      "evidence": "VB-06-IRQ31-EVEN/uart.log"
+    },
+    {
+      "id": "LOAD-VECTOR-MSP",
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "LOAD-VECTOR-MSP.txt"
+    },
+    {
+      "id": "LOAD-VECTOR-IRQ31",
+      "status": "PASS",
+      "actual_code": 7,
+      "evidence": "LOAD-VECTOR-IRQ31.txt"
+    },
+    {
+      "id": "STATUS-IO",
+      "status": "PASS",
+      "actual_code": 1,
+      "evidence": "STATUS-IO.txt"
+    },
+    {
+      "id": "STATUS-HARDFAULT",
+      "status": "PASS",
+      "actual_code": 256,
+      "evidence": "STATUS-HARDFAULT.txt"
+    }
+  ],
+  "elf_sha256": {
+    "bootloader-week4.elf": "2b58b00b365b3df9e10064e2845c51dde1f2b32a497e8f305a1313a4e830d361",
+    "application.elf": "e3c01dda1262fc3700515bba66572c5c0a91f85898e11038c57c3c97ad0be0c0"
+  },
+  "matrix_assertions": 321,
+  "cpu_gdb_paths": 11
+}

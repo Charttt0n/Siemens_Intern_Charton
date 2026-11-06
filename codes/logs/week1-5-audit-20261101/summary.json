@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-01",
+  "head": "64cc17b40ffbbc8ba6aa4e252aaeeea6a791bb4e",
+  "scope": "working-tree, QEMU AN500, Weeks 1-5",
+  "conclusion": "simulation functionality passes; full plan conditional/partial",
+  "firmware_unchanged_during_audit": true,
+  "changed_preexisting_scripts": [
+    "codes/scripts/delivery_manifest.py",
+    "codes/scripts/export_weekly_reports.py",
+    "codes/scripts/verify-manifest.py"
+  ],
+  "suites": {
+    "week1-review": {
+      "directory": "codes/logs/week1-review-20261101-005706",
+      "status": "PASS",
+      "checks": 6
+    },
+    "week2": {
+      "directory": "codes/logs/week2-20261101-005710",
+      "status": "PASS",
+      "checks": 12
+    },
+    "week3": {
+      "directory": "codes/logs/week3-20261101-005715-135530",
+      "status": "PASS",
+      "checks": 11
+    },
+    "week4": {
+      "directory": "codes/logs/week4-20261101-005717-815700",
+      "status": "PASS",
+      "checks": 27
+    },
+    "week5": {
+      "directory": "codes/logs/week5-20261101-005722-628287",
+      "status": "PASS",
+      "checks": 71
+    },
+    "feedback": {
+      "directory": "codes/logs/feedback-20261101-010030",
+      "status": "PASS",
+      "checks": 30
+    },
+    "handoff-contract": {
+      "directory": "codes/logs/handoff-contract-20261101-005853",
+      "status": "PASS",
+      "checks": 7
+    },
+    "vector-bounds": {
+      "directory": "codes/logs/vector-bounds-20261101-005856",
+      "status": "PASS",
+      "checks": 9
+    },
+    "irq-contract": {
+      "directory": "codes/logs/irq-contract-20261101-005901",
+      "status": "PASS",
+      "checks": 2
+    },
+    "tx-full": {
+      "directory": "codes/logs/tx-full-20261101-005901",
+      "status": "PASS",
+      "checks": 7
+    },
+    "uart-baud": {
+      "directory": "codes/logs/uart-baud-20261101-005903",
+      "status": "PASS",
+      "checks": 2
+    },
+    "cli-week34": {
+      "directory": "codes/logs/cli-week34-20261101-005904",
+      "status": "PASS",
+      "checks": 22
+    },
+    "manifest": {
+      "directory": "codes/logs/manifest-20261101-005933",
+      "status": "PASS",
+      "checks": 43
+    }
+  },
+  "week5": {
+    "check_groups": 71,
+    "boot_cases": 23,
+    "negative_cases": 11,
+    "fault_cases": 9,
+    "interop": 9
+  },
+  "open_items": [
+    "W1 specified manual study and industrial applicability",
+    "accept fixed clock / SRAM NOR with checkpoints / SIMATIC role analogy",
+    "teacher review pending"
+  ],
+  "versions": [
+    "QEMU emulator version 11.1.2",
+    "arm-none-eabi-gcc (GCC) 16.2.0",
+    "cmake version 4.4.4",
+    "GNU gdb (xPack GNU Arm Embedded GCC arm64) 16.3.90.20250906-git",
+    "GNU Make 4.4.1",
+    "git version 2.56.0"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "pdf_pages": 11,
+  "docx_tables": 9,
+  "image_input_rows": 22,
+  "all_22_image_hashes_match_previous_evidence": true,
+  "manifest_example_valid": true,
+  "preexisting_session_diff_preserved": true,
+  "visual_review": "render-v3 all 11 pages inspected",
+  "git_head": "64cc17b40ffbbc8ba6aa4e252aaeeea6a791bb4e",
+  "artifacts": [
+    {
+      "path": "reports/week4/week4-report.md",
+      "size": 22550,
+      "sha256": "80251651ee1f1f1379256c34369e0b89ff6f10afe1dc0fcdb2c6735845fd1a9c"
+    },
+    {
+      "path": "reports/week4/Week4实习周报.docx",
+      "size": 347350,
+      "sha256": "af6b9e0b6b867f8c3fc81010147a9508c72c3a4c648bd6e9358b6cbcbb235368"
+    },
+    {
+      "path": "reports/week4/Week4实习周报.pdf",
+      "size": 1020938,
+      "sha256": "8973ea2009541427be22559f2c182b15856d564c6546ce1cb08c5708203faf42"
+    },
+    {
+      "path": "codes/docs/week4-test-report.md",
+      "size": 20845,
+      "sha256": "586547154ec90a9b2a0d0d074e46e7fa56b6b0df2f0f464958ffa639ad4e5611"
+    },
+    {
+      "path": "planning/teacher-feedback-review-2026-10-29.md",
+      "size": 6827,
+      "sha256": "45e37acdf46018cb5b8d0a0f1a5ce86c9fc7e0fafd0380d18fc2d562828e884e"
+    },
+    {
+      "path": "codes/docs/images/week4-boot-flow-reviewed.png",
+      "size": 307514,
+      "sha256": "6d80dc47f57913f4344b73a067decc3b2daf98d30a3c218bfa4285950dbd432a"
+    }
+  ]
+}

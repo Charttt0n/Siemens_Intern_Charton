@@ -1,0 +1,5378 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 74651724560458,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651724723833,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793951476,
+      "microseconds": 338067
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651725508333,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793951476,
+      "microseconds": 338854
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651725598000,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793951476,
+      "microseconds": 338931
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651725914666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651747705416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651768125958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651790168666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651810762041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651832240833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651852662791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651876241250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651901773625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651927080083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651951233916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651972881583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74651995851708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652017080500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652042369791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652067704916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652092991958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652118586416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652143862708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652169082375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652194297666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652219510250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652244719708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652267889541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652293100291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652315980333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652341200666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652365227500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652387936666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652413145166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652438361458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652459563125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652484757500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652509958125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652530318125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652554446666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652574833541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652595223625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652620423625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652645656875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652670863916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652696073208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652717686416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652742888000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652768084333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652793275125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652816179750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652841383291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652861782583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652885655916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652910934500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652936156583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652961373625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74652986641125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653008339000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653033609625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653055326791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653080576583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653102001833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653127284291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653152533083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653175498166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653199707875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653221402041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653242898708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653264411750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653286064958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653311319666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653334558291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653359790291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653385081666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653405437500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653425802375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653450892333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653473790000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653496677125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653521939416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653542418333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653567632958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653592939041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653617896875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653642035625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653666720500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653692017000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653712526875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653737795166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653758814000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653784230666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653807224125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653827541291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653852821583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653878093750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653901001833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653923977333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653949247916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653970460958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74653990839500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654016065250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654037491541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654062702458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654087940333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654110718000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654134558166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654159567583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654183638375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654208922416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654234209916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654258633958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654283938291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654309356375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654334611458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654359849250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654383822291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654406703583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654429559625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654450330291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654475547041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654500760041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654525973708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654546339041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654567982708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654592497458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654614934375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654640232875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654665520041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654685968958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654710134708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654732853458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654758113625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654783389208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654805398583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654827077875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654850005000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654872902625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654898179083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654923455583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654948735791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654974014500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74654998274208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655023564541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655043938958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655068150583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655092904416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655118214000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655142979250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655167118458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655192472666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655217773000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655239491416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655264793125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655290074291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655312982500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655334555416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655355038500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655375422500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655400657875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655425872708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655447255625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655467888125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655492899416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655517891625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655543101083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655568308583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655593519750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655618717125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655640326750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655665526291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655690780250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655716020000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655737927458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655763207250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655787389708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655808844333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655834037541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655859252875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655881907541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655906088458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655928320833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655953464250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655978688708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74655999044875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656024299750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656049561833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656074818291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656097404500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656122666041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656147909583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656173169666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656197418791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656218780958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656242897416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656264396333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656289668000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656311326791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656331700291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656355884666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656381146625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656402800375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656425480583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656449491541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656469874708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656490298291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656514489500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656539755708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656565028458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656587881625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656608313208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656630077750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656655362875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656677492291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656697927416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656723218416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656743658208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656768949041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656793404000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656816292541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656841521875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656866739458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656891934958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656917143958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656938791166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656963999541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74656989258000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657010035666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657031749666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657052401458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657074000083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657099214875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657124468541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657149739458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657173451166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657195148583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657215540375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657240783166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657262453666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657284641000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657309923625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657330221333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657350572541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657375804916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657401023208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657422645458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657445515708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657467916625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657490844375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657512331291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657533803791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657559015291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657583216125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657608476916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657630086791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657655340625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657680574500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657705681833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657730923166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657756132875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657777808291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657802023958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657822388583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657845306250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657870511750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657894641666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657919843333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657943404875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657967910458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74657989563500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658014772083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658038956541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658064212083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658088382583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658113613833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658138882833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658162653166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658183036541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658208308666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658231177791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658254062541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658276250000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658301497791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658326875666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658351243833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658374887041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658396301458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658417761375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658443059791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658467903333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658493195041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658517345541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658538801208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658559562958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658583714708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658604139750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658627087833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658652371208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658677642583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658701232000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658726505708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658751807250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658777082500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658801792541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658823411291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658845085125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658867897708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658890810916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658916105666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658941437250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658961877208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74658987163750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659010494583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659035600875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659057300583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659082576625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659107878958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659130824166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659151209125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659176462333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659201750708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659227033291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659252326166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659273931250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659296846625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659322079333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659343708250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659364064625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659389262250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659409561958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659434586375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659454921958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659480178958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659505428291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659530675166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659552235500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659576237125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659599188583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659619587541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659644803500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659665054083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659690245041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659713032958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659738291166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659758836416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659779242916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659800977791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659826289375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659851573791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659876818708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659899768500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659925044666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659947845708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659968270166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74659989975791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660015184291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660040395458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660065664083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660090928125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660113635791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660134568166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660159567750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660184569500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660206269333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660231521583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660254339333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660274743375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660299954708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660321389250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660343024500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660367976375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660393232500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660418478416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660442601583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660465328125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660486773083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660509561791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660534786250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660555150041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660580351541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660603050208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660628309958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660653565041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660677556416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660702830125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660728040333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660749668916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660771317958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660796574250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660818259333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660843561333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660868843291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660893023375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660915946291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660939897083,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660965172416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74660990437250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661015696041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661037122583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661059136541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661083648500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661108950541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661134258666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661159556708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661179976666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661202877208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661223246291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661245607375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661268508833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661293712500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661319012583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661342900791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661368179750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661392903250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661417149125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661438874500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661462801583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661488079375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661513294625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661538511750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661563709416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661584072833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661609342541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661634603166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661659885541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661684574000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661709848625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661734100583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661759348208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661782319833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661806806291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661832054125,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661852449791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661875367250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661899556500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661922486500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661945479291,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661965976416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74661988414166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662013694666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662038981916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662062906500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662085939833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662109567791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662133756166,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662157505250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662182806625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662208117375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662232279041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662254824208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662276264958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662301234833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662326233500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662351468916,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662375605875,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662395973625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662421197750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662442848750,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662467908250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662492894583,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662517909958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662543168791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662567900000,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662593130500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662613519666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662637456791,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662659572041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662684274458,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662704671416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662729918375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662754263250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662777147416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662801275041,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662826674708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662851239541,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662876517375,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662896896708,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662922141500,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662947364250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662967888208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74662992965250,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663017176416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663037635208,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663059576958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663084828833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000006\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663085061375,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793951487,
+      "microseconds": 698354
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 74663085495541,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261106-154822-115294/activation-marker-prefix2/tmpg4naq5sa"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "fault_snapshot": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261106-154822-115294/activation-marker-prefix2/nor-at-fault.bin",
+    "bytes": 1048576
+  }
+]

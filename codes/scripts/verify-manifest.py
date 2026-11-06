@@ -16,6 +16,9 @@ def main():
   (examples/'README.txt').write_bytes((root/'README.txt').read_bytes())
   (examples/'valid.json').write_text(json.dumps(good,ensure_ascii=False,indent=2)+'\n')
   validate(good,root);rows.append(dict(id='MF-VALID',input='valid.json + README.txt',expected='accepted',actual='accepted',status='PASS'))
+  for group in ('week5','week1-5'):
+   validate(generate(root,group),root)
+   rows.append(dict(id='MF-'+group.upper(),input=group,expected='accepted',actual='accepted',status='PASS'))
   def reject(name,mut,expected='ValueError',alter=None):
    data=copy.deepcopy(good);mut(data)
    if alter:alter()
@@ -31,7 +34,7 @@ def main():
   for name,mut in [
    ('MISSING',lambda d:d.pop('files')),('UNKNOWN',lambda d:d.update(extra=1)),
    ('VERSION',lambda d:d.update(schema_version=2)),('BOOLEAN-VERSION',lambda d:d.update(schema_version=True)),
-   ('GROUP',lambda d:d.update(plan_group='week5')),('FORMAT',lambda d:d.update(image_format='M7IM-v2')),
+   ('GROUP',lambda d:d.update(plan_group='week9')),('FORMAT',lambda d:d.update(image_format='M7IM-v2')),
    ('APPROVAL',lambda d:d.update(approval_status='approved')),('DATE',lambda d:d.update(generated_at='2026-02-30T12:00:00+08:00')),
    ('DATE-TEXT',lambda d:d.update(generated_at='2026-10-25Tgarbage+08:00')),('ZONE',lambda d:d.update(generated_at='2026-10-25T12:00:00Z')),
    ('FILES-TYPE',lambda d:d.update(files={})),('EMPTY',lambda d:d.update(files=[])),

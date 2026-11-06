@@ -1,0 +1,98 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 59876287380708,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876287550833,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910737,
+      "microseconds": 515485
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876288348000,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910737,
+      "microseconds": 516277
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876288441250,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910737,
+      "microseconds": 516351
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876289387666,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910737,
+      "microseconds": 517307
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876289478958,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-7tvcicu4/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59876291093958,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910737,
+      "microseconds": 519010
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

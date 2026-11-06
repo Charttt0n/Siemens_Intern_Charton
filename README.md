@@ -1,5 +1,10 @@
 # Siemens Intern 实习项目
 
+- **[项目规划书](Industrial%20Embedded%20Systems%20Bootloader%20Development.pdf)**：8 周目标、每周任务与交付要求；与 planning 中原件保持一致。
+
+2026-11-06 已更新 [Week 5 交付索引](reports/week5/delivery-index.md)、周报及升级测试报告。[前五周阶段交付总索引](planning/week1-5-delivery-index.md)保留 11 月 1 日的五周验收记录及 Week 1 待确认项。
+
+
 - [codes](codes/README.md)：唯一主代码工程。源码、构建脚本、架构说明、测试报告和日志保留在工程内。
 - [reports/week1-2](reports/week1-2/)：Week 1–2 周报，Word 为提交版，Markdown 为可编辑文本。
 - [reports/week3](reports/week3/)：Week3驱动与存储周报，含Word、Markdown、PDF及交付索引。

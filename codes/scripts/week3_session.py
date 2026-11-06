@@ -84,6 +84,11 @@ class Session:
             self.serial = connect(work / 'uart.sock', self.process)
             self.execute('cont')
             self.banner = self.response()
+            # Synchronize the vCPU with host I/O after the startup prompt.
+            # Without this boundary, QEMU on macOS can leave the first UART
+            # command pending until a debugger or QMP pause/resume occurs.
+            self.execute('stop')
+            self.execute('cont')
             return self
         except BaseException:
             self.close()

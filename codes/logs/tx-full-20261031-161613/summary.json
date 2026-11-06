@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "TX-WEEK2-DRIVER",
+      "expected": "flush/putc/write=-1; each 1000000 reads; DATA unchanged; recovery succeeds",
+      "actual": "10 assertions OK; QEMU exit=0",
+      "evidence": [
+        "week2-driver.txt"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-WEEK3-DRIVER",
+      "expected": "flush/putc/write=-1; each 1000000 reads; DATA unchanged; recovery succeeds",
+      "actual": "10 assertions OK; QEMU exit=0",
+      "evidence": [
+        "week3-driver.txt"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-PRODUCTION",
+      "expected": "normal target builds have no uart_tx_test_* symbols",
+      "actual": "three production ELF files verified",
+      "evidence": [
+        "bootloader-week3-symbols.txt",
+        "bootloader-week4-symbols.txt",
+        "application-symbols.txt"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-W3-PRINT",
+      "expected": "boot_status=3; idle; 1000000 reads; no successful DATA write",
+      "actual": "GDB assertions PASS; no APP: RUNNING/PONG; QEMU reaped",
+      "evidence": [
+        "TX-W3-PRINT.txt",
+        "TX-W3-PRINT.gdb",
+        "TX-W3-PRINT-uart.log"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-W4-PRINT",
+      "expected": "boot_status=257; idle; 1000000 reads; no successful DATA write",
+      "actual": "GDB assertions PASS; no APP: RUNNING/PONG; QEMU reaped",
+      "evidence": [
+        "TX-W4-PRINT.txt",
+        "TX-W4-PRINT.gdb",
+        "TX-W4-PRINT-uart.log"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-W4-FLUSH",
+      "expected": "final uart_flush failure sets boot_status=0x101; no application jump",
+      "actual": "GDB assertions PASS; no APP: RUNNING/PONG; QEMU reaped",
+      "evidence": [
+        "TX-W4-FLUSH.txt",
+        "TX-W4-FLUSH.gdb",
+        "TX-W4-FLUSH-uart.log"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "TX-W4-APP",
+      "expected": "valid boot handoff; application TX failure sets app_status=4; no RUNNING",
+      "actual": "GDB assertions PASS; no APP: RUNNING/PONG; QEMU reaped",
+      "evidence": [
+        "TX-W4-APP.txt",
+        "TX-W4-APP.gdb",
+        "TX-W4-APP-uart.log"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "elf_sha256": {
+    "application.elf": "d673834c9a946d01dd81f127f2d8f6231710430341c8157c40949eb64738e215",
+    "tx-week3.elf": "55db6da784d3f69255fff330fb60f2e4c27b86ea222b3b7ec059f8c5eaf00ce7",
+    "tx-week4.elf": "fbcc894f494371d897747ac4b44869fc438e07ca6e62fad92de228ad4a8fdb99",
+    "bootloader-week4.elf": "25ebc50d7ff1204ee8c6d223347d58cfa1ff39b9c932da1131551bd1502eb8e6",
+    "tx-application.elf": "2885ce2e819106f5b497ff091c6859def8421001a0bbc13eb6dd967b2bd73896",
+    "bootloader-week3.elf": "12315de1106b60351db83cae13f4d4fd2c72d503dbf02d565bd44c2b7f4bc3d2"
+  }
+}

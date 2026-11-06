@@ -1,0 +1,5 @@
+$ /Users/charton/.local/bin/python3 scripts/run-week4.py --image /var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/feedback-67xtdu21/blank.bin
+BOOT: stage4 image validation
+REJECT: 0x00000002
+> 
+EXIT=1 TIMEOUT=False

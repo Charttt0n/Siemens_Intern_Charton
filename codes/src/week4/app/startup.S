@@ -30,8 +30,9 @@ app_vectors:
 .thumb_func
 App_Reset_Handler:
   cpsid i
-  /* Hardware has already loaded MSP from vector[0]. The linker asserts
-     word-aligned section boundaries and an 8-byte-aligned stack. */
+  /* The Bootloader software handoff has set MSP from app vector[0].
+     BX to this handler does not perform a hardware reset or reload MSP.
+     The linker asserts word-aligned sections and an 8-byte-aligned stack. */
   ldr r0, =_sidata
   ldr r1, =_sdata
   ldr r2, =_edata

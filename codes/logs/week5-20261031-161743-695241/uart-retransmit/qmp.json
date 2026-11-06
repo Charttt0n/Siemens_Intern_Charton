@@ -1,0 +1,98 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 178003527481500,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178003527637875,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434743,
+      "microseconds": 440558
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178003528386666,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434743,
+      "microseconds": 441309
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178003528467916,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434743,
+      "microseconds": 441375
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178017100773291,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434757,
+      "microseconds": 13875
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178017100950166,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-3gtd52gh/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 178017102803083,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434757,
+      "microseconds": 15851
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

@@ -1,0 +1,4 @@
+$ /Users/charton/.local/bin/python3 scripts/run-week4.py --image /var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/feedback-a9d392on/blank.bin
+ERROR: image missing; run bash scripts/build-week4.sh first
+
+EXIT=1 TIMEOUT=False

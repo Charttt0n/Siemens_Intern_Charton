@@ -19,7 +19,7 @@ vectors:
   .word Default_Handler /* DebugMonitor */
   .word 0
   .word Default_Handler /* PendSV */
-  .word Default_Handler /* SysTick */
+  .word SysTick_Handler /* SysTick: weak default below */
   .word UART0_RX_Handler /* UART0 RX: IRQ 0 */
   .rept 31
   .word Default_Handler
@@ -64,3 +64,8 @@ Default_Handler:
   mrs r0, ipsr
   b exception_handler
 .size Default_Handler, .-Default_Handler
+
+/* Targets that do not provide a SysTick handler keep the default one; Week 5
+   overrides this weak symbol when it needs a millisecond tick. */
+.weak SysTick_Handler
+.thumb_set SysTick_Handler, Default_Handler

@@ -1,0 +1,55 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 167422695673000,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 167422695844625,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793390210,
+      "microseconds": 846416
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 167422696620375,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793390210,
+      "microseconds": 847182
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 167422696698791,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793390210,
+      "microseconds": 847249
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "scripts/seed-week5.py",
+        "--slot-a",
+        "build/week5/application-v1.pkg",
+        "--output",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-smoke-nor.bin"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/send-week5.py",
+        "--image",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-smoke-nor.bin",
+        "--package",
+        "build/week5/application-v2.pkg",
+        "--evidence",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-upload-v2"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/send-week5.py",
+        "--image",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-smoke-nor.bin",
+        "--evidence",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-reboot-v2"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/send-week5.py",
+        "--image",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-smoke-nor.bin",
+        "--package",
+        "build/week5/application-v3.pkg",
+        "--evidence",
+        "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week1-5-audit-20261101/delivery-upload-v3"
+      ],
+      "exit": 0
+    }
+  ],
+  "binaries": {
+    "build/week5/erase-io.bin": "9168371663000c4547fb7be577b878e8bc9b6962ce1c765945d15583cf960965",
+    "build/week5/accept-v1.pkg": "c7167491042a35c95392665864563c97def999f0207114c8ade895baef322948",
+    "build/week5/truncated-file.pkg": "49521ca1313d206b8d32149dcf77072c6f27b44bc574fcb33e09da38a1c9c10b",
+    "build/week5/accept-v3.pkg": "ea087448389291aec318c8fe2922bc6112db6356402c45735229e06423bae06c",
+    "build/week5/uncommitted-state-4.bin": "cd7e39d20f3478b7c177ab271e90d62cd64ca65d6cca99432abe928d9fce4274",
+    "build/week5/cancel.bin": "eda7f9340b037b86162e360aabd4f26b99b8090c5e60f12c21cfe4ba5b4e678e",
+    "build/week5/accept-v2.pkg": "4ef4a1aa71839391578c208d2683b882a8ec5048817a1f28a80a785e1332c134",
+    "build/week5/file-over-capacity.pkg": "01fcbb7edea0d0f9bf9900444be3336dc2c913e707ddaa6a6b66eeadaf708959",
+    "build/week5/bad-vector.bin": "9421eb00d69f68f8f50f3c322712d4fb390009a106b6236758563e9454cc717d",
+    "build/week5/uncommitted-state-1.bin": "855846f307089d26726d1dbd75412076e93e70e556d716b99d63c60dddf157ca",
+    "build/week5/reboot-v2.bin": "6fd225d9d596f86efa18899ab625e563c1fc0cdb39cfd0b6b742263c7a5d1902",
+    "build/week5/uncommitted-state-3.bin": "c3f9a8c6a6bcc10a8e3a8e28cbf0f28a2a98ee09bd2ce8c59dd2e46f7f82c8fc",
+    "build/week5/uncommitted-state-2.bin": "7ca47b34de846a792fd165af47be17b8188c2282782fc0eae1900c16e1b786db",
+    "build/week5/extra-file-tail.bin": "0d5f26168c81547a50ec20c6c42d2ecc7bab7ef9061ee50ccd5060eb6184c642",
+    "build/week5/reboot-v3.bin": "72a26dbd9d10b1ce12ca881a01415121d75a6b9a6e347580b4ce9edc3bc361cf",
+    "build/week5/explicit-recovery.bin": "6fd225d9d596f86efa18899ab625e563c1fc0cdb39cfd0b6b742263c7a5d1902",
+    "build/week5/ambiguous-metadata.bin": "8761c3881e40eb15db744cc1da6876f81cbaf4ec89bc5819e0a372c8cac3e520",
+    "build/week5/application-v1.bin": "0708328e3c3dbf6b9ab98e7fbff4139d3e5dc24aa03ab9f0c5f0173f23b8102d",
+    "build/week5/application-v3.bin": "ffa60ecf121dd244108007872894e2649e0a529896486a1d7d29ed09e974a6ff",
+    "build/week5/bad-crc32.bin": "fe2ef099e3a0dc2fb75fc014fd1ebea147b3bd1bc435494a80803ffc8fb775f4",
+    "build/week5/blank-meta-default-a.bin": "2e34165c76b5f84c56396dd985bcd81db0fdb4f37994fd75dfa8dbeb7978a635",
+    "build/week5/no-active-image.bin": "053abe2cbaeee25f9efdcac0c755921c9b4a653b8b01e8e5ab004eec8379ded9",
+    "build/week5/uart-retransmit.bin": "6fd225d9d596f86efa18899ab625e563c1fc0cdb39cfd0b6b742263c7a5d1902",
+    "build/week5/application-v2.bin": "6259bbbfd9bdb8a763c3bdf6f8083b8ebee4c3bde66b3c5528bd3676b8b7f31e",
+    "build/week5/timeout.bin": "eda7f9340b037b86162e360aabd4f26b99b8090c5e60f12c21cfe4ba5b4e678e",
+    "build/week5/activation-meta-io.bin": "82ccce15cf616ea595e559e4774d3b9fc35384be942a1837abf8ba5dcc6e8134",
+    "build/week5/target-erase-prefix73.bin": "79ca139ee075ef57528b88d9d4ba650d90b9f6a12e2b667bd097af4cf7c215d7",
+    "build/week5/application-v1.pkg": "c7167491042a35c95392665864563c97def999f0207114c8ade895baef322948",
+    "build/week5/application-v1.elf": "fc8140dae1197039e9aacc0017bab1c3aef83d2a177d969b799d910550527c79",
+    "build/week5/application-v3.elf": "b2abb7c4fad5bc52cef27684b85e222f80e94ee831a9e9496542013dbfe21d1f",
+    "build/week5/application-v2.pkg": "4ef4a1aa71839391578c208d2683b882a8ec5048817a1f28a80a785e1332c134",
+    "build/week5/bootloader-week5-upgrade.elf": "91c2e74add8e187c84fac970d8d0c36f3d7a094435300e03fefd422ae84bb3f6",
+    "build/week5/bad-crc32.pkg": "4f8e94ade1e36d494193a5a0f0cca9a55108f9f011e852a19a3611444b0fcd7f",
+    "build/week5/application-v3.pkg": "ea087448389291aec318c8fe2922bc6112db6356402c45735229e06423bae06c",
+    "build/week5/application-v2.elf": "9ad97306487499d456092db37bd8b4e025d8510888880345002f25f165477304",
+    "build/week5/continuous-upgrades.bin": "72a26dbd9d10b1ce12ca881a01415121d75a6b9a6e347580b4ce9edc3bc361cf",
+    "build/week5/bootloader-week5-fault.elf": "8fbf5bb5c8aff0d1ad8f06ed94419995850aa0e4d3135c0a00f2733178a4e5cb",
+    "build/week5/bad-active-does-not-auto-fallback.bin": "96f334feb019be0011fb42282207062ddda0520326e1ce9c38ced8e06e98407a",
+    "build/week5/metadata-selects-b.bin": "36a9a19089c94e651feec7109bc1533c829925b03e79fde1bf7d1b0ff9961638",
+    "build/week5/double-metadata-damage.bin": "41bc72e50ff3d949a00e58145272a6b5222ad0f13f1b0abd67d09766c75f3510",
+    "build/week5/bootloader-week5.elf": "d9b28a22fe304e2d8a5fe91810488398e0fc6dd469bb04931fbaff70c654104f",
+    "build/week5/truncated-file.bin": "e48080872937d0cb0226b176875bb5fab26bb1877d9359e80bb829d4a74d5ede",
+    "build/week5/program-io.bin": "46a9c4d74e34a513b01687a4b312e214a0d2e596a7c8e354fe05fc91d3c0d9ac",
+    "build/week5/bad-vector.pkg": "a4574d46fbb2f3615c8db5fbbef800e2678104230017443baee135e9543c94db",
+    "build/week5/one-valid-metadata-copy.bin": "9c5b9113b5f746e9ece5432de760ab90049662606ef74435d815a5eb802647c7",
+    "build/week5/file-over-capacity.bin": "2e34165c76b5f84c56396dd985bcd81db0fdb4f37994fd75dfa8dbeb7978a635",
+    "build/week5/extra-file-tail.pkg": "418c04670bb5df319916cbe7767074ff926b2dafdd9490cf123b7811a9833940",
+    "build/week5/rx-loss-indication.bin": "2ad9d2ddf10f991885f17b22b1b653b619911dac65718cfc163379a3ac1f6182"
+  }
+}

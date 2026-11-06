@@ -1,0 +1,3 @@
+PASS: Cortex-M7; .data initialized; .bss zero; bare-metal C99
+
+EXIT_CODE=0

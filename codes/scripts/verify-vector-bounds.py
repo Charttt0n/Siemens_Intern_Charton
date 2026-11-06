@@ -29,12 +29,19 @@ def main():
    native=b/'vector-test'
    run(['cc','-std=c99','-Wall','-Wextra','-Werror','-fsanitize=address,undefined','-Isrc/week4','-Isrc/week3','src/week4/image.c','src/week4/crc32.c','src/week3/flash.c','tests/test_vector_bounds.c','-o',str(native)],'native-build')
    text=run([str(native),str(seed)],'matrix')
-   entries=[line for line in text.splitlines() if line.startswith('VEC-')];assert len(entries)==321 and all(x.endswith('PASS') for x in entries)
+   entries=[line for line in text.splitlines() if line.startswith('VEC-')];assert len(entries)==323 and all(x.endswith('PASS') for x in entries)
    report['matrix_assertions']=len(entries);report['checks'].append({'id':'VEC-MATRIX','status':'PASS','actual':len(entries),'evidence':'matrix.txt'})
-   for name,index,value in [('MSP-AT-BASE',0,0x20010000),('RESERVED-13',13,0x100c1),('IRQ31-END',47,(0x10000+len(payload))|1),('RESET-BELOW',1,0x100bf)]:
+   # Each CPU case starts from the valid image and a fresh QEMU session.
+   # VB-04/05/06 add CPU rejection evidence beyond the host-only matrix.
+   cpu_cases=[('MSP-AT-BASE',0,0x20010000),('RESERVED-13',13,0x100c1),
+              ('IRQ31-END',47,(0x10000+len(payload))|1),('RESET-BELOW',1,0x100bf),
+              ('VB-04-MSP-ABOVE-TOP',0,0x20200010),
+              ('VB-05-RESERVED-8',8,0x100c1),
+              ('VB-06-IRQ31-EVEN',47,0x100c0)]
+   for name,index,value in cpu_cases:
     data=bytearray(valid);struct.pack_into('<I',data,0x10020+4*index,value);struct.pack_into('<I',data,0x10018,zlib.crc32(data[0x10020:0x10020+len(payload)]));struct.pack_into('<I',data,0x1001c,zlib.crc32(data[0x10000:0x1001c]));path=b/(name+'.bin');path.write_bytes(data)
     with Session(boot,path,out/name) as vm:assert vm.banner==b'BOOT: stage4 image validation\r\nREJECT: 0x00000007\r\n> '
-    report['checks'].append({'id':name,'index':index,'value':value,'status':'PASS','actual_code':7,'evidence':name+'/uart.log'})
+    report['checks'].append({'id':name,'index':index,'value':value,'status':'PASS','expected_code':7,'actual_code':7,'evidence':name+'/uart.log'})
    stage4.OUT=out;stage4.summary={'checks':[]}
    for name,body,expected in [
     ('LOAD-VECTOR-MSP','set {unsigned int}0x10000 = 0x20010000',7),
@@ -83,6 +90,8 @@ assert status==0x100 and number==3
 end
 """,b'')
    report['checks'].append({'id':'STATUS-HARDFAULT','status':'PASS','actual_code':256,'evidence':'STATUS-HARDFAULT.txt'})
+  report['cpu_gdb_paths']=len(report['checks'])-1
+  assert report['cpu_gdb_paths']==11
   report['status']='PASS'
  finally:
   (out/'summary.json').write_text(json.dumps(report,indent=2)+'\n');(ROOT/'logs/vector-bounds-latest.txt').write_text(str(out)+'\n');print(report['status'],out)

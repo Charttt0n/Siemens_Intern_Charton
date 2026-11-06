@@ -1,0 +1,1 @@
+PASS: slot validation, illegal slots, bad CRC/length/vector, Week-4 wrappers

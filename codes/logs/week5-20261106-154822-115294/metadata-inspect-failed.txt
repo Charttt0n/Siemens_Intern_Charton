@@ -1,0 +1,1 @@
+{"generation": 6, "active": 1, "target": 2, "state": 4, "state_name": "FAILED", "progress": 1005, "expected": 1005, "version": 0, "error": 4}

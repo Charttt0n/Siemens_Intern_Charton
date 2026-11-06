@@ -1,0 +1,22 @@
+flowchart TD
+  INIT[C初始化 board UART] --> VALID[绑定存储及镜像校验]
+  VALID --> LOAD[复制payload并复核运行区]
+  LOAD --> FLUSH[输出LOAD JUMP并flush]
+  FLUSH --> HANDOFF[boot_status=0 清中断 设置VTOR MSP并跳转]
+  HANDOFF --> APP[应用CRT与交接检查 初始化UART]
+  APP --> SVC[输出CRT HANDOFF 开中断并检查SVC]
+  SVC --> LOG[输出SVC PASS RUNNING]
+  LOG --> RUN[app_status=1 app_idle]
+  INIT -->|UART失败| BTX[boot_status=0x101 boot_idle]
+  VALID -->|1至7| REJECT[写boot_status 输出REJECT boot_idle]
+  LOAD -->|1或4或7或8| REJECT
+  FLUSH -->|失败| BTX
+  BPRINT[任意Bootloader日志失败 包括REJECT] --> BTX
+  BFAULT[Bootloader异常 记录exception_number] --> BEX[boot_status=0x100 boot_idle]
+  APP -->|CRT或交接失败| A2[app_status=2 输出错误 app_idle]
+  APP -->|UART失败| A4[app_status=4 app_idle]
+  SVC -->|计数失败| A2
+  SVC -->|日志失败| A4
+  LOG -->|日志失败| A4
+  A2 -->|错误提示发送失败| A4
+  AFAULT[应用异常 记录app_exception] --> A3[app_status=3 app_idle]

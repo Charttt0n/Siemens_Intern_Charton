@@ -1,0 +1,141 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 188622219807458,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622219989458,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 696387
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622220448666,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 696836
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622220549166,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 696953
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622221287208,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 697664
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622221376541,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ogchukeg/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622223139875,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 699530
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622224289833,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 700684
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622224396875,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ogchukeg/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188622225945625,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465837,
+      "microseconds": 702331
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "upload-v2",
+      "status": "PASS",
+      "version": 2,
+      "metadata": {
+        "generation": 7,
+        "active": 2,
+        "target": 4294967295,
+        "state": 0,
+        "state_name": "IDLE",
+        "progress": 0,
+        "expected": 0,
+        "version": 0,
+        "error": 0
+      }
+    },
+    {
+      "name": "reboot-v2",
+      "status": "PASS",
+      "version": 2,
+      "metadata": {
+        "generation": 7,
+        "active": 2,
+        "target": 4294967295,
+        "state": 0,
+        "state_name": "IDLE",
+        "progress": 0,
+        "expected": 0,
+        "version": 0,
+        "error": 0
+      }
+    },
+    {
+      "name": "upload-v3",
+      "status": "PASS",
+      "version": 3,
+      "metadata": {
+        "generation": 13,
+        "active": 1,
+        "target": 4294967295,
+        "state": 0,
+        "state_name": "IDLE",
+        "progress": 0,
+        "expected": 0,
+        "version": 0,
+        "error": 0
+      }
+    }
+  ],
+  "binary_sha256": {
+    "application-v1.bin": "0708328e3c3dbf6b9ab98e7fbff4139d3e5dc24aa03ab9f0c5f0173f23b8102d",
+    "application-v1.elf": "7c5d785e2b112fdbb721d884f6d21dd049b5a0e6119e9ea0cb610c689d9540f7",
+    "application-v1.pkg": "c7167491042a35c95392665864563c97def999f0207114c8ade895baef322948",
+    "application-v2.bin": "6259bbbfd9bdb8a763c3bdf6f8083b8ebee4c3bde66b3c5528bd3676b8b7f31e",
+    "application-v2.elf": "1961a010c6789f25a1d07b4f1c1a341931efb84e8e461389c6f806d057681f66",
+    "application-v2.pkg": "4ef4a1aa71839391578c208d2683b882a8ec5048817a1f28a80a785e1332c134",
+    "application-v3.bin": "ffa60ecf121dd244108007872894e2649e0a529896486a1d7d29ed09e974a6ff",
+    "application-v3.elf": "acf4e04d5900148a256801537722f9c9acd1e0b98b00fb00047d3cc72a2acb2a",
+    "application-v3.pkg": "ea087448389291aec318c8fe2922bc6112db6356402c45735229e06423bae06c",
+    "bootloader-week5.elf": "b8dcc5be0c3151e99297b70311e8f87e6dd174e1fd6e6f708ef9120a9cce7773"
+  }
+}

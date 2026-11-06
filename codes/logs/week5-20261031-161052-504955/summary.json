@@ -1,0 +1,401 @@
+{
+  "status": "FAIL",
+  "scope": "week5-code-complete",
+  "started_at": "20261031-161052-504955",
+  "checks": [
+    "fresh Week-5 build; boot stack below APP_RAM_BASE; app linked at 0x10000",
+    "v1/v2 payloads differ; packages are exactly header + payload",
+    "package framing, CRC, vector, capacity and seed boundaries",
+    "packer rejects ELF input and a 1 MiB flash dump",
+    "native slot API: A/B, illegal slots, bad CRC/length/vector, wrappers",
+    "native boot_meta: transactions, damage, IO states, torn writes, wrap",
+    "native YMODEM: frames, block0 bounds, CRC/retry, duplicates, cancel, timeouts, sink errors",
+    "native update: RECEIVING/erase/write/READY/failure and YMODEM end-to-end",
+    "review reproduction: repeated frame hits RETRY_LIMIT, reads bounded",
+    "CRC16 matches independent ymodem 1.5.3 implementation on 10 inputs",
+    "YMODEM interop interop-1024: independent sender, 1024B frames",
+    "YMODEM interop interop-128: independent sender, 128B frames",
+    "YMODEM interop interop-block0-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-data-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-eot-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-bad-crc: independent sender, 128B frames",
+    "YMODEM interop interop-wrap-128: independent sender, 128B frames",
+    "YMODEM interop interop-delayed-terminator: independent sender, 128B frames",
+    "YMODEM stalled link interop-stalled-link: bounded exit in 0.62s",
+    "vendored sender provenance and licences present",
+    "QEMU persisted boot blank-meta-default-a",
+    "QEMU persisted boot metadata-selects-b",
+    "QEMU persisted boot uncommitted-state-1",
+    "QEMU persisted boot uncommitted-state-2",
+    "QEMU persisted boot uncommitted-state-3",
+    "QEMU persisted boot uncommitted-state-4",
+    "QEMU recovery entry bad-active-does-not-auto-fallback",
+    "QEMU recovery entry no-active-image",
+    "QEMU recovery entry double-metadata-damage",
+    "QEMU persisted boot one-valid-metadata-copy",
+    "QEMU recovery entry ambiguous-metadata",
+    "QEMU v2 upload committed; B active, old slot unchanged",
+    "QEMU persisted boot reboot-v2",
+    "QEMU v3 upload committed; A active, old slot unchanged",
+    "QEMU persisted boot reboot-v3",
+    "QEMU explicit metadata recovery and re-upload",
+    "QEMU rejects bad-crc32; old program runs",
+    "QEMU rejects bad-vector; old program runs",
+    "QEMU rejects truncated-file; old program runs",
+    "QEMU rejects extra-file-tail; old program runs"
+  ],
+  "boot_cases": [
+    {
+      "name": "blank-meta-default-a",
+      "version": 1,
+      "active": "A",
+      "nor_sha256": "2e34165c76b5f84c56396dd985bcd81db0fdb4f37994fd75dfa8dbeb7978a635"
+    },
+    {
+      "name": "metadata-selects-b",
+      "version": 2,
+      "active": "B",
+      "nor_sha256": "36a9a19089c94e651feec7109bc1533c829925b03e79fde1bf7d1b0ff9961638"
+    },
+    {
+      "name": "uncommitted-state-1",
+      "version": 1,
+      "active": "A",
+      "nor_sha256": "855846f307089d26726d1dbd75412076e93e70e556d716b99d63c60dddf157ca"
+    },
+    {
+      "name": "uncommitted-state-2",
+      "version": 1,
+      "active": "A",
+      "nor_sha256": "7ca47b34de846a792fd165af47be17b8188c2282782fc0eae1900c16e1b786db"
+    },
+    {
+      "name": "uncommitted-state-3",
+      "version": 1,
+      "active": "A",
+      "nor_sha256": "c3f9a8c6a6bcc10a8e3a8e28cbf0f28a2a98ee09bd2ce8c59dd2e46f7f82c8fc"
+    },
+    {
+      "name": "uncommitted-state-4",
+      "version": 1,
+      "active": "A",
+      "nor_sha256": "cd7e39d20f3478b7c177ab271e90d62cd64ca65d6cca99432abe928d9fce4274"
+    },
+    {
+      "name": "bad-active-does-not-auto-fallback",
+      "result": "RECOVERY"
+    },
+    {
+      "name": "no-active-image",
+      "result": "RECOVERY"
+    },
+    {
+      "name": "double-metadata-damage",
+      "result": "RECOVERY"
+    },
+    {
+      "name": "one-valid-metadata-copy",
+      "version": 2,
+      "active": "B",
+      "nor_sha256": "9c5b9113b5f746e9ece5432de760ab90049662606ef74435d815a5eb802647c7"
+    },
+    {
+      "name": "ambiguous-metadata",
+      "result": "RECOVERY"
+    },
+    {
+      "name": "reboot-v2",
+      "version": 2,
+      "active": "B",
+      "nor_sha256": "6fd225d9d596f86efa18899ab625e563c1fc0cdb39cfd0b6b742263c7a5d1902"
+    },
+    {
+      "name": "reboot-v3",
+      "version": 3,
+      "active": "A",
+      "nor_sha256": "72a26dbd9d10b1ce12ca881a01415121d75a6b9a6e347580b4ce9edc3bc361cf"
+    }
+  ],
+  "interop": [
+    {
+      "name": "interop-1024",
+      "packet_size": 1024,
+      "bytes": 3001,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-1024-source.bin",
+        "size": 3001,
+        "received": 3001,
+        "blocks": 3,
+        "retries": 0
+      },
+      "seconds": 2.86
+    },
+    {
+      "name": "interop-128",
+      "packet_size": 128,
+      "bytes": 3001,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-128-source.bin",
+        "size": 3001,
+        "received": 3001,
+        "blocks": 24,
+        "retries": 0
+      },
+      "seconds": 2.85
+    },
+    {
+      "name": "interop-block0-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "block0"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-block0-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.139
+    },
+    {
+      "name": "interop-data-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "data"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-data-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.133
+    },
+    {
+      "name": "interop-eot-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "eot"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-eot-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.126
+    },
+    {
+      "name": "interop-bad-crc",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "corrupt_next_data": true
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-bad-crc-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 5
+      },
+      "seconds": 4.096
+    },
+    {
+      "name": "interop-wrap-128",
+      "packet_size": 128,
+      "bytes": 34000,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-wrap-128-source.bin",
+        "size": 34000,
+        "received": 34000,
+        "blocks": 266,
+        "retries": 0
+      },
+      "seconds": 2.899
+    },
+    {
+      "name": "interop-delayed-terminator",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "terminator_delay_ms": 700
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-delayed-terminator-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 0
+      },
+      "seconds": 3.55,
+      "late_acks": 2
+    },
+    {
+      "name": "interop-stalled-link",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "stall_data": true
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "TIMEOUT",
+        "code": 2,
+        "name": "interop-stalled-link-source.bin",
+        "size": 1500,
+        "received": 0,
+        "blocks": 0,
+        "retries": 2
+      },
+      "seconds": 0.62
+    }
+  ],
+  "upgrades": [
+    {
+      "version": 2,
+      "active": "B",
+      "metadata": {
+        "generation": 7,
+        "active": 2,
+        "target": 4294967295,
+        "state": 0,
+        "state_name": "IDLE",
+        "progress": 0,
+        "expected": 0,
+        "version": 0,
+        "error": 0
+      },
+      "old_slot_sha256": "20edd00f710395cd613f19bcb138d5ba2c0ca98c7ed99fea1d85aca5bb5ab733"
+    },
+    {
+      "version": 3,
+      "active": "A",
+      "metadata": {
+        "generation": 13,
+        "active": 1,
+        "target": 4294967295,
+        "state": 0,
+        "state_name": "IDLE",
+        "progress": 0,
+        "expected": 0,
+        "version": 0,
+        "error": 0
+      },
+      "old_slot_sha256": "4e2b80cdfdcf424fe4d478321d733ae33e9a21475d82056bbb83671e05642eb5"
+    }
+  ],
+  "elf_sha256": {
+    "bootloader-week5.elf": "3a255458fb2268ddafa1b38ae8090980390c7b8a3e836f0510d3848ab72e9acc",
+    "application-v1.elf": "c53db62c0079b100f3856a8d3c76f38fd3a4b38e6fbcccb0298f536f19a357f4",
+    "application-v2.elf": "20c03fe94b1663e8e6c13b628b8bf538c2a5a5e760a1ff46b2bc1bcbb796f75c",
+    "application-v3.elf": "222cd3842ddbd1eff54c7931fac57a3067ec8b7ce3988877e1da2c04796053c0"
+  },
+  "payload_bytes": {
+    "v1": 1004,
+    "v2": 1004,
+    "v3": 1004
+  },
+  "package_bytes": {
+    "v1": 1036,
+    "v2": 1036
+  },
+  "crc16_cases": 10,
+  "fault_cases": [],
+  "negative_cases": [
+    {
+      "name": "bad-crc32",
+      "sender_result": true,
+      "metadata": {
+        "generation": 6,
+        "active": 1,
+        "target": 2,
+        "state": 4,
+        "state_name": "FAILED",
+        "progress": 1004,
+        "expected": 1004,
+        "version": 0,
+        "error": 4
+      }
+    },
+    {
+      "name": "bad-vector",
+      "sender_result": true,
+      "metadata": {
+        "generation": 6,
+        "active": 1,
+        "target": 2,
+        "state": 4,
+        "state_name": "FAILED",
+        "progress": 1004,
+        "expected": 1004,
+        "version": 0,
+        "error": 4
+      }
+    },
+    {
+      "name": "truncated-file",
+      "sender_result": true,
+      "metadata": {
+        "generation": 6,
+        "active": 1,
+        "target": 2,
+        "state": 4,
+        "state_name": "FAILED",
+        "progress": 997,
+        "expected": 997,
+        "version": 0,
+        "error": 4
+      }
+    },
+    {
+      "name": "extra-file-tail",
+      "sender_result": true,
+      "metadata": {
+        "generation": 6,
+        "active": 1,
+        "target": 2,
+        "state": 4,
+        "state_name": "FAILED",
+        "progress": 1009,
+        "expected": 1009,
+        "version": 0,
+        "error": 4
+      }
+    }
+  ],
+  "error": "TimeoutError(\"UART missing b'APP: RUNNING\\\\r\\\\n> ': b''\")"
+}

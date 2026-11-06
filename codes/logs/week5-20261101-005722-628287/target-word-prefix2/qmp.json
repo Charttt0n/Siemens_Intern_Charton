@@ -1,0 +1,120 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 188745877793666,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745877947291,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465961,
+      "microseconds": 354980
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745878660208,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465961,
+      "microseconds": 355691
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745878740125,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465961,
+      "microseconds": 355757
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745878981333,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745904230833,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745925598416,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000002\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745925852416,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793465961,
+      "microseconds": 402905
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 188745926216875,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261101-005722-628287/target-word-prefix2/tmpc3zgbs3o"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "fault_snapshot": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261101-005722-628287/target-word-prefix2/nor-at-fault.bin",
+    "bytes": 1048576
+  }
+]

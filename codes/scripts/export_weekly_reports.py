@@ -11,14 +11,29 @@ from docx.enum.section import WD_SECTION_START,WD_ORIENT
 from docx.enum.table import WD_TABLE_ALIGNMENT,WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from PIL import Image
 
 def clean(t):
     t=re.sub(r'\[([^]]*)\]\(([^)]+)\)',r'\1',t)
     return t.replace('**','').replace('`','')
 
+def inline_text(paragraph,text):
+    """Keep source links clickable in Word and its exported PDF."""
+    pos=0
+    for match in re.finditer(r'\[([^]]+)\]\(([^)]+)\)',text):
+        paragraph.add_run(clean(text[pos:match.start()]))
+        link=OxmlElement('w:hyperlink')
+        link.set(qn('r:id'),paragraph.part.relate_to(match[2],RT.HYPERLINK,is_external=True))
+        run=OxmlElement('w:r');props=OxmlElement('w:rPr')
+        underline=OxmlElement('w:u');underline.set(qn('w:val'),'single');props.append(underline)
+        run.append(props);value=OxmlElement('w:t');value.text=clean(match[1]);run.append(value)
+        link.append(run);paragraph._p.append(link);pos=match.end()
+    paragraph.add_run(clean(text[pos:]))
+
 def word(md,out):
     md=Path(md);doc=Document();sec=doc.sections[0]
+    technical=md.name=='week4-test-report.md'
     def setup(sec,wide=False):
         sec.orientation=WD_ORIENT.LANDSCAPE if wide else WD_ORIENT.PORTRAIT
         sec.page_width=Inches(11.69 if wide else 8.27);sec.page_height=Inches(8.27 if wide else 11.69)
@@ -82,7 +97,7 @@ def word(md,out):
                     if j==0:
                         sh=OxmlElement('w:shd');sh.set(qn('w:fill'),'E8EEF3');cell._tc.get_or_add_tcPr().append(sh)
                     for p in cell.paragraphs:
-                        p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(3);p.paragraph_format.line_spacing=1.08
+                        p.paragraph_format.space_after=Pt(1.5 if technical else 3);p.paragraph_format.space_before=Pt(1.5 if technical else 3);p.paragraph_format.line_spacing=1.08
                         p.paragraph_format.keep_with_next=False
                         for run in p.runs:
                             run.font.size=Pt(8.5 if n>=5 else 9);run.bold=j==0
@@ -93,13 +108,15 @@ def word(md,out):
             borders=OxmlElement('w:tblBorders')
             for side in ['top','left','bottom','right','insideH','insideV']:
                 x=OxmlElement('w:'+side);x.set(qn('w:val'),'single');x.set(qn('w:sz'),'4');x.set(qn('w:color'),'CBD5E1');borders.append(x)
-            table._tbl.tblPr.append(borders);doc.add_paragraph().paragraph_format.space_after=Pt(2)
+            table._tbl.tblPr.append(borders)
+            gap=doc.add_paragraph();gap.paragraph_format.space_after=Pt(2)
+            if technical:gap.paragraph_format.line_spacing=Pt(2);gap.paragraph_format.space_before=Pt(0)
             continue
         h=re.match(r'^(#{1,4})\s+(.+)',s)
         if h:
             p=doc.add_paragraph(clean(h[2]),style='Title' if len(h[1])==1 else 'Heading '+str(len(h[1])-1))
         else:
-            p=doc.add_paragraph(clean(s))
+            p=doc.add_paragraph();inline_text(p,s)
             if fence:
                 p.paragraph_format.line_spacing=1;p.paragraph_format.space_after=Pt(1)
                 p.paragraph_format.keep_with_next=(i<len(lines) and not lines[i].startswith('```'))
@@ -108,7 +125,78 @@ def word(md,out):
     for root in [doc.element,doc.styles.element]:
         for b in list(root.iter(qn('w:pBdr'))):b.getparent().remove(b)
     if md.parent.name=='week3':format_week3_portrait(doc)
+    if md.parent.name=='week4':format_week4_portrait(doc)
+    if md.parent.name=='week5' or md.name in ['week5-test-report.md','week1-5-conformance-2026-11-01.md']:
+        format_stage5_delivery(doc)
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True);doc.save(out)
+
+def format_stage5_delivery(doc):
+    """Compact portrait layout for the current audit and Week5 deliverables."""
+    for name,size in [('Normal',10),('Title',20),('Heading 1',14),('Heading 2',12)]:
+        st=doc.styles[name];st.font.size=Pt(size)
+        st.paragraph_format.space_before=Pt(0 if name in ['Normal','Title'] else 8)
+        st.paragraph_format.space_after=Pt(5 if name!='Title' else 10)
+        st.paragraph_format.line_spacing=1.1
+    for table in doc.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                for p in cell.paragraphs:
+                    p.paragraph_format.space_before=Pt(1)
+                    p.paragraph_format.space_after=Pt(1)
+                    p.paragraph_format.line_spacing=1.05
+    for root in [doc.element,doc.styles.element]:
+        for fonts in root.iter(qn('w:rFonts')):
+            for attr in ['asciiTheme','hAnsiTheme','eastAsiaTheme','cstheme']:
+                fonts.attrib.pop(qn('w:'+attr),None)
+            for attr in ['ascii','hAnsi','eastAsia','cs']:
+                fonts.set(qn('w:'+attr),'Arial Unicode MS')
+
+def format_week4_portrait(doc):
+    """Keep the Week4 narrative and technical tables readable on portrait pages."""
+    for sec in doc.sections:
+        sec.orientation=WD_ORIENT.PORTRAIT;sec.page_width=Mm(210);sec.page_height=Mm(297)
+        sec.top_margin=Mm(16);sec.bottom_margin=Mm(16)
+        sec.left_margin=Mm(17);sec.right_margin=Mm(17);sec.footer_distance=Mm(8)
+    widths_by_header={
+        '计划任务':[38,74,64], '验证内容':[32,80,64],
+        '偏移':[18,54,104], '编号及场景':[44,88,44],
+        '检查对象':[36,88,52], 'boot_status 值':[20,75,81],
+        '字段':[44,132], '反馈要求':[48,128], '证据内容':[38,138],
+        '用例编号':[34,80,62], 'MSP 输入':[35,57,84],
+        '异常':[25,37,62,52], '阶段':[28,100,48],
+        '检查项':[38,82,56], '用例':[48,66,62],
+        '寄存器或状态':[45,131],
+    }
+    for table in doc.tables:
+        header=table.rows[0].cells[0].text
+        widths=widths_by_header.get(header,[176/len(table.columns)]*len(table.columns))
+        # A heading may be reused by tables with different column counts.
+        if len(widths)!=len(table.columns):widths=[176/len(table.columns)]*len(table.columns)
+        table.autofit=False;table.alignment=WD_TABLE_ALIGNMENT.CENTER
+        for col,w in zip(table.columns,widths):col.width=Mm(w)
+        for border in table._tbl.tblPr.iter(qn('w:tblBorders')):
+            for edge in border:edge.set(qn('w:color'),'D9D9D9')
+        for j,row in enumerate(table.rows):
+            row.height=None
+            for k,cell in enumerate(row.cells):
+                cell.width=Mm(widths[k]);cell.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.CENTER
+                tcpr=cell._tc.get_or_add_tcPr()
+                old=tcpr.find(qn('w:tcMar'))
+                if old is not None:tcpr.remove(old)
+                margins=OxmlElement('w:tcMar')
+                for side,v in [('top',70),('bottom',70),('left',90),('right',90)]:
+                    m=OxmlElement('w:'+side);m.set(qn('w:w'),str(v));m.set(qn('w:type'),'dxa');margins.append(m)
+                tcpr.append(margins)
+                for p in cell.paragraphs:
+                    p.paragraph_format.space_before=Pt(0);p.paragraph_format.space_after=Pt(1.5)
+                    p.paragraph_format.line_spacing=1.08
+                    for run in p.runs:run.font.size=Pt(9);run.bold=j==0
+    # Set each script family explicitly, including inherited bold runs.
+    for root in [doc.element,doc.styles.element]:
+        for fonts in root.iter(qn('w:rFonts')):
+            for attr in ['asciiTheme','hAnsiTheme','eastAsiaTheme','cstheme']:
+                fonts.attrib.pop(qn('w:'+attr),None)
+            for attr in ['ascii','hAnsi','eastAsia','cs']:fonts.set(qn('w:'+attr),'Arial Unicode MS')
 
 def format_week3_portrait(doc):
     for sec in doc.sections:
@@ -166,7 +254,7 @@ def format_week3_portrait(doc):
       ratio=limit/shape.width;shape.width=int(limit);shape.height=int(shape.height*ratio)
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2]);ap.add_argument('--week',nargs='+',choices=['3','4'],default=['3','4']);a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2]);ap.add_argument('--week',nargs='+',choices=['3','4','5'],default=['3','4']);a=ap.parse_args()
     for n in a.week:
         p=a.root/f'reports/week{n}'
         word(p/f'week{n}-report.md',p/f'Week{n}实习周报.docx')

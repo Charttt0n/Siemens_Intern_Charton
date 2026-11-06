@@ -1,0 +1,3 @@
+usage: seed-week5.py [-h] --slot-a SLOT_A [--slot-b SLOT_B] --output OUTPUT
+                     [--force]
+seed-week5.py: error: output exists; pass --force for explicit replacement

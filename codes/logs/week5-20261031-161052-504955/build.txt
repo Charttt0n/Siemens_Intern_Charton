@@ -1,0 +1,61 @@
+[ 14%] Building ASM object CMakeFiles/bootloader-week5.elf.dir/src/week3/startup.S.obj
+[ 14%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week3/flash.c.obj
+[ 21%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week3/uart.c.obj
+[ 28%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/main.c.obj
+[ 35%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week4/image.c.obj
+[ 42%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/boot_meta.c.obj
+[ 78%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week2/board.c.obj
+[ 78%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/ymodem.c.obj
+[ 78%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/crc16.c.obj
+[ 78%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week4/crc32.c.obj
+[ 78%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/update.c.obj
+[ 85%] Building C object CMakeFiles/bootloader-week5.elf.dir/src/week5/timebase.c.obj
+[ 92%] Building ASM object CMakeFiles/bootloader-week5.elf.dir/src/week4/handoff.S.obj
+[100%] Linking C executable bootloader-week5.elf
+[100%] Built target bootloader-week5.elf
+[  7%] Building ASM object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week3/startup.S.obj
+[ 14%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week3/uart.c.obj
+[ 28%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/main.c.obj
+[ 35%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week3/flash.c.obj
+[ 35%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week2/board.c.obj
+[ 42%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/boot_meta.c.obj
+[ 50%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/ymodem.c.obj
+[ 57%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/crc16.c.obj
+[ 64%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week4/crc32.c.obj
+[ 85%] Building ASM object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week4/handoff.S.obj
+[ 92%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/timebase.c.obj
+[ 92%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week4/image.c.obj
+[ 92%] Building C object CMakeFiles/bootloader-week5-upgrade.elf.dir/src/week5/update.c.obj
+[100%] Linking C executable bootloader-week5-upgrade.elf
+[100%] Built target bootloader-week5-upgrade.elf
+[ 13%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week3/flash.c.obj
+[ 13%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week3/uart.c.obj
+[ 20%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week2/board.c.obj
+[ 26%] Building ASM object CMakeFiles/bootloader-week5-fault.elf.dir/src/week3/startup.S.obj
+[ 33%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/main.c.obj
+[ 40%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/crc16.c.obj
+[ 60%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/boot_meta.c.obj
+[ 60%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week4/image.c.obj
+[ 60%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/tests/week5_fault.c.obj
+[ 66%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/timebase.c.obj
+[ 73%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/update.c.obj
+[ 93%] Building ASM object CMakeFiles/bootloader-week5-fault.elf.dir/src/week4/handoff.S.obj
+[ 93%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week5/ymodem.c.obj
+[ 93%] Building C object CMakeFiles/bootloader-week5-fault.elf.dir/src/week4/crc32.c.obj
+[100%] Linking C executable bootloader-week5-fault.elf
+[100%] Built target bootloader-week5-fault.elf
+[ 75%] Building C object CMakeFiles/application-v1.elf.dir/src/week2/uart.c.obj
+[ 75%] Building C object CMakeFiles/application-v1.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building ASM object CMakeFiles/application-v1.elf.dir/src/week4/app/startup.S.obj
+[100%] Linking C executable application-v1.elf
+[100%] Built target application-v1.elf
+[ 75%] Building C object CMakeFiles/application-v2.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building C object CMakeFiles/application-v2.elf.dir/src/week2/uart.c.obj
+[ 75%] Building ASM object CMakeFiles/application-v2.elf.dir/src/week4/app/startup.S.obj
+[100%] Linking C executable application-v2.elf
+[100%] Built target application-v2.elf
+[ 75%] Building C object CMakeFiles/application-v3.elf.dir/src/week4/app/main.c.obj
+[ 75%] Building ASM object CMakeFiles/application-v3.elf.dir/src/week4/app/startup.S.obj
+[ 75%] Building C object CMakeFiles/application-v3.elf.dir/src/week2/uart.c.obj
+[100%] Linking C executable application-v3.elf
+[100%] Built target application-v3.elf

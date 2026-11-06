@@ -1,0 +1,300 @@
+{
+  "status": "PASS",
+  "scope": "week5-step1-4",
+  "started_at": "20261031-151219-971145",
+  "checks": [
+    "fresh Week-5 build; boot stack below APP_RAM_BASE; app linked at 0x10000",
+    "v1/v2 payloads differ; packages are exactly header + payload",
+    "package framing, CRC, vector, capacity and seed boundaries",
+    "packer rejects ELF input and a 1 MiB flash dump",
+    "native slot API: A/B, illegal slots, bad CRC/length/vector, wrappers",
+    "native boot_meta: transactions, damage, IO states, torn writes, wrap",
+    "native YMODEM: frames, block0 bounds, CRC/retry, duplicates, cancel, timeouts, sink errors",
+    "review reproduction: repeated frame hits RETRY_LIMIT, reads bounded",
+    "CRC16 matches independent ymodem 1.5.3 implementation on 10 inputs",
+    "YMODEM interop interop-1024: independent sender, 1024B frames",
+    "YMODEM interop interop-128: independent sender, 128B frames",
+    "YMODEM interop interop-block0-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-data-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-eot-ack-loss: independent sender, 128B frames",
+    "YMODEM interop interop-bad-crc: independent sender, 128B frames",
+    "YMODEM interop interop-wrap-128: independent sender, 128B frames",
+    "YMODEM interop interop-delayed-terminator: independent sender, 128B frames",
+    "YMODEM stalled link interop-stalled-link: bounded exit in 0.66s",
+    "vendored sender provenance and licences present",
+    "QEMU boot case boot-slot-a",
+    "QEMU boot case boot-slot-b",
+    "QEMU boot case both-valid-prefers-a",
+    "QEMU boot case a-payload-corrupt-boots-b",
+    "QEMU boot case a-header-crc-stale",
+    "QEMU boot case a-length-zero",
+    "QEMU boot case a-length-over-slot",
+    "QEMU boot case a-load-address",
+    "QEMU boot case a-vector-even-reset",
+    "QEMU boot case b-invalid-ignored-while-a-valid",
+    "QEMU boot case both-invalid",
+    "all slot A/B boot and rejection banners match exactly",
+    "no QEMU guest errors in any boot case"
+  ],
+  "boot_cases": [
+    {
+      "name": "boot-slot-a",
+      "seed_sha256": "a144b69a4805264eed12c2830fa952d76dbf54c344e9e19d38a5db5d0a4bf0e2",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "boot-slot-b",
+      "seed_sha256": "d687e2e9e4f9703d0cdf69ff74cb7759c3e576c52c2cff9153632cd9c1e51881",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "both-valid-prefers-a",
+      "seed_sha256": "fb2eeff64e1efec049ceb97c387373ec5c919c6a114b3e4f30040f1b06c2fb23",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-payload-corrupt-boots-b",
+      "seed_sha256": "32a0fbcf4041ee5a98cd2d9b3eebfa2707b14b9888a882e29f368d5ee896dce1",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000006\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000006\r\nIMAGE: SLOT B CRC32 PASS\r\nIMAGE: VERSION 0x00000002\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v2\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-header-crc-stale",
+      "seed_sha256": "ca64a147532219ff17d31f8f7ba76f347cd43b545ac29b902cd880e0ad587174",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000003\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000003\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000003\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000003\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-length-zero",
+      "seed_sha256": "92561313a3206c3bcebe408e3bb1bc9eaab3e863479f967a3aa9d4a9920217e5",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-length-over-slot",
+      "seed_sha256": "f6ada1e268234bc538180cbe3b1e50217c79eeebd05dd71b6807cca7daef931f",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000004\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000004\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-load-address",
+      "seed_sha256": "bbfc4abd0dc4b32d7aa6340bbcf73cc9c792fd08abd112899944e1077fe535eb",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000005\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000005\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000005\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000005\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "a-vector-even-reset",
+      "seed_sha256": "7bae2ac812e701753ca5523302c4227d38cd5bd22e00163146076313f5154cba",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000007\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000007\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000007\r\nIMAGE: SLOT B REJECT 0x00000002\r\nREJECT: 0x00000007\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "b-invalid-ignored-while-a-valid",
+      "seed_sha256": "5f3db346ec0804057943323110df4fda737d597068275b0f8f5b8a688df49f4e",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A CRC32 PASS\r\nIMAGE: VERSION 0x00000001\r\nLOAD: verified at 0x00010000\r\nJUMP: application\r\nAPP: CRT PASS\r\nAPP: HANDOFF PASS\r\nAPP: VERSION v1\r\nAPP: SVC PASS\r\nAPP: RUNNING\r\n> ",
+      "status": "PASS"
+    },
+    {
+      "name": "both-invalid",
+      "seed_sha256": "13aa51e4b403809c0380eeb3a50e60d5d39210ca28c6a351eaa80176c40b5195",
+      "expected_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B REJECT 0x00000007\r\nREJECT: 0x00000002\r\n> ",
+      "actual_uart": "BOOT: stage5 slot validation\r\nIMAGE: SLOT A REJECT 0x00000002\r\nIMAGE: SLOT B REJECT 0x00000007\r\nREJECT: 0x00000002\r\n> ",
+      "status": "PASS"
+    }
+  ],
+  "interop": [
+    {
+      "name": "interop-1024",
+      "packet_size": 1024,
+      "bytes": 3001,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-1024-source.bin",
+        "size": 3001,
+        "received": 3001,
+        "blocks": 3,
+        "retries": 0
+      },
+      "seconds": 2.861
+    },
+    {
+      "name": "interop-128",
+      "packet_size": 128,
+      "bytes": 3001,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-128-source.bin",
+        "size": 3001,
+        "received": 3001,
+        "blocks": 24,
+        "retries": 0
+      },
+      "seconds": 2.881
+    },
+    {
+      "name": "interop-block0-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "block0"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-block0-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.146
+    },
+    {
+      "name": "interop-data-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "data"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-data-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.121
+    },
+    {
+      "name": "interop-eot-ack-loss",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "drop_after": "eot"
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-eot-ack-loss-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 4
+      },
+      "seconds": 4.111
+    },
+    {
+      "name": "interop-bad-crc",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "corrupt_next_data": true
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-bad-crc-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 5
+      },
+      "seconds": 4.094
+    },
+    {
+      "name": "interop-wrap-128",
+      "packet_size": 128,
+      "bytes": 34000,
+      "fault": {},
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-wrap-128-source.bin",
+        "size": 34000,
+        "received": 34000,
+        "blocks": 266,
+        "retries": 0
+      },
+      "seconds": 2.872
+    },
+    {
+      "name": "interop-delayed-terminator",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "terminator_delay_ms": 700
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "OK",
+        "code": 0,
+        "name": "interop-delayed-terminator-source.bin",
+        "size": 1500,
+        "received": 1500,
+        "blocks": 12,
+        "retries": 0
+      },
+      "seconds": 3.574,
+      "late_acks": 2
+    },
+    {
+      "name": "interop-stalled-link",
+      "packet_size": 128,
+      "bytes": 1500,
+      "fault": {
+        "stall_data": true
+      },
+      "sender": "ymodem 1.5.3 (MIT)",
+      "receiver": {
+        "result": "TIMEOUT",
+        "code": 2,
+        "name": "interop-stalled-link-source.bin",
+        "size": 1500,
+        "received": 0,
+        "blocks": 0,
+        "retries": 2
+      },
+      "seconds": 0.663
+    }
+  ],
+  "elf_sha256": {
+    "bootloader-week5.elf": "41bcf750debcb8296f01f7d27d49b248314e579dea0deb300b6e1bad0962ec5e",
+    "application-v1.elf": "22a3e897c502af795630c15e53c0a244be7483e44fd6608401477cad36a9391b",
+    "application-v2.elf": "19b30f99b493ad35496e38d7d33be5ff903b49a36d46fad259916fa6fcb59668"
+  },
+  "payload_bytes": {
+    "v1": 1004,
+    "v2": 1004
+  },
+  "package_bytes": {
+    "v1": 1036,
+    "v2": 1036
+  },
+  "crc16_cases": 10
+}

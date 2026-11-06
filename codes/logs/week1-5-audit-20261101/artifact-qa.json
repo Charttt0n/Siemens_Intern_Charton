@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "date": "2026-11-01",
+  "artifacts": [
+    {
+      "markdown": "planning/week1-5-conformance-2026-11-01.md",
+      "docx": "planning/前五周开发符合性核查报告.docx",
+      "pdf": "planning/前五周开发符合性核查报告.pdf",
+      "pages": 4,
+      "markdown_segments_matched": 162,
+      "all_pages_visually_inspected": true,
+      "embedded_fonts": true,
+      "pdf_sha256": "9ce95cfcc5382d8084a316428b41d481bc4879756c44b1d78b24d49b6fe16af2"
+    },
+    {
+      "markdown": "reports/week5/week5-report.md",
+      "docx": "reports/week5/Week5实习周报.docx",
+      "pdf": "reports/week5/Week5实习周报.pdf",
+      "pages": 4,
+      "markdown_segments_matched": 101,
+      "all_pages_visually_inspected": true,
+      "embedded_fonts": true,
+      "pdf_sha256": "dc1746485b3293f4bf06190124ddf811f44146879113fb4eec72f4a6a51fb433"
+    },
+    {
+      "markdown": "codes/docs/week5-test-report.md",
+      "docx": "output/week1-5-20261101/Week5固件升级测试报告.docx",
+      "pdf": "codes/docs/week5-test-report.pdf",
+      "pages": 6,
+      "markdown_segments_matched": 251,
+      "all_pages_visually_inspected": true,
+      "embedded_fonts": true,
+      "pdf_sha256": "a5b6b5523f7dc5a05b769cd743bf05f09e6615b703e5d19663b2c474c7654649"
+    }
+  ],
+  "checked_links": 91,
+  "broken_links": [],
+  "firmware_files_unchanged": 39,
+  "render_font_config": "Explicit fontconfig search of /Library/Fonts and bundled fonts; Arial Unicode MS embedded"
+}

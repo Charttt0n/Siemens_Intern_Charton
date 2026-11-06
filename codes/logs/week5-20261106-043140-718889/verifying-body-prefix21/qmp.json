@@ -1,0 +1,131 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 60015129056083,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015129197333,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910876,
+      "microseconds": 357961
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015129900000,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910876,
+      "microseconds": 358667
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015129989166,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910876,
+      "microseconds": 358753
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015130234958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015153858625,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015179154958,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000000\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015204432666,
+    "execute": "human-monitor-command",
+    "arguments": {
+      "command-line": "xp /1wx 0x200000c4"
+    }
+  },
+  {
+    "return": "200000c4: 0x00000009\r\n"
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015204637958,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910876,
+      "microseconds": 433414
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 60015204908916,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261106-043140-718889/verifying-body-prefix21/tmp0qxeczzy"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "fault_snapshot": "/Users/charton/Projects/Siemens_Intern_Charton/codes/logs/week5-20261106-043140-718889/verifying-body-prefix21/nor-at-fault.bin",
+    "bytes": 1048576
+  }
+]

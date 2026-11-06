@@ -1,0 +1,4 @@
+   text	   data	    bss	    dec	    hex	filename
+   2620	      0	   4280	   6900	   1af4	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-kll8040y/bootloader-week5.elf
+    992	     12	   4132	   5136	   1410	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-kll8040y/application-v1.elf
+    992	     12	   4132	   5136	   1410	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-kll8040y/application-v2.elf

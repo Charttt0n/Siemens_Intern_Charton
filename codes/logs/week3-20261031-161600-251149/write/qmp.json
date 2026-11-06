@@ -1,0 +1,141 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 177822487277625,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822487466083,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 398686
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822487916291,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 399143
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822488009625,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 399218
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822488523083,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 399729
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822488608791,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ypj5yixx/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822490256666,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 401485
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822491702541,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 402926
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822491816375,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ypj5yixx/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177822493365916,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434562,
+      "microseconds": 404577
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

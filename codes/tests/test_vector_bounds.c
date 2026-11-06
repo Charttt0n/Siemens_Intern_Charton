@@ -10,7 +10,11 @@ static void put(uint8_t *p,uint32_t v) {for(unsigned i=0;i<4;i++)p[i]=(uint8_t)(
 static void test(const char *label,unsigned index,uint32_t value,int expect,int length) {
  memcpy(memory,base,FLASH_SIZE);uint8_t *h=memory+0x10000,*p=h+32;
  uint32_t size=get(h+12);
- if(length) {size=value;put(h+12,size);} else put(p+4*index,value);
+ if(length) {
+  size=value;put(h+12,size);
+  for(unsigned i=1;i<48;i++)
+   if(!(i>=7&&i<=10)&&i!=13)put(p+4*i,(APP_EXEC_BASE+APP_VECTOR_SIZE)|1u);
+ } else put(p+4*index,value);
  put(h+24,crc32(p,size));put(h+28,crc32(h,28));
  flash_device dev={0};image_info info={0};
  if(flash_sim_bind(&dev,memory,FLASH_SIZE)) {++failed;return;}
@@ -28,12 +32,13 @@ int main(int argc,char **argv) {
  for(unsigned i=1;i<48;i++) {
   if((i>=7&&i<=10)||i==13){test("reserved-zero",i,0,0,0);test("reserved-nonzero",i,0x100c1,7,0);continue;}
   test("entry-lower",i,0x100c1,0,0);test("entry-below",i,0x100bf,7,0);
-  test("entry-upper-inside",i,((end-1)&~1u)|1u,0,0);
+  test("entry-upper-inside",i,((end-2)&~1u)|1u,0,0);
   test("entry-at-end",i,end|1u,7,0);test("entry-above",i,(end+2)|1u,7,0);
   test("entry-even",i,0x100c0,7,0);test("entry-zero",i,0,7,0);
  }
  test("length-191",0,191,4,1);test("length-192-no-code",0,192,7,1);
- /* 193 bytes permits an address at the last byte; parser checks start address,
-    not full Thumb instruction length. This acceptance is not executed. */
+ /* The first Thumb halfword must be wholly inside the declared payload. */
+ test("length-193-halfword-truncated",0,193,7,1);
+ test("length-194-halfword-inside",0,194,0,1);
  printf("VECTOR_MATRIX total=%u failed=%u\n",total,failed);return failed?1:0;
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 177975700298333,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975700464666,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434715,
+      "microseconds": 613147
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975701432166,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434715,
+      "microseconds": 614099
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975701526333,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434715,
+      "microseconds": 614186
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975702479833,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434715,
+      "microseconds": 615139
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975702569958,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-fp5zwi9t/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 177975704215875,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793434715,
+      "microseconds": 616876
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

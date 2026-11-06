@@ -42,7 +42,7 @@ def generate(root,group):
     files=[{'path':p.relative_to(root).as_posix(),'size':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file() and p.name!='delivery-manifest.json']
     return validate({'schema_version':1,'plan_group':group,'generated_at':datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),'files':files,'image_format':'M7IM-v1','approval_status':'pending-teacher-review'},root)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--group',choices=['week1-2','week3','week4','week3-4']);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--group',choices=['week1-2','week3','week4','week3-4','week5','week1-5']);a=p.parse_args()
     if a.group: (a.root/'delivery-manifest.json').write_text(json.dumps(generate(a.root,a.group),ensure_ascii=False,indent=2)+'\n')
     else: validate(json.loads((a.root/'delivery-manifest.json').read_text()),a.root)
     print('MANIFEST PASS')

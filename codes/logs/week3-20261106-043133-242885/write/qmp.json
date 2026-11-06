@@ -1,0 +1,141 @@
+[
+  {
+    "direction": "request",
+    "monotonic_ns": 59834882362291,
+    "execute": "qmp_capabilities"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834882514166,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 110183
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834882950708,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 110622
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834883042958,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 110705
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834883556166,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 111216
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834883638291,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ocmo37ra/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834885158833,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 112820
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834886519250,
+    "execute": "stop"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 114189
+    },
+    "event": "STOP"
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834886613666,
+    "execute": "pmemsave",
+    "arguments": {
+      "val": 540016640,
+      "size": 1048576,
+      "filename": "/tmp/w3-ocmo37ra/flash.bin"
+    }
+  },
+  {
+    "return": {}
+  },
+  {
+    "direction": "request",
+    "monotonic_ns": 59834888036375,
+    "execute": "cont"
+  },
+  {
+    "timestamp": {
+      "seconds": 1793910696,
+      "microseconds": 115705
+    },
+    "event": "RESUME"
+  },
+  {
+    "return": {}
+  }
+]

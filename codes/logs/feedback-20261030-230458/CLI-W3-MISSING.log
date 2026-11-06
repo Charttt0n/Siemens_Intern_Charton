@@ -1,0 +1,6 @@
+$ /Users/charton/.local/bin/python3 scripts/run-week3.py
+ERROR: ELF not found: /private/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/feedback-ljj5bvs1/codes/build/week3/bootloader-week3.elf
+Commands: p ping; r read; e erase first parameter sector; w write W3OK; s stats; h help
+Host: save = checkpoint; quit / EOF = checkpoint and exit. Ctrl-C = exit without saving.
+
+EXIT=1 TIMEOUT=False
