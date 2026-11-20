@@ -1,13 +1,16 @@
+/** @file
+ * @brief Two-page journal of boot parameters and trial intent.
+ */
 #ifndef WEEK6_BOOT_CONFIG_H
 #define WEEK6_BOOT_CONFIG_H
 #include "boot_meta.h"
 
-/* Week-6 boot parameters and trial-boot state, stored as two 4 KiB pages at
+/** Week-6 boot parameters and trial-boot state, stored as two 4 KiB pages at
  * offsets 0x2000 and 0x3000 of FLASH_PARAMS. Pages 0 and 1 remain Week-5
  * upgrade metadata and are not overwritten here. */
-#define CFG_MAGIC 0x4643364du   /* little-endian "M6CF" */
+#define CFG_MAGIC 0x4643364du   /**< little-endian "M6CF" */
 #define CFG_SCHEMA 1u
-#define CFG_MARKER 0x54494d43u  /* "CMIT" */
+#define CFG_MARKER 0x54494d43u  /**< "CMIT" */
 #define CFG_RECORD_SIZE 56u
 #define CFG_PAGE_BASE (META_PAGE_COUNT * META_PAGE_SIZE)
 #define CFG_DEFAULT_WINDOW_MS 2500u
@@ -30,7 +33,7 @@ typedef struct {
     uint32_t trial_slot;
     uint32_t last_confirmed_slot;
     uint32_t trial_pending;
-    uint32_t trial_stage;     /* 0 none, 1 armed this session, 2 launched */
+    uint32_t trial_stage;     /**< 0 none, 1 armed this session, 2 launched */
     uint32_t reserved[3];
     uint32_t crc, marker;
 } cfg_record;
@@ -39,8 +42,12 @@ typedef struct {
 #define CFG_TRIAL_ARMED 1u
 #define CFG_TRIAL_LAUNCHED 2u
 
+/** Fill the caller-owned record with the default command window and trial state. */
 void cfg_defaults(cfg_record *record);
+/** Load a record or initialize two blank pages with default parameters. */
 int cfg_init(const meta_flash_ops *ops, cfg_record *record);
+/** Read the newest valid parameter record. Report blank, damaged and ambiguous pages separately. */
 int cfg_read(const meta_flash_ops *ops, cfg_record *record);
+/** Commit and read back a new generation. Publish runtime values only on CFG_OK. */
 int cfg_commit(const meta_flash_ops *ops, cfg_record *record);
 #endif

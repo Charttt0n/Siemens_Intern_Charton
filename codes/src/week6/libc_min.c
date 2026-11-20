@@ -15,7 +15,9 @@ void *memmove(void *dest, const void *src, size_t n) {
     uint8_t *d = dest;
     const uint8_t *s = src;
     if (d == s || n == 0) return dest;
-    if (d < s) {
+    /* Cortex-M7 uses a flat address space. Compare integer addresses when
+       the source and destination may belong to different objects. */
+    if ((uintptr_t)d < (uintptr_t)s) {
         while (n--) *d++ = *s++;
     } else {
         d += n; s += n;

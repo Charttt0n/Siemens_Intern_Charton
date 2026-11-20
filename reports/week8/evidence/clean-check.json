@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-11-20T21:06:46.853543+08:00",
+  "platform": "macOS; QEMU MPS2-AN500",
+  "clean_run": "fresh source copy, empty logs, no build tree, independent generated signing key",
+  "command": "make verify-release",
+  "exit_code": 0,
+  "environment_smoke": "PASS: versions, build, Cortex-M7 execution, C runtime, GDB breakpoints and single step",
+  "suites": {
+    "cli-week34": {
+      "status": "PASS",
+      "groups": 22,
+      "run": "cli-week34-20261120-181540"
+    },
+    "feedback": {
+      "status": "PASS",
+      "groups": 30,
+      "run": "feedback-20261120-181119"
+    },
+    "handoff-contract": {
+      "status": "PASS",
+      "groups": 7,
+      "run": "handoff-contract-20261120-181537"
+    },
+    "irq-contract": {
+      "status": "PASS",
+      "groups": 2,
+      "run": "irq-contract-20261120-181609"
+    },
+    "tx-full": {
+      "status": "PASS",
+      "groups": 7,
+      "run": "tx-full-20261120-181609"
+    },
+    "uart-baud": {
+      "status": "PASS",
+      "groups": 2,
+      "run": "uart-baud-20261120-181612"
+    },
+    "vector-bounds": {
+      "status": "PASS",
+      "groups": 12,
+      "run": "vector-bounds-20261120-181613"
+    },
+    "week1-review": {
+      "status": "PASS",
+      "groups": 6,
+      "run": "week1-review-20261120-180705"
+    },
+    "week2": {
+      "status": "PASS",
+      "groups": 12,
+      "run": "week2-20261120-180709"
+    },
+    "week3": {
+      "status": "PASS",
+      "groups": 11,
+      "run": "week3-20261120-180713-911143"
+    },
+    "week4": {
+      "status": "PASS",
+      "groups": 27,
+      "run": "week4-20261120-180716-295526"
+    },
+    "week5": {
+      "status": "PASS",
+      "groups": 75,
+      "run": "week5-20261120-180721-019438"
+    },
+    "week6": {
+      "status": "PASS",
+      "groups": 11,
+      "run": "week6-20261120-181126-093199"
+    },
+    "week7": {
+      "status": "PASS",
+      "groups": 29,
+      "run": "week7-20261120-181217-807077",
+      "unity": [
+        {
+          "suite": "flash",
+          "tests": 1,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/flash.txt"
+        },
+        {
+          "suite": "image",
+          "tests": 1,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/image.txt"
+        },
+        {
+          "suite": "boot_meta",
+          "tests": 16,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/boot_meta.txt"
+        },
+        {
+          "suite": "ymodem",
+          "tests": 32,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/ymodem.txt"
+        },
+        {
+          "suite": "update",
+          "tests": 9,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/update.txt"
+        },
+        {
+          "suite": "core",
+          "tests": 23,
+          "failures": 0,
+          "ignored": 0,
+          "log": "/private/tmp/siemens-w8.EE27Ko/clean/codes/logs/week7-20261120-181217-807077/unity/core.txt"
+        },
+        {
+          "suite": "cortex-m7",
+          "tests": 11,
+          "failures": 0,
+          "ignored": 0,
+          "log": "unity-target.txt"
+        }
+      ],
+      "watchdog": [
+        {
+          "timestamp": {
+            "seconds": 1795169733,
+            "microseconds": 360099
+          },
+          "event": "RESET",
+          "data": {
+            "guest": true,
+            "reason": "guest-reset"
+          }
+        }
+      ]
+    }
+  },
+  "scripts_sha256": {
+    "verify-week7.py": "aa64b7df694e0fbc01a7031cc1d27cde440b656c5d6a1e1c36361a73a8388813",
+    "week7_unit.py": "a3212850285117c40cf7a17fb18956342f85b1de52ec480d488a063e5e215542",
+    "demo-week8.sh": "edbd03ffb2d0d7b98869fb39312b7c520218a02b595e3e7a036675a8692b8083"
+  },
+  "demos": [
+    "boot",
+    "upgrade",
+    "refusal",
+    "recovery"
+  ],
+  "demo_from_staged_files": "PASS",
+  "api_generated_without_build_tree": "PASS",
+  "api_public_headers": 15,
+  "summary_docx": {
+    "body_han_characters": 9502,
+    "figures": 5,
+    "rendered_pdf_pages": 12
+  },
+  "header_documentation_check": {
+    "load_bytes": 24216,
+    "before_and_after_raw_image_sha256": "7fae5a54327a46da40935ea9e64b1d55bf6808297d1477a3447523ef250e6a4b",
+    "method": "same key and build directory; arm-none-eabi-objcopy -O binary and byte comparison"
+  }
+}

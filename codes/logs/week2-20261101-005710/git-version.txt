@@ -1,4 +1,0 @@
-$ git --version
-git version 2.56.0
-
-EXIT_CODE=0

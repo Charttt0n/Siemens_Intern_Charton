@@ -1,1 +1,0 @@
-PASS: update metadata/erase/write/validate/failure and YMODEM end-to-end

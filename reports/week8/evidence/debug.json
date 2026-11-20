@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "transport": "QEMU gdbstub (no physical JTAG/OpenOCD adapter)",
+  "checks": [
+    "trial intent persisted before activation",
+    "old active slot A before commit",
+    "new active slot B after commit",
+    "trial app confirmed"
+  ]
+}

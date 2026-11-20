@@ -1,0 +1,86 @@
+{
+  "started_at": "2026-11-20T17:56:39.891056+08:00",
+  "checks": [
+    {
+      "name": "tool-versions",
+      "status": "PASS",
+      "evidence": [
+        "qemu-system-arm-version.txt",
+        "arm-none-eabi-gcc-version.txt",
+        "cmake-version.txt",
+        "arm-none-eabi-gdb-version.txt",
+        "make-version.txt",
+        "git-version.txt"
+      ]
+    },
+    {
+      "name": "clean-build",
+      "status": "PASS",
+      "evidence": [
+        "configure.txt",
+        "build.txt",
+        "size.txt",
+        "vectors.txt",
+        "symbols.txt"
+      ]
+    },
+    {
+      "name": "nominal-run",
+      "status": "PASS",
+      "evidence": [
+        "nominal-qemu.txt"
+      ],
+      "qemu_exit": 0
+    },
+    {
+      "name": "poisoned-startup",
+      "status": "PASS",
+      "evidence": [
+        "poisoned-startup.gdb",
+        "poisoned-startup-gdb.txt",
+        "poisoned-startup-qemu.txt"
+      ],
+      "qemu_exit": 0
+    },
+    {
+      "name": "corrupt-data",
+      "status": "PASS",
+      "evidence": [
+        "corrupt-data.gdb",
+        "corrupt-data-gdb.txt",
+        "corrupt-data-qemu.txt"
+      ],
+      "qemu_exit": 1
+    },
+    {
+      "name": "corrupt-bss",
+      "status": "PASS",
+      "evidence": [
+        "corrupt-bss.gdb",
+        "corrupt-bss-gdb.txt",
+        "corrupt-bss-qemu.txt"
+      ],
+      "qemu_exit": 1
+    }
+  ],
+  "status": "PASS",
+  "versions": [
+    "QEMU emulator version 11.1.2",
+    "arm-none-eabi-gcc (GCC) 16.2.0",
+    "cmake version 4.4.4",
+    "GNU gdb (xPack GNU Arm Embedded GCC arm64) 16.3.90.20250906-git",
+    "GNU Make 4.4.1",
+    "git version 2.56.0"
+  ],
+  "elf": "build/week1-review-3zcztncs/demo.elf",
+  "elf_sha256": "bd282108df27d0be13d5e21397cc4ccd029d9a5ee8d7c7086f6a7edc323561f2",
+  "source_sha256": {
+    "src/main.c": "bc5dff956ac5edcb5ce743661f522e63b5a45ce133a27d13f1255df3eef0ae66",
+    "src/startup.S": "f51fb00686cb0d6032125fd484a0cf4f4d2a80e1e9d24115784757985ab47b4a",
+    "src/linker.ld": "52a001f4a09a937930ae7ff729215fb8287dc453aeaf3894953b2793489567e1",
+    "CMakeLists.txt": "b35e31ccb83633f18987d74909f76bfd97cce44381d0881ab43f418315d5d7a1",
+    "cmake/arm-none-eabi.cmake": "714ef86c356761682b2ed92bb2d6c7074557e63a52f2a9158ac3c4309f263829",
+    "scripts/verify-startup.py": "b5a28c844ec853c27d6504fff948bc7f169c9415539fbf8f53b5862399ac545a"
+  },
+  "finished_at": "2026-11-20T17:56:43.500926+08:00"
+}

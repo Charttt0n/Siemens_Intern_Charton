@@ -1,8 +1,0 @@
-$ arm-none-eabi-gdb --version
-GNU gdb (xPack GNU Arm Embedded GCC arm64) 16.3.90.20250906-git
-Copyright (C) 2024 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-EXIT_CODE=0

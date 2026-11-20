@@ -1,25 +1,33 @@
-# Siemens Intern 实习项目
+# 工业嵌入式 Bootloader
 
-- **[项目规划书](Industrial%20Embedded%20Systems%20Bootloader%20Development.pdf)**：8 周目标、每周任务与交付要求；与 planning 中原件保持一致。
+本工程在 QEMU MPS2-AN500 Cortex-M7 上实现裸机启动、签名校验、UART/YMODEM 升级、双槽切换与未确认应用回退。第八周正式固件的装载体积为 **24,216 字节**，相对本轮关闭 LTO 的对照减少 **2,988 字节（10.98%）**。仿真验收覆盖正常升级、拒绝无签名包、最大容量、存储操作错误、中断恢复与看门狗复位。
 
-2026-11-06 已更新 [Week 5 交付索引](reports/week5/delivery-index.md)、周报及升级测试报告。[前五周阶段交付总索引](planning/week1-5-delivery-index.md)保留 11 月 1 日的五周验收记录及 Week 1 待确认项。
+## 从空目录开始
 
+准备 Arm 裸机 GCC/binutils 和 GDB、QEMU、Python 3、CMake、GNU Make、OpenSSL 及支持 ASan/UBSan 的宿主 C 编译器。首次构建自动生成本地实验密钥。完整版本和依赖来源见[代码工程 README](codes/README.md)。
 
-- [codes](codes/README.md)：唯一主代码工程。源码、构建脚本、架构说明、测试报告和日志保留在工程内。
-- [reports/week1-2](reports/week1-2/)：Week 1–2 周报，Word 为提交版，Markdown 为可编辑文本。
-- [reports/week3](reports/week3/)：Week3驱动与存储周报，含Word、Markdown、PDF及交付索引。
-- [reports/week4](reports/week4/)：Week4固件校验与应用跳转周报，含Word、Markdown、PDF及交付索引。
-- [Week3与Week4交付总索引](planning/week3-week4-delivery-index.md)：原计划对应、材料归属及独立交付包。
-- [planning](planning/)：实习规划及工时补充材料。
-- [notes](notes/)：个人学习笔记。
-- [archive](archive/)：早期代码副本、旧周报、文档生成脚本及渲染文件，仅作历史参考。
+```sh
+cd codes
+bash scripts/demo-week8.sh
+make verify-release
+```
 
-后续代码只修改 codes，周报只在 reports 对应周次维护。归档目录中的脚本可能包含历史路径，不作为日常运行入口。
+演示会重新构建并检查四场实际会话。全量验收覆盖 Week 1–7、反馈和六个补充专项；任何优化之后均从这个入口回归。查看[演示指南和串口截图](codes/docs/week8-demo.md)或[逐套测试结果](reports/week8/最终测试报告.md)。
 
-Git 仓库位于项目根目录，保留原有代码提交历史，并统一管理 codes、reports、planning 和 notes。archive、构建产物、下载包及缓存不上传。测试报告中的日期与测试结论保留原始含义。
+## 最终交付
 
-远程仓库：[Siemens_Intern_Charton](https://github.com/Charttt0n/Siemens_Intern_Charton)。构建和运行时仍进入 codes 目录。
+| 需要做什么 | 从哪里开始 |
+|---|---|
+| 阅读八周成果 | [结项报告 PDF](reports/week8/结项报告.pdf) · [可编辑 Word](reports/week8/结项报告.docx) · [Markdown](reports/week8/结项报告.md) |
+| 核对计划与本周产物 | [原始八周规划书](planning/Industrial%20Embedded%20Systems%20Bootloader%20Development.pdf) · [第八周交付索引](reports/week8/delivery-index.md) · [第八周周报](reports/week8/第八周实习周报.pdf) |
+| 修改代码、查接口 | [架构、模块、开发说明及工业要求对应](codes/docs/week8-technical.md) · [Doxygen 离线 API](reports/week8/API参考.zip) |
+| 核对体积及安全回归 | [测试与测量报告 PDF](reports/week8/最终测试报告.pdf) · [LTO 成对测量](reports/week8/evidence/lto-comparison.json) · [原始运行证据](reports/week8/evidence/运行证据.zip) |
+| 复查早期决策 | [阶段进度](planning/stage-progress.md) · [各周报告](reports/) · [第一周学习记录](notes/week1-learning-notes.md) |
 
-2026-10-23：Week 1–4 仿真功能已有实现；[完整计划核查](planning/week1-4-plan-audit.md)发现 Week1 指定手册学习与工业要求适用性研究尚未闭环。当前结论见 [任务进度](planning/stage-progress.md)，2026-10-22的历史交付步骤见 [交付说明](codes/docs/week2-delivery.md)。
+## 目录与历史
 
-2026-10-25仓库同步：正式周报见reports/week3、reports/week4；Week3两份独立存储交付PDF见[codes/docs/week3-memory-layout.pdf](codes/docs/week3-memory-layout.pdf)和[codes/docs/week3-test-report.pdf](codes/docs/week3-test-report.pdf)。output/中的生成包及archive/不上传，仓库保留正式代码、报告和测试证据。
+`codes/` 是唯一代码工程，包含平台与协议实现、第三方源码及许可、脚本、测试和技术文档。`reports/` 保存周报和正式提交材料。`planning/` 保存原任务及阶段核查，`notes/` 保存学习记录。
+
+交付分支从第七周代码提交 `fef3e14` 派生，保留此前 Git 历史及正式目录中已有的周报修订。早期报告中的日志地址对应当时工作区；已提交的历史文件可用 `git show fef3e14:codes/logs/<原相对路径>` 核查。当前证据以第八周索引为准。清理后的工程仅在运行时创建 build 和 logs，旧构建树、重复交付包、缓存及实验私钥均不随源码分发。原始规划书在 planning 保存一份，根目录保留同名兼容入口。
+
+实体 Flash 掉电、板级最坏时序、生产密钥和 OpenOCD/SWD 需在指定硬件上验收。仿真测试和带教签收分别记录。

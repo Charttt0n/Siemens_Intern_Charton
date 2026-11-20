@@ -1,9 +1,0 @@
-$ arm-none-eabi-gdb --batch -q /var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/baud-build-82bc4hpt/bootloader-week4.elf -x /Users/charton/Projects/Siemens_Intern_Charton/codes/logs/uart-baud-20261031-161618/week4-registers.gdb
-boot_idle () at /Users/charton/Projects/Siemens_Intern_Charton/codes/src/week4/main.c:7
-7	__attribute__((noreturn)) void boot_idle(void) { for (;;) __asm__ volatile ("wfi"); }
-BAUDDIV[0x40004010] = 0x000000d9 (217)
-CTRL[0x40004008] = 0x0000000b
-UART_BAUD_READBACK_PASS
-[Inferior 1 (process 1) detached]
-
-EXIT=0

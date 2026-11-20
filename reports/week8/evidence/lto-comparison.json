@@ -1,0 +1,165 @@
+{
+  "model": "QEMU icount shift=3, 8 ns per emulated instruction; TIMER0 25 MHz",
+  "toolchain": "GNU Arm GCC 16.2.0, QEMU 11.1.2",
+  "runs": 3,
+  "window_ms": 200,
+  "variants": {
+    "off": {
+      "elf": "/private/tmp/siemens-w8.EE27Ko/off/bootloader-week7.elf",
+      "sha256": "27c7e7cf2e629c61d73c85034e684b85f0004e672b8981220d87cd98ad9b2962",
+      "text": 27196,
+      "data": 8,
+      "bss_including_stack": 41176,
+      "load_bytes": 27204,
+      "measurements": [
+        {
+          "image": "demo",
+          "payload_bytes": 3360,
+          "variant": "optimized",
+          "seed_sha256": "ab6dcfc6dec1c13999bf7256a153487db222fde82c83525b6f1b421d48c7c24e",
+          "samples": [
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            }
+          ],
+          "median_verify_ms": 29.0,
+          "median_total_ms": 231.0006
+        },
+        {
+          "image": "128KiB",
+          "payload_bytes": 131072,
+          "variant": "optimized",
+          "seed_sha256": "e589634075082e6c3e9730b1fc1f21a77e8bde84474220fa33ef764b397f4e08",
+          "samples": [
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            }
+          ],
+          "median_verify_ms": 163.0,
+          "median_total_ms": 365.0006
+        }
+      ]
+    },
+    "on": {
+      "elf": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/build/week7/bootloader-week7.elf",
+      "sha256": "e0e44e0d3a78421641bbd28ecf5d89a4f043ceadc6f2ab584dc9ec232f9a13e1",
+      "text": 24208,
+      "data": 8,
+      "bss_including_stack": 41176,
+      "load_bytes": 24216,
+      "measurements": [
+        {
+          "image": "demo",
+          "payload_bytes": 3360,
+          "variant": "optimized",
+          "seed_sha256": "ab6dcfc6dec1c13999bf7256a153487db222fde82c83525b6f1b421d48c7c24e",
+          "samples": [
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 5775015,
+              "VERIFY": 725000,
+              "before_ms": 202.0006,
+              "total_ms": 231.0006,
+              "verify_ms": 29.0
+            }
+          ],
+          "median_verify_ms": 29.0,
+          "median_total_ms": 231.0006
+        },
+        {
+          "image": "128KiB",
+          "payload_bytes": 131072,
+          "variant": "optimized",
+          "seed_sha256": "e589634075082e6c3e9730b1fc1f21a77e8bde84474220fa33ef764b397f4e08",
+          "samples": [
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            },
+            {
+              "BEFORE": 5050015,
+              "TOTAL": 9125015,
+              "VERIFY": 4075000,
+              "before_ms": 202.0006,
+              "total_ms": 365.0006,
+              "verify_ms": 163.0
+            }
+          ],
+          "median_verify_ms": 163.0,
+          "median_total_ms": 365.0006
+        }
+      ]
+    }
+  },
+  "saved_bytes": 2988
+}

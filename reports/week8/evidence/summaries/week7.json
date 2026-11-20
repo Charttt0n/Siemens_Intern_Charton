@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "timezone": "Asia/Shanghai",
+  "started_at": "20261120-180152-447897",
+  "checks": [
+    {
+      "name": "fresh-build",
+      "status": "PASS"
+    },
+    {
+      "name": "unity-all",
+      "status": "PASS",
+      "tests": 93
+    },
+    {
+      "name": "production-excludes-fault-hooks",
+      "status": "PASS"
+    },
+    {
+      "name": "signed-boot",
+      "status": "PASS"
+    },
+    {
+      "name": "signed-upgrade-and-confirm",
+      "status": "PASS"
+    },
+    {
+      "name": "unsigned-rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "bad-signature-rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "corrupt-payload-rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "signed-header-tamper-rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "maximum-signed-upgrade",
+      "status": "PASS",
+      "package_bytes": 458752,
+      "payload_bytes": 458448
+    },
+    {
+      "name": "corrupt-active-fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "both-invalid-remain-cli",
+      "status": "PASS"
+    },
+    {
+      "name": "cli-validation-persistence-factory",
+      "status": "PASS"
+    },
+    {
+      "name": "corrupt-config-fails-closed",
+      "status": "PASS"
+    },
+    {
+      "name": "erase-error-keeps-old",
+      "status": "PASS"
+    },
+    {
+      "name": "program-error-keeps-old",
+      "status": "PASS"
+    },
+    {
+      "name": "readback-error-keeps-old",
+      "status": "PASS"
+    },
+    {
+      "name": "trial-arm-error-keeps-old",
+      "status": "PASS"
+    },
+    {
+      "name": "param-write-error-keeps-runtime",
+      "status": "PASS"
+    },
+    {
+      "name": "active-read-error-fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "target-erase-tear-cold-restart",
+      "status": "PASS",
+      "fault_id": 1,
+      "active_slot": 1,
+      "snapshot": "target-erase-tear/nor-at-fault.bin"
+    },
+    {
+      "name": "target-write-tear-cold-restart",
+      "status": "PASS",
+      "fault_id": 2,
+      "active_slot": 1,
+      "snapshot": "target-write-tear/nor-at-fault.bin"
+    },
+    {
+      "name": "trial-body-tear-cold-restart",
+      "status": "PASS",
+      "fault_id": 3,
+      "active_slot": 1,
+      "snapshot": "trial-body-tear/nor-at-fault.bin"
+    },
+    {
+      "name": "trial-marker-complete-cold-restart",
+      "status": "PASS",
+      "fault_id": 4,
+      "active_slot": 1,
+      "snapshot": "trial-marker-complete/nor-at-fault.bin"
+    },
+    {
+      "name": "activation-body-tear-cold-restart",
+      "status": "PASS",
+      "fault_id": 5,
+      "active_slot": 1,
+      "snapshot": "activation-body-tear/nor-at-fault.bin"
+    },
+    {
+      "name": "activation-marker-tear-cold-restart",
+      "status": "PASS",
+      "fault_id": 6,
+      "active_slot": 1,
+      "snapshot": "activation-marker-tear/nor-at-fault.bin"
+    },
+    {
+      "name": "activation-marker-complete-cold-restart",
+      "status": "PASS",
+      "fault_id": 7,
+      "active_slot": 2,
+      "snapshot": "activation-marker-complete/nor-at-fault.bin"
+    },
+    {
+      "name": "watchdog-reset-observed",
+      "status": "PASS"
+    },
+    {
+      "name": "unconfirmed-trial-rollback",
+      "status": "PASS",
+      "method": "explicit pre-reset NOR snapshot and cold restart"
+    }
+  ],
+  "unity": [
+    {
+      "suite": "flash",
+      "tests": 1,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/flash.txt"
+    },
+    {
+      "suite": "image",
+      "tests": 1,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/image.txt"
+    },
+    {
+      "suite": "boot_meta",
+      "tests": 16,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/boot_meta.txt"
+    },
+    {
+      "suite": "ymodem",
+      "tests": 32,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/ymodem.txt"
+    },
+    {
+      "suite": "update",
+      "tests": 9,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/update.txt"
+    },
+    {
+      "suite": "core",
+      "tests": 23,
+      "failures": 0,
+      "ignored": 0,
+      "log": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897/unity/core.txt"
+    },
+    {
+      "suite": "cortex-m7",
+      "tests": 11,
+      "failures": 0,
+      "ignored": 0,
+      "log": "unity-target.txt"
+    }
+  ],
+  "scope": "Week 7 QEMU AN500 simulation",
+  "evidence": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897",
+  "watchdog_events": [
+    {
+      "timestamp": {
+        "seconds": 1795169107,
+        "microseconds": 965675
+      },
+      "event": "RESET",
+      "data": {
+        "guest": true,
+        "reason": "guest-reset"
+      }
+    }
+  ],
+  "finished_at": "2026-11-20T18:05:11.811150+08:00",
+  "source_sha256": {
+    "src/startup.S": "f51fb00686cb0d6032125fd484a0cf4f4d2a80e1e9d24115784757985ab47b4a",
+    "src/main.c": "bc5dff956ac5edcb5ce743661f522e63b5a45ce133a27d13f1255df3eef0ae66",
+    "src/linker.ld": "52a001f4a09a937930ae7ff729215fb8287dc453aeaf3894953b2793489567e1",
+    "src/week6/week6_mbedtls_config.h": "0ab2df5e6ada0a7e38ad9439abfc24ee0aa5aba2a51311f3d53976e5dc02b4c3",
+    "src/week6/watchdog.h": "387ab0d3f5c10bfab65d15cec91eaceff2157c3fee328045fa19eca44e965134",
+    "src/week6/libc_min.c": "ae368b78f2740b9a3219f1fb7320a60cc70e3603ca5220a74be9e4878990de72",
+    "src/week6/secure_image.h": "a9cdd12fb5dd496f34da85099bd39d755ed5b6474bfb486128bf1d234a1f6d04",
+    "src/week6/app_confirm.c": "9449665b90b708000543297e3eed5bdae81302154121f492fe1d1d6ff840b4e1",
+    "src/week6/update.c": "b3f57d26d898566e157b5cbd88cdd3d51da2bbdee5aefb870cc6a0f30fcf4390",
+    "src/week6/boot_config.h": "775ba04292cbf0ffa66b6bb39083708d138746b0f566cf8fbff9ba090fb5cd14",
+    "src/week6/watchdog.c": "a8b6341a8e440982c7170beacf17b7936b841523613222a7d2d41a604ae51c5f",
+    "src/week6/main.c": "a3e0209c3a1f030d836101824a813b0df30ecfbafab1956a7cdf38bd4631c543",
+    "src/week6/app_confirm.h": "30b7b004bed7c11c85872321f443b978dceb99b660828350f7de5121d839a218",
+    "src/week6/secure_image.c": "9cd0af60aeb8c46b49247065b37f1ddfb4ee3402ad9e62352f567abf15bb032e",
+    "src/week6/boot_config.c": "13ff70d3cc42de6563c0adf90b507c5a4f6bae869bad842a81aef59e0b1bc33a",
+    "src/week6/linker.ld": "84eb6528f7a0fb75190834f08396d376348ac957920dedf0f022a20958663b0f",
+    "src/week7/control.h": "f3dfe2e94acf38011febf270a38ca6c66d0da6bf158b2e07c2104c60a0e76110",
+    "src/week7/app_confirm.c": "f86f383a2aa7668b568c4da25332466dfe22d4d63df338f6eb5eed6eb2a80961",
+    "src/week7/crc32.c": "6c1fc13c9c2022d67920d442c0fde82412bec9297cb92c1c7fc8714abd92f23a",
+    "src/week7/control.c": "452fdb408f82863d448a168c061881b2f272c45a118b876b7fe0471304e6a8a2",
+    "src/week7/main.c": "392e3ba88b104d3cfb7100229ef8699ba01c770dc5f0a4a9153d362b4a9dd556",
+    "src/week2/board.c": "f119351cad804eb1da32b273809406104cfa6f3a002d30834960b8b9e9cf68ed",
+    "src/week2/startup.S": "af42fb64c0ca07649ec5854e3d3f889773e4fb1d61ccfaaadf845e45e782a676",
+    "src/week2/uart.h": "8cf2fb1eb3eb839537ab18661f6ca9595db87a6633d42dfea31052f83d43895f",
+    "src/week2/main.c": "5f15bb4ccfa3e4e885a2d1e6c9a2546f90219e07397ba4e2325c665acf650c6f",
+    "src/week2/irq.h": "95ca448bb537c0f5d815526ef2849fd1a429f3b2f9c7281efa6f06c200d9bcaf",
+    "src/week2/board.h": "0869c79e3a3130132479a9eabdb08b28a7ffb87fb648ab696fc2eeb1b2b9dd01",
+    "src/week2/linker.ld": "f804f535a48a6a7721bb3c2bf6935a427be1fbf3d48a07a7cd2bbcf7142e98d0",
+    "src/week2/uart.c": "404ac7a6cb588441e61214f7fe21adb612669c1258361ba58b326e34da0997b5",
+    "src/week5/ymodem.c": "385a71cd9f3d2fe02c061f2e7ff94629d8a56f03f5b3bc9cce19bf4ee2945339",
+    "src/week5/crc16.h": "b5d1d2f9b8cf4cf1bdda0ee6af7cc0e56edf33c16a3ecba1680dfcf28dce3528",
+    "src/week5/boot_meta.h": "a372e256e99824104cd243516632576153b2ef00bf32e03de2d3b27a91f46013",
+    "src/week5/timebase.c": "b766c31648eac92106333cf6d71f92e83f2e4a3307eed81504fa7cc6df2b6ffc",
+    "src/week5/update.c": "abde6f86864dfd4e8af202a1b615bf11ce5f52aeffd358de24742b7da47ddb8f",
+    "src/week5/main.c": "40b92f13054d19b0550738c48f2b58a935c915140097add68130f22ae67da38b",
+    "src/week5/ymodem.h": "d7a48a5abf68018d902624be2f599eb05b04891b7f66b0b1c35280c4a845c23b",
+    "src/week5/crc16.c": "2618cf12ec8919e3590abf10cd460041382fff281205c871ef4743d3f9faa1da",
+    "src/week5/boot_meta.c": "a2c302b0e0cbed9ef63b6ff7ce511759eae42c0799dd229772073ae8958ba7f8",
+    "src/week5/timebase.h": "249793622ff7a1f38f5b594856163cae798893fb6506c51b24d16b221e0a7a19",
+    "src/week5/update.h": "4dfd06008f58e282f24048386cd4c544e15485f6c6c7432593f8e805c7fb025e",
+    "src/week4/image.c": "a54bde4c9cb719a6ae0a585f54a7ce35d39927a2696562cc4199ad0737a24c45",
+    "src/week4/crc32.c": "923db869fe5b77f18fedf4c2c1affeac76d3e19cf93b8c71f0a01c3bac60f039",
+    "src/week4/handoff.S": "38fc6dddd94e2b27b46d71bc8bc300d4b7e312458c134f01fa6884fe942a6542",
+    "src/week4/main.c": "d9cf09944b6efe0b0d61899730dfb7794b85f89bb4871abdc7057e305d499221",
+    "src/week4/crc32.h": "092eb4b018aa621b1a331584a84636c35154a80afa5cb797e34d012f54e57791",
+    "src/week4/image.h": "d7a1f6a712052f718d43d989ceab5302085940cb05e696b93d6db094cb621b6d",
+    "src/week4/linker.ld": "570b9efcd91066f35d226380f923bd9fa00c5eed1a0d6efab10bee6963cb1f6c",
+    "src/week3/flash.c": "135d5ef788d2b0ddbf34f9a882a7b4773f817424ada739906323747df3e886c9",
+    "src/week3/startup.S": "67d12216e8fe395a1dffac16b4b6bf11d4daa1eb868d9ac00b5b54b51c3cdf08",
+    "src/week3/uart.h": "bc690b91ebd1b4bc21df40ba8174a623dcdcfa9d765b4100f563495ba2fdae76",
+    "src/week3/main.c": "abb6bf6c8e1fcc026523b0dff4235edb6c6a27844e1dde75bbcb3ae061a01e65",
+    "src/week3/flash.h": "163be03fd6d4ae2afff06889d7aa2078b5b912c2be7dfffa5622797cc5402a52",
+    "src/week3/linker.ld": "e24501f439a8e136736271fc9791fc1e2e3305404615179d6b8547c8f43155f4",
+    "src/week3/uart.c": "1438e03e85ea1172bf9d9db9c0a6d1f44e1587b60a92735b29c1566b40ace379",
+    "src/week6/app/main.c": "8ffc312f24ff2d0bf58be7733984d146f31bf22c6513fcd98562b3b2d1f57f73",
+    "src/week6/nolibc/stdlib.h": "5a48eb84c12d79fe402ea2871ce537e2b19886297de807f00bdf894536f0e093",
+    "src/week6/nolibc/stdio.h": "9619506619184f49993036c6ae65f86731563e8c653e03a0b6e4e052f7955445",
+    "src/week6/nolibc/assert.h": "a4db19e65add1c41dbde45b66537d64147ec6afb1dba1c4aa2f04b8152476f03",
+    "src/week6/nolibc/string.h": "348f278e74307a7f3a2261ab6f9641418c14a3eff11332e8557e1c798f31ec03",
+    "src/week4/app/startup.S": "53d38ac5d1bbb5664c5d6985f5ea4357a1abbef07d2779beab58357dc8986d61",
+    "src/week4/app/main.c": "a35d71e7159c043b358ef57abb415bdc572fa6ed65cff54bd9283beb9df70662",
+    "src/week4/app/linker.ld": "e82542d2b01bc8420303b1deb0ad6abe58b2bbf0cf402870168933f95ef31329",
+    "cmake/week7.cmake": "e04d7fe6a9bafb7aef4a21a8bc91e5df13f86690c7a8eae5f58eca6e11399afc",
+    "cmake/arm-none-eabi.cmake": "714ef86c356761682b2ed92bb2d6c7074557e63a52f2a9158ac3c4309f263829",
+    "cmake/week6.cmake": "e0c0194d870d7afdda30ba8f3dc8b21683556882645c1e929d8c460863fad04c",
+    "tests/week7/test_image_unity.c": "9beaaf01d284bc0fc15bf2f730e6a89e99a2ebcbd795dd41459f5f0989a76fd8",
+    "tests/week7/test_flash_unity.c": "a7e7b62fb4940c877aa9cbfb49fd879074473b9cdddc404bfe0f7bc4ba820e61",
+    "tests/week7/test_ymodem_unity.c": "0a5351915af92cda7128da5dd1c9051a2a5ab1b1c960dd278a28f8d1a2b58e1d",
+    "tests/week7/unity_config.h": "7d0242b2297469165c0d0877c68513339aaeee5315fe489dc1485ffdb346a14b",
+    "tests/week7/test_target.c": "9b15331b4d54a6ffd15f1ddac2b3ceccc71aef60c267e6d75dbfc03b2de5b7d7",
+    "tests/week7/test_boot_meta_unity.c": "3e4ce6b45edd8746148e58e2f34567f5b00626413926e5a5a77af8673ecd453f",
+    "tests/week7/test_core.c": "1766fa8d578ea8807212dc30f6624aba739adfd7e2d05732289ecda9782961c3",
+    "tests/week7/fault.c": "539dee4cc4a0f5c44b9715b18374bb6dcdf0504dc4f0d2c7fbbca2c73bf1458c",
+    "tests/week7/test_update_unity.c": "cc711390891d9af1bf22360f5ccc73330dae072b37c84ff7570f4abd3d8db18b",
+    "scripts/build-week7.sh": "26257fa4c41a66be4947fa7308a6107d8df70119e9a25e21862fbc1b2691ea64",
+    "scripts/verify-week6.py": "e752afb4ddb18fa7dafbe20f33b54333afdb55d9e7659e3c0d4be2de7c8fbc72",
+    "scripts/verify-irq-contract.py": "d14456735a97f7007a10a4f9b5d9bc721d7a9008d8a457244833130b2bb6d2c9",
+    "scripts/send-week5.py": "e2ae0d7d4ebd63d761e9429da62275373267921aca7052c130e3b2048358dfcc",
+    "scripts/week6_session.py": "814ab1eb3f3b19808eb1fc7146d56caa4105b94f6d79612d360ae574d12d25af",
+    "scripts/verify-manifest.py": "1e7735d3cab32c0b33059ba5ea0fa4d9b2b9cea7adcf2d0852c74621cc43102c",
+    "scripts/pack-week4.py": "53c122e188708dba3b7f3a308ef8e75bcafe5a7b9f4bec7faae183d29623bc9d",
+    "scripts/verify-week2.py": "bbd4547c75af09f96950ca00b390338dacac3d5fb10cb616fb01a98ff8a93442",
+    "scripts/build-week3.sh": "e6a33ab7fc3e21867477da16dc8c69dbcad31597eefd32d398860fdbc06017ff",
+    "scripts/verify-week3.py": "4df63c48fdad74866b939a707c8878d0218b08842ca8a2332511bc1e9dd0b632",
+    "scripts/build-week2.sh": "a1531d042f4c31816cc19792e68283cc9b7e3feb2f126a0b7a800187916c2f2d",
+    "scripts/build-week6.sh": "8bee8c39c8348b7a2895bb4a30d89127e824d9a598413a5f00518c865664e04a",
+    "scripts/verify-week7.py": "aa64b7df694e0fbc01a7031cc1d27cde440b656c5d6a1e1c36361a73a8388813",
+    "scripts/verify-startup.py": "b5a28c844ec853c27d6504fff948bc7f169c9415539fbf8f53b5862399ac545a",
+    "scripts/render-week4-flow.py": "b22fc6c5893151a085537a32862cff8b831b7822e8458029ebeb25f6a276d974",
+    "scripts/verify-uart-baud.py": "b6a3443dbb755d130b8791bb77a9a9095b91671e3a2ef142e0b30311308dfb43",
+    "scripts/week3_session.py": "8a97fc19ee53f3ffe24c0574c739321563ccfd158b566950c94d9cf61ee7a40c",
+    "scripts/seed-week5.py": "b6463e921823b355b4d95a1136728d01635ddda570c410ea94731208912c4ee9",
+    "scripts/pack-week5.py": "86b7678a22b31b914674d0a868d9a337a337827b65548e0d3e72b747b75a3155",
+    "scripts/image_format.py": "e70e186cbc846ce3680cfaa7dccaf4ab1c1b972f0466640821821504f4d342f1",
+    "scripts/week5_meta.py": "16abb953612e68e632e32936588d659e6e77f3a60007a3f5158bfb9954fce0b6",
+    "scripts/run-week3.py": "4a481fe5cefb3496303936fcf990fdde41e2205db2e37dbc2dc68d4f6637264c",
+    "scripts/reproduce-week7-baseline.py": "df43fc3c1dd1f88a097922f6082b033db17f11774d5547720552364393e8558a",
+    "scripts/demo-week8.sh": "edbd03ffb2d0d7b98869fb39312b7c520218a02b595e3e7a036675a8692b8083",
+    "scripts/week7_unit.py": "a3212850285117c40cf7a17fb18956342f85b1de52ec480d488a063e5e215542",
+    "scripts/install-tools.sh": "d5882eae80cd451501394c6e860b22339623b067257663009aaa6da2460edfaf",
+    "scripts/week6_package.py": "c0a00f5d29e2c1bebf88d2453d74afd08741e6fd5172f781c233c268b2365f6a",
+    "scripts/verify-feedback.py": "d9edf3ae38c7fe087d87f8bc14200f09521776e4172d69b9632e8df6af86f086",
+    "scripts/delivery_manifest.py": "398078f7ab795e76ad74197f5f388620bbe347fa90e54dccb4a01dd8506e9f6f",
+    "scripts/run.sh": "5651c1dd1b032c4f19d38e9c46e33b9ac625eb1f8e84dc55e85fc93ff2c42233",
+    "scripts/verify-tx-full.py": "91a414c80e24c7ca17dbd6b2700ac1566194b9990cb06a2e5c17c14897b2259d",
+    "scripts/render-boot-state.py": "d3f0e10aab391a75a2a1eaa3ff65365b00d10ad604f3ea8868f81fd800e79901",
+    "scripts/week5_package.py": "297239978e972c681a47a234f9d3365379f4754a912d01865fd0a2c1593e5c0a",
+    "scripts/verify-vector-bounds.py": "e49018af4000eee5139f542ac8554d09a4e67614c8ea74b8dc5d364852e83200",
+    "scripts/export_weekly_reports.py": "18a49173d7a722d955c5c57577d570529d9826461d53fdec79932b611c7289b2",
+    "scripts/build.sh": "0894fe74e3d59ac24c1fbf199ba47491a1a82cd803999b860f2ca670dd41c384",
+    "scripts/verify-handoff-contract.py": "823763100bb0c3761d238273ef475a2d805e4bb7bc57ea71c823af628b5a149f",
+    "scripts/run-week4.py": "d0937178124cbde33ab2de48fad71296300f3e92589a0247d6d6f7a48f27ae1e",
+    "scripts/week7_session.py": "da39d5f3dc97433c6b0375088e7ab8049febd7b65280ebf44c45ddd8969ac72c",
+    "scripts/test_week5_package.py": "88d07fc5b4c1595d43f2d377d82010e933e61e16a84d4f8bb8ac27daadd747fe",
+    "scripts/env.sh": "7f41a03d4bcfaecead2471946ef08db5853e81edaf0727761681e5cb4e36cc96",
+    "scripts/week5_acceptance.py": "0dfd7778b979c938d22e6e6242ed05ff93ea3c19de7a435442746efdb1c6e8b4",
+    "scripts/verify.py": "f9b85b9ddabafdfe8379ef960aac5de0eba2134e222aa32ea0c58b46b299a30d",
+    "scripts/debug-week7.py": "5f1b7b8d0a8f0ca9a1a123786b0cc1b9b2433ffa0e14393484062f883f244486",
+    "scripts/build-week5.sh": "e6e024d04fd820328db36078f9c95f3e92a5c19cd75b8817dadceffe52fb52d6",
+    "scripts/verify-week4.py": "1596ae33516b674bc62800968d8fb79f7a84b99bac30354f6b8d15aeac586413",
+    "scripts/send-week7.py": "66884fdbb1d150c639324aa067c89f405fc43c4da9114cdea0fa2fdd36672849",
+    "scripts/seed-week6.py": "aecdc065be9db3f1101381c208216786cac1e2ed6651beafef65228ab1c42174",
+    "scripts/pack-week6.py": "4f6949f7da81ddb0b1b424bed4ed5d1330d77911ae1ba2414be6a56a5809416e",
+    "scripts/benchmark-week7.py": "895b71a4a70e49cebfe2365246152edc330477b6e22838018272ed62605de792",
+    "scripts/build-week4.sh": "14dcc26e96c50bc0db32818ea802dbc89a4bad5dbdd5601e0a68960c0ee371ea",
+    "scripts/verify-week5.py": "b199dc4a8ac3dca8a4710dd47fd7cfe6b747f2fb609491e481b4c112543bcee1",
+    "scripts/lab_signing_key.py": "377e7f1b08695dd282cd8a4e061e6792354d9d6c3fccdcca155797340af6f987",
+    "scripts/week5_session.py": "dcb01271d23dd1b383ad6031e9c7feb7569494378752567e3b4371fa32d88722",
+    "scripts/send-week6.py": "ecf620d9ec8adcfcf16ed9c4d00b254eb3615b17bfcef0d4176677a7645ea7ef",
+    "scripts/verify-cli-week34.py": "852c5770f7e49f5a4e0d114c13667abf73e7c399f42aeda956c601d83b40b913",
+    "scripts/export-deliverables.py": "d6980b099f1dfde6e59d9fe6ec9b1c0b865440849f05ff6119340702fb5e2488",
+    "scripts/run-week2.sh": "8319b2a4ee2eb78700fa3dfbb8b202faefd13733dc9f6513bcc943a3467401b4"
+  }
+}

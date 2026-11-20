@@ -8,6 +8,13 @@ function(configure_week7 target)
     target_include_directories(${target} PRIVATE src/week7)
     # Retain debug info for postmortem GDB; exactly one optimization flag.
 endfunction()
+# Share LTO settings between release and fault builds. Keep the flash adapter
+# and transaction boundaries as regular objects for ld --wrap and GDB probes.
+option(BOOT_CRYPTO_LTO "Optimize the release signature verifier at link time" ON)
+if(BOOT_CRYPTO_LTO)
+    set_property(SOURCE ${MBEDTLS_SRCS} src/week6/secure_image.c APPEND PROPERTY
+        COMPILE_OPTIONS "$<$<BOOL:$<TARGET_PROPERTY:BOOT_CRYPTO_LTO>>:-flto>")
+endif()
 add_executable(bootloader-week7.elf ${WEEK7_SRCS})
 configure_week7(bootloader-week7.elf)
 add_executable(bootloader-week7-debug.elf ${WEEK7_SRCS})
@@ -17,6 +24,12 @@ add_executable(bootloader-week7-fault.elf ${WEEK7_SRCS} tests/week7/fault.c)
 configure_week7(bootloader-week7-fault.elf)
 target_link_options(bootloader-week7-fault.elf PRIVATE
     -Wl,--wrap=flash_program -Wl,--wrap=flash_erase -Wl,--wrap=flash_read)
+if(BOOT_CRYPTO_LTO)
+    foreach(target bootloader-week7.elf bootloader-week7-fault.elf)
+        set_property(TARGET ${target} PROPERTY BOOT_CRYPTO_LTO TRUE)
+        target_link_options(${target} PRIVATE -flto -Os)
+    endforeach()
+endif()
 # Reproduce the pre-fix activation gap, without changing Week-6 production.
 add_executable(bootloader-week6-review-fault.elf ${WEEK6_BL_SRCS} tests/week7/fault.c)
 configure_week6(bootloader-week6-review-fault.elf src/week6/linker.ld)

@@ -1,3 +1,6 @@
+/** @file
+ * @brief Receive, verify and activate a firmware candidate in the inactive slot.
+ */
 #ifndef WEEK5_UPDATE_H
 #define WEEK5_UPDATE_H
 #include "flash.h"
@@ -5,7 +8,7 @@
 #include "boot_meta.h"
 #include "ymodem.h"
 
-/* Week-5 upload transaction: receive one firmware image over YMODEM and write it to the
+/** Upload transaction: receive one firmware image over YMODEM and write it to the
  * slot that is not active. The active_slot is never changed here; a fully
  * validated image is only recorded as READY, which update_activate() commits.
  *
@@ -16,7 +19,7 @@
  *   3. Data is programmed in 4 byte words; the last word is padded with 0xFF.
  *      Each accepted block persists the RECEIVING progress.
  *   4. YMODEM finish -> validate length, header, payload CRC32, address and
- *      vectors, then persist READY (active_slot unchanged).
+ *      vectors (and signature for the Week-6/7 signed receiver), then persist READY (active_slot unchanged).
  *   5. Any failure or abort persists FAILED with a non-zero error and leaves
  *      the active slot untouched. */
 typedef enum {
@@ -42,7 +45,7 @@ typedef struct {
                  uint32_t size);
 } update_flash_ops;
 
-/* Bind the ops to the Week-3 simulated NOR device (all callbacks return 0 on
+/** Bind the ops to the Week-3 simulated NOR device (all callbacks return 0 on
    success, non-zero on failure). */
 void update_flash_bind(update_flash_ops *ops, flash_device *dev);
 
@@ -50,13 +53,13 @@ typedef struct {
     flash_device *dev;
     update_flash_ops ops;
     meta_flash_ops meta_ops;
-    meta_record record; /* latest persisted record */
+    meta_record record; /**< latest persisted record */
     flash_partition_id active;
     flash_partition_id target;
-    uint32_t expected;         /* declared file length, header + payload */
-    uint32_t payload_expected; /* expected - IMAGE_HEADER_SIZE (meta field) */
-    uint32_t received;         /* file bytes accepted from YMODEM */
-    uint32_t programmed; /* bytes actually programmed (4 byte aligned) */
+    uint32_t expected;         /**< declared file length including all framing */
+    uint32_t payload_expected; /**< payload length excluding header and any signature trailer */
+    uint32_t received;         /**< file bytes accepted from YMODEM */
+    uint32_t programmed; /**< bytes actually programmed (4 byte aligned) */
     uint8_t stage[FLASH_PROGRAM_SIZE];
     uint32_t staged;
     int begun;
@@ -64,15 +67,15 @@ typedef struct {
     int failed;
 } update_context;
 
-/* Read the metadata and select the non-active target. No flash is erased.
+/** Read the metadata and select the non-active target. No flash is erased.
    ops/meta_ops may be NULL to use the production adapters over dev. */
 int update_prepare(update_context *ctx, flash_device *dev,
                    const update_flash_ops *ops, const meta_flash_ops *meta_ops);
 
-/* Fill a ymodem_sink whose callbacks drive this update context. */
+/** Fill a ymodem_sink whose callbacks drive this update context. */
 void update_sink_init(update_context *ctx, ymodem_sink *sink);
 
-/* Re-read READY and revalidate the candidate before the atomic active-slot
+/** Re-read READY and revalidate the candidate before the atomic active-slot
  * commit. On any error the caller must re-read metadata: a marker write may
  * have completed even if its final read-back failed. Never infer selection
  * from this function's return code or an old context. */

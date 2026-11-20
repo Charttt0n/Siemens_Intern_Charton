@@ -28,3 +28,17 @@ debug-week7:
 verify-feedback:
 	$(PYTHON) scripts/verify-feedback.py
 verify-all: verify-week1 verify-week2 verify-week3 verify-week4 verify-week5 verify-feedback
+
+# Serial execution avoids concurrent use of the historical QEMU test endpoints.
+.PHONY: verify-release api
+verify-release:
+	@test -z "$$PYTHONOPTIMIZE" || { echo "Unset PYTHONOPTIMIZE to enable assertions"; exit 1; }
+	@mkdir -p logs
+	$(PYTHON) scripts/verify.py
+	UBSAN_OPTIONS=halt_on_error=1 $(MAKE) -j1 verify-all verify-week6 verify-week7 verify-handoff-contract
+	@set -e; for suite in cli-week34 irq-contract tx-full uart-baud vector-bounds; do \
+		UBSAN_OPTIONS=halt_on_error=1 $(PYTHON) scripts/verify-$$suite.py; \
+	done
+api:
+	@mkdir -p build/api
+	doxygen Doxyfile

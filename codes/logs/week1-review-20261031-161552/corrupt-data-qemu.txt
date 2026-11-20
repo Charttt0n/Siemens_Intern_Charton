@@ -1,3 +1,0 @@
-FAIL: Cortex-M7 or C runtime validation
-
-EXIT_CODE=1

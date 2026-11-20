@@ -1,8 +1,11 @@
+/** @file
+ * @brief Single-file YMODEM receiver with bounded retries and sink callbacks.
+ */
 #ifndef WEEK5_YMODEM_H
 #define WEEK5_YMODEM_H
 #include <stdint.h>
 
-/* Single-file YMODEM batch receiver with 128 and 1024 byte frames.
+/** Single-file YMODEM batch receiver with 128 and 1024 byte frames.
  *
  * Protocol basis: the YMODEM batch protocol as documented by Chuck Forsberg
  * (the "YMODEM Protocol reference" distributed with the pinned host sender in
@@ -38,22 +41,22 @@
 
 typedef enum {
     YMODEM_OK = 0,
-    YMODEM_IO = 1,           /* read or write callback failed / bad return */
-    YMODEM_TIMEOUT = 2,      /* no-progress wall-clock budget exhausted */
-    YMODEM_CANCELLED = 3,    /* sender sent the CAN CAN abort sequence */
-    YMODEM_PROTOCOL = 4,     /* malformed header, name or length field */
-    YMODEM_RETRY_LIMIT = 5,  /* consecutive no-progress events exceeded limit */
-    YMODEM_SINK = 6,         /* begin/write/finish reported a failure */
-    YMODEM_TOO_LARGE = 7,    /* declared length exceeds max_file_size */
-    YMODEM_UNDERFLOW = 8,    /* EOT before all declared bytes arrived */
-    YMODEM_OVERFLOW = 9,     /* data blocks after the declared length */
-    YMODEM_MULTI_FILE = 10,  /* terminating block 0 named another file */
-    YMODEM_ARGUMENT = 11     /* invalid configuration or callbacks */
+    YMODEM_IO = 1,           /**< read or write callback failed / bad return */
+    YMODEM_TIMEOUT = 2,      /**< no-progress wall-clock budget exhausted */
+    YMODEM_CANCELLED = 3,    /**< sender sent the CAN CAN abort sequence */
+    YMODEM_PROTOCOL = 4,     /**< malformed header, name or length field */
+    YMODEM_RETRY_LIMIT = 5,  /**< consecutive no-progress events exceeded limit */
+    YMODEM_SINK = 6,         /**< begin/write/finish reported a failure */
+    YMODEM_TOO_LARGE = 7,    /**< declared length exceeds max_file_size */
+    YMODEM_UNDERFLOW = 8,    /**< EOT before all declared bytes arrived */
+    YMODEM_OVERFLOW = 9,     /**< data blocks after the declared length */
+    YMODEM_MULTI_FILE = 10,  /**< terminating block 0 named another file */
+    YMODEM_ARGUMENT = 11     /**< invalid configuration or callbacks */
 } ymodem_result;
 
 typedef struct {
     void *context;
-    /* Binary byte channel. read returns 1..size bytes actually read, 0 when no
+    /** Binary byte channel. read returns 1..size bytes actually read, 0 when no
        byte is available right now, or a negative value on failure. The
        receiver only ever asks for one byte and treats any other count as an
        I/O error.
@@ -64,35 +67,35 @@ typedef struct {
        positive one, as YMODEM_IO. */
     int (*read)(void *context, uint8_t *buffer, uint32_t size);
     int (*write)(void *context, const uint8_t *data, uint32_t size);
-    /* Monotonic milliseconds. Must not wrap during a transfer in practice. */
+    /** Monotonic milliseconds. Must not wrap during a transfer in practice. */
     uint32_t (*now_ms)(void *context);
 } ymodem_io;
 
 typedef struct {
     void *context;
-    /* Called once for a validated block 0. name is NUL-terminated.
+    /** Called once for a validated block 0. name is NUL-terminated.
        Return 0 when fully initialised, non-zero on failure. The receiver calls
        abort() after a failed begin, because begin may have partially created
        resources; abort must tolerate that. */
     int (*begin)(void *context, const char *name, uint32_t size);
-    /* Returns 0 after all bytes were accepted, non-zero on failure. */
+    /** Returns 0 after all bytes were accepted, non-zero on failure. */
     int (*write)(void *context, const uint8_t *data, uint32_t size);
-    /* Called once for the terminating empty block 0; this is the commit point.
+    /** Called once for the terminating empty block 0; this is the commit point.
        Returning 0 means the file is committed: the receiver then reports
        YMODEM_OK even if the final ACK cannot be written, never calls abort and
        never calls finish again. A non-zero return is a failure and abort is
        invoked. */
     int (*finish)(void *context, uint32_t size);
-    /* Optional cleanup after any failure, including a failed begin. Never
+    /** Optional cleanup after any failure, including a failed begin. Never
        called after a successful finish. Must be safe with no open file. */
     void (*abort)(void *context);
 } ymodem_sink;
 
 typedef struct {
-    uint32_t max_file_size; /* largest accepted declared length */
-    uint32_t timeout_ms;    /* per byte inactivity timeout */
-    uint32_t retry_limit;   /* consecutive no-progress events before giving up */
-    /* Wall-clock no-progress budget covering both silent gaps and continuous
+    uint32_t max_file_size; /**< largest accepted declared length */
+    uint32_t timeout_ms;    /**< per byte inactivity timeout */
+    uint32_t retry_limit;   /**< consecutive no-progress events before giving up */
+    /** Wall-clock no-progress budget covering both silent gaps and continuous
        byte delivery. 0 derives timeout_ms * (YMODEM_PACKET_MAX + 8), i.e. one
        maximum-length frame, which is enough for a normal block and small
        enough that a stalling or repeating peer cannot run forever. Only
@@ -103,13 +106,13 @@ typedef struct {
 
 typedef struct {
     char name[YMODEM_NAME_MAX];
-    uint32_t size;     /* declared length */
-    uint32_t received; /* bytes handed to the sink */
-    uint32_t blocks;   /* data frames accepted */
-    uint32_t retries;  /* NAK / 'C' retries transmitted */
+    uint32_t size;     /**< declared length */
+    uint32_t received; /**< bytes handed to the sink */
+    uint32_t blocks;   /**< data frames accepted */
+    uint32_t retries;  /**< NAK / 'C' retries transmitted */
 } ymodem_stats;
 
-/* Receive exactly one file (plus the batch terminator). stats may be NULL. */
+/** Receive exactly one file (plus the batch terminator). stats may be NULL. */
 int ymodem_receive(const ymodem_io *io, const ymodem_sink *sink,
                    const ymodem_config *config, ymodem_stats *stats);
 #endif

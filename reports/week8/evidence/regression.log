@@ -1,0 +1,265 @@
+UBSAN_OPTIONS=halt_on_error=1 make -j1 verify-all verify-week6 verify-week7 verify-handoff-contract
+make[1]: Entering directory '/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes'
+python3 scripts/verify-startup.py
+PASS: tool-versions
+PASS: clean-build
+PASS: nominal-run
+PASS: poisoned-startup
+PASS: corrupt-data
+PASS: corrupt-bss
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week1-review-20261120-175639
+python3 scripts/verify-week2.py
+PASS: model-clock
+PASS: clean-build-no-semihosting
+PASS: week1-regression
+PASS: uart-repeat-1
+PASS: uart-repeat-2
+PASS: uart-repeat-3
+PASS: poisoned-startup-and-registers
+PASS: uart-parameter-boundaries
+PASS: corrupt-data
+PASS: corrupt-bss
+PASS: disabled-uart
+PASS: undefined-instruction
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week2-20261120-175643
+python3 scripts/verify-week3.py
+PASS: fresh cross-build; no semihosting BKPT
+PASS: native flash API and boundary tests with ASan/UBSan
+PASS: same flash assertions execute on Cortex-M7
+PASS: real UART RX IRQ, binary byte order, 127-byte queue, drop-new overflow and recovery
+PASS: 300 serial command responses across ring wraps; unknown-command rejection
+PASS: exact 1 MiB checkpoint and exclusive image lock
+PASS: failed checkpoint preserves old image and resumes QEMU
+PASS: new QEMU process restores checkpoint; unsaved erase lost after SIGKILL
+PASS: erasure persists after explicit checkpoint and restart
+PASS: wrong-size image rejected without modification
+PASS: no QEMU guest-error diagnostics
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week3-20261120-175648-353899
+python3 scripts/verify-week4.py
+PASS: fresh build; distinct boot/app memory; no semihosting
+PASS: CRC known vectors and 8 deterministic lengths match independent zlib oracle under sanitizers
+PASS: native and QEMU image valid
+PASS: native and QEMU image blank
+PASS: native and QEMU image bad-magic
+PASS: native and QEMU image unsupported-format
+PASS: native and QEMU image bad-header-size
+PASS: native and QEMU image bad-header-crc
+PASS: native and QEMU image empty-payload
+PASS: native and QEMU image oversize-payload
+PASS: native and QEMU image wrong-load-address
+PASS: native and QEMU image payload-corruption
+PASS: native and QEMU image unaligned-msp
+PASS: native and QEMU image boot-ram-msp
+PASS: native and QEMU image even-reset
+PASS: native and QEMU image outside-reset
+PASS: native and QEMU image vector-table-reset
+PASS: native and QEMU image bad-irq-vector
+PASS: native and QEMU image reserved-vector
+PASS: native and QEMU image msp-above-top
+PASS: native and QEMU image msp-below-base
+PASS: native and QEMU image reset-at-end
+PASS: native and QEMU image irq-before-code
+PASS: native and QEMU image maximum-payload
+PASS: dirty-state-handoff-and-app-crt
+PASS: reject-corrupted-loaded-copy
+PASS: no QEMU guest errors in all boot and rejection cases
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week4-20261120-175650-798600
+python3 scripts/verify-week5.py
+PASS: fresh Week-5 build; boot stack below APP_RAM_BASE; app linked at 0x10000
+PASS: v1/v2 payloads differ; packages are exactly header + payload
+PASS: package framing, CRC, vector, capacity and seed boundaries
+PASS: packer rejects ELF input and a 1 MiB flash dump
+PASS: native slot API: A/B, illegal slots, bad CRC/length/vector, wrappers
+PASS: native boot_meta: transactions, damage, IO states, torn writes, wrap
+PASS: native YMODEM: frames, block0 bounds, CRC/retry, duplicates, cancel, timeouts, sink errors
+PASS: native update: RECEIVING/erase/write/READY/failure and YMODEM end-to-end
+PASS: review reproduction: repeated frame hits RETRY_LIMIT, reads bounded
+PASS: CRC16 matches independent ymodem 1.5.3 implementation on 10 inputs
+PASS: YMODEM interop interop-1024: independent sender, 1024B frames
+PASS: YMODEM interop interop-128: independent sender, 128B frames
+PASS: YMODEM interop interop-block0-ack-loss: independent sender, 128B frames
+PASS: YMODEM interop interop-data-ack-loss: independent sender, 128B frames
+PASS: YMODEM interop interop-eot-ack-loss: independent sender, 128B frames
+PASS: YMODEM interop interop-bad-crc: independent sender, 128B frames
+PASS: YMODEM interop interop-wrap-128: independent sender, 128B frames
+PASS: YMODEM interop interop-delayed-terminator: independent sender, 128B frames
+PASS: YMODEM stalled link interop-stalled-link: bounded exit in 0.64s
+PASS: vendored sender provenance and licences present
+PASS: QEMU persisted boot blank-meta-default-a
+PASS: QEMU persisted boot metadata-selects-b
+PASS: QEMU persisted boot uncommitted-state-1
+PASS: QEMU persisted boot uncommitted-state-2
+PASS: QEMU persisted boot uncommitted-state-3
+PASS: QEMU persisted boot uncommitted-state-4
+PASS: QEMU recovery entry bad-active-does-not-auto-fallback
+PASS: QEMU recovery entry no-active-image
+PASS: QEMU recovery entry double-metadata-damage
+PASS: QEMU persisted boot one-valid-metadata-copy
+PASS: QEMU recovery entry ambiguous-metadata
+PASS: QEMU v2 upload committed; B active, old slot unchanged
+PASS: QEMU persisted boot reboot-v2
+PASS: QEMU v3 upload committed; A active, old slot unchanged
+PASS: QEMU persisted boot reboot-v3
+PASS: QEMU explicit metadata recovery and re-upload
+PASS: QEMU maximum-size package fills B; A unchanged and B committed
+PASS: QEMU persisted boot reboot-maximum-slot-upload
+PASS: QEMU rejects bad-crc32; old program runs
+PASS: QEMU rejects bad-vector; old program runs
+PASS: QEMU rejects bad-vector-tail-halfword; old program runs
+PASS: QEMU rejects truncated-file; old program runs
+PASS: QEMU rejects extra-file-tail; old program runs
+PASS: QEMU rejects file-over-capacity; old program runs
+PASS: QEMU UART fragmentation, CRC16 retry, duplicate frame -> one correct image
+PASS: QEMU cancel exits with old program
+PASS: QEMU timeout exits with old program
+PASS: QEMU injected erase-io preserves old selection
+PASS: QEMU injected program-io preserves old selection
+PASS: QEMU injected activation-meta-io preserves old selection
+PASS: QEMU injected rx-loss-indication preserves old selection
+PASS: QEMU persisted boot restart-after-disconnect
+PASS: QEMU real socket disconnect -> bounded receiver timeout -> old boot
+PASS: QEMU actual UART RX ring overflow aborts transfer and boots old program
+PASS: QEMU persisted boot restart-target-erase-prefix73
+PASS: QEMU tear snapshot and cold restart target-erase-prefix73
+PASS: QEMU persisted boot restart-target-word-prefix2
+PASS: QEMU tear snapshot and cold restart target-word-prefix2
+PASS: QEMU persisted boot restart-activation-erase-prefix24
+PASS: QEMU tear snapshot and cold restart activation-erase-prefix24
+PASS: QEMU persisted boot restart-activation-body-prefix21
+PASS: QEMU tear snapshot and cold restart activation-body-prefix21
+PASS: QEMU persisted boot restart-activation-crc-prefix2
+PASS: QEMU tear snapshot and cold restart activation-crc-prefix2
+PASS: QEMU persisted boot restart-activation-marker-prefix2
+PASS: QEMU tear snapshot and cold restart activation-marker-prefix2
+PASS: QEMU persisted boot restart-activation-marker-complete
+PASS: QEMU tear snapshot and cold restart activation-marker-complete
+PASS: QEMU persisted boot restart-ready-not-activated
+PASS: QEMU tear snapshot and cold restart ready-not-activated
+PASS: QEMU persisted boot restart-verifying-body-prefix21
+PASS: QEMU tear snapshot and cold restart verifying-body-prefix21
+PASS: QEMU full re-upload after torn target write succeeds
+PASS: metadata inspection CLI reports persisted failure and rejects ambiguous records
+PASS: no QEMU guest errors in any boot case
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week5-20261120-175655-674877
+python3 scripts/verify-feedback.py
+PASS FB-TX-01
+PASS FB-TX-02
+PASS FB-IRQ-01
+PASS FB-IRQ-02
+PASS CLI-W1-MISSING
+PASS CLI-W1-BUILD
+PASS CLI-W1-RUN
+PASS CLI-W2-MISSING
+PASS CLI-W2-BUILD
+PASS CLI-W2-RUN
+PASS CLI-W3-MISSING
+PASS CLI-W3-BUILD
+PASS CLI-W3-RUN
+PASS CLI-W4-MISSING
+PASS CLI-W4-BUILD
+PASS CLI-W4-RUN
+PASS CLI-W4-MISSING-IMAGE
+PASS CLI-W4-BLANK
+PASS CLI-W2-PAUSED
+PASS CLI-BUILD-FAIL
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/feedback-20261120-180053
+python3 scripts/verify-week6.py
+PASS: build-and-pack
+PASS: host-parse-unsigned-rejected
+PASS: native-sanitizer-verify
+PASS: boot-signed-v1
+PASS: upgrade-signed-v2
+PASS: reject-unsigned
+PASS: rollback-corrupt-active
+PASS: both-invalid-stay-cli
+PASS: status-and-param-persist
+PASS: factory-reset-keeps-firmware
+PASS: trial-hang-rollback
+SUMMARY PASS checks 11 dir /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week6-20261120-180100-687777
+python3 scripts/verify-week7.py
+PASS: fresh-build
+PASS Unity flash: 1
+PASS Unity image: 1
+PASS Unity boot_meta: 16
+PASS Unity ymodem: 32
+PASS Unity update: 9
+PASS Unity core: 23
+PASS: unity-all
+PASS: production-excludes-fault-hooks
+PASS: signed-boot
+PASS: signed-upgrade-and-confirm
+PASS: unsigned-rejected
+PASS: bad-signature-rejected
+PASS: corrupt-payload-rejected
+PASS: signed-header-tamper-rejected
+PASS: maximum-signed-upgrade
+PASS: corrupt-active-fallback
+PASS: both-invalid-remain-cli
+PASS: cli-validation-persistence-factory
+PASS: corrupt-config-fails-closed
+PASS: erase-error-keeps-old
+PASS: program-error-keeps-old
+PASS: readback-error-keeps-old
+PASS: trial-arm-error-keeps-old
+PASS: param-write-error-keeps-runtime
+PASS: active-read-error-fallback
+PASS: target-erase-tear-cold-restart
+PASS: target-write-tear-cold-restart
+PASS: trial-body-tear-cold-restart
+PASS: trial-marker-complete-cold-restart
+PASS: activation-body-tear-cold-restart
+PASS: activation-marker-tear-cold-restart
+PASS: activation-marker-complete-cold-restart
+PASS: watchdog-reset-observed
+PASS: unconfirmed-trial-rollback
+SUMMARY PASS 29 /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week7-20261120-180152-447897
+python3 scripts/verify-handoff-contract.py
+PASS: HANDOFF-REGISTERS
+PASS: USAGE-ENABLED
+PASS: USAGE-DISABLED-ESCALATION
+PASS: MEMMANAGE-XN
+PASS: BUSFAULT-PRECISE
+PASS: SVC-MASKED-ESCALATION
+PASS: SVC-PSP-FRAME
+PASS /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/handoff-contract-20261120-180511
+make[1]: Leaving directory '/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes'
+PASS CLI34-W3-MISSING exit 1
+PASS CLI34-W3-BUILD exit 0
+PASS CLI34-W3-RUN exit 0
+PASS CLI34-W3-MISSING-ELF exit 1
+PASS CLI34-W3-NEW-IMAGE exit 0
+PASS CLI34-W3-QEMU-FAIL exit 1
+PASS CLI34-W3-START-TIMEOUT exit 1
+PASS CLI34-W3-UART-TIMEOUT exit 1
+PASS CLI34-W3-FAIL-CONFIGURE exit 42
+PASS CLI34-W3-FAIL-BUILD exit 42
+PASS CLI34-W3-RECOVERY exit 0
+PASS CLI34-W4-MISSING exit 1
+PASS CLI34-W4-BUILD exit 0
+PASS CLI34-W4-RUN exit 0
+PASS CLI34-W4-MISSING-ELF exit 1
+PASS CLI34-W4-MISSING-IMAGE exit 1
+PASS CLI34-W4-QEMU-FAIL exit 1
+PASS CLI34-W4-START-TIMEOUT exit 1
+PASS CLI34-W4-UART-TIMEOUT exit 1
+PASS CLI34-W4-FAIL-CONFIGURE exit 42
+PASS CLI34-W4-FAIL-BUILD exit 42
+PASS CLI34-W4-RECOVERY exit 0
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/cli-week34-20261120-180515
+PASS /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/irq-contract-20261120-180544
+PASS TX-WEEK2-DRIVER
+PASS TX-WEEK3-DRIVER
+PASS TX-PRODUCTION
+PASS TX-W3-PRINT
+PASS TX-W4-PRINT
+PASS TX-W4-FLUSH
+PASS TX-W4-APP
+Evidence: /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/tx-full-20261120-180544
+PASS BAUD-W3
+PASS BAUD-W4
+/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/uart-baud-20261120-180546
+PASS: LOAD-VECTOR-MSP
+PASS: LOAD-VECTOR-IRQ31
+PASS: STATUS-IO
+PASS: STATUS-HARDFAULT
+PASS /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/vector-bounds-20261120-180547

@@ -1,1 +1,0 @@
-PASS: versions, build, Cortex-M7 execution, C runtime, GDB breakpoints and single step
