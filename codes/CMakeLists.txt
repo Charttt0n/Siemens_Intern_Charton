@@ -104,3 +104,6 @@ target_include_directories(bootloader-week5-fault.elf PRIVATE src/week5
 configure_stage4(bootloader-week5-fault.elf src/week4/linker.ld)
 target_link_options(bootloader-week5-fault.elf PRIVATE
     -Wl,--wrap=flash_program -Wl,--wrap=flash_erase)
+
+include(cmake/week6.cmake)
+include(cmake/week7.cmake)

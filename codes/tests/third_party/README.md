@@ -46,3 +46,14 @@ protocol behaviour was derived from:
   1.5.3 above.
 - The observable behaviour of the pinned ymodem 1.5.3 sender, used only as an
   interoperability peer and covered by its MIT licence.
+
+## Mbed TLS 3.6.7 (Week 6 firmware verify-only)
+
+Pruned official release used by the Week-6 bootloader for SHA-256 and
+RSA-2048 PKCS#1 v1.5 verification. Provenance, licence and the exact file
+set are in `mbedtls/README.md`. The Week 6 and Week 7 bootloaders use this
+library. See [local lab signing](mbedtls/keys/README.md) for key setup.
+
+## Week 7 Unity
+
+`unity/` 固定为官方 [ThrowTheSwitch Unity v2.6.1](https://github.com/ThrowTheSwitch/Unity/tree/v2.6.1)，MIT 许可证。保留原始 src/unity.c、unity.h、unity_internals.h 和 LICENSE.txt；来源及每文件 SHA256 见 `unity/SOURCE.json`。不在生产 Bootloader 中链接 Unity，宿主与 QEMU 单元测试分别构建。

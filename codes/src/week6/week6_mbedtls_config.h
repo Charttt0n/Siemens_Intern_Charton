@@ -1,0 +1,25 @@
+#ifndef WEEK6_MBEDTLS_CONFIG_H
+#define WEEK6_MBEDTLS_CONFIG_H
+
+/* Tight, verify-only Mbed TLS 3.6 configuration for the Week-6 bootloader.
+ * TLS, X.509, PSA and key generation stay disabled. */
+#define MBEDTLS_HAVE_ASM
+#define MBEDTLS_PLATFORM_C
+#define MBEDTLS_PLATFORM_MEMORY
+#define MBEDTLS_MEMORY_BUFFER_ALLOC_C
+#define MBEDTLS_NO_PLATFORM_ENTROPY
+#define MBEDTLS_PLATFORM_NO_STD_FUNCTIONS
+#define MBEDTLS_PLATFORM_SNPRINTF_MACRO snprintf
+#define MBEDTLS_PLATFORM_EXIT_MACRO exit
+
+#define MBEDTLS_SHA256_C
+#define MBEDTLS_SHA256_SMALLER
+#define MBEDTLS_MD_C
+#define MBEDTLS_BIGNUM_C
+#define MBEDTLS_OID_C
+#define MBEDTLS_ASN1_PARSE_C
+#define MBEDTLS_ASN1_WRITE_C
+#define MBEDTLS_RSA_C
+#define MBEDTLS_PKCS1_V15
+
+#endif
