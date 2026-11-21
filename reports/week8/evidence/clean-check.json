@@ -157,8 +157,9 @@
   "api_public_headers": 15,
   "summary_docx": {
     "body_han_characters": 9502,
-    "figures": 5,
-    "rendered_pdf_pages": 12
+    "figures": 11,
+    "rendered_pdf_pages": 12,
+    "document_review_date": "2026-11-21"
   },
   "header_documentation_check": {
     "load_bytes": 24216,
