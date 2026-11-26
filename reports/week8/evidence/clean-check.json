@@ -156,10 +156,11 @@
   "api_generated_without_build_tree": "PASS",
   "api_public_headers": 15,
   "summary_docx": {
-    "body_han_characters": 9503,
+    "body_han_characters": 9397,
     "figures": 14,
     "rendered_pdf_pages": 12,
-    "document_review_date": "2026-11-26"
+    "document_review_date": "2026-11-26",
+    "count_method": "Han characters in Normal body paragraphs longer than 70 characters before 复核资料; headings, captions and references excluded."
   },
   "header_documentation_check": {
     "load_bytes": 24216,
