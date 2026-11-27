@@ -158,10 +158,11 @@
   "summary_docx": {
     "body_han_characters": 10225,
     "figures": 16,
-    "tables": 4,
-    "rendered_pdf_pages": 13,
+    "tables": 5,
+    "appendices": 2,
+    "rendered_pdf_pages": 15,
     "document_review_date": "2026-11-27",
-    "count_method": "Han characters in Normal body paragraphs longer than 70 characters before 复核资料; headings, tables, captions, notes and references excluded."
+    "count_method": "Han characters in Normal body paragraphs longer than 70 characters before 附录 A; headings, tables, captions, notes and appendices excluded."
   },
   "header_documentation_check": {
     "load_bytes": 24216,
