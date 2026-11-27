@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "week6-code-complete",
+  "started_at": "20261120-180100-687777",
+  "timezone": "Asia/Shanghai",
+  "checks": [
+    {
+      "name": "build-and-pack",
+      "text": 29124,
+      "data": 8
+    },
+    {
+      "name": "host-parse-unsigned-rejected"
+    },
+    {
+      "name": "native-sanitizer-verify"
+    },
+    {
+      "name": "boot-signed-v1"
+    },
+    {
+      "name": "upgrade-signed-v2"
+    },
+    {
+      "name": "reject-unsigned"
+    },
+    {
+      "name": "rollback-corrupt-active"
+    },
+    {
+      "name": "both-invalid-stay-cli"
+    },
+    {
+      "name": "status-and-param-persist"
+    },
+    {
+      "name": "factory-reset-keeps-firmware"
+    },
+    {
+      "name": "trial-hang-rollback",
+      "method": "snapshot-restart",
+      "note": "QEMU system_reset did not keep the SRAM NOR model in-process; firmware rollback was verified by restarting from a pre-reset snapshot."
+    }
+  ],
+  "failed": [],
+  "evidence": "/Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/logs/week6-20261120-180100-687777",
+  "finished_at": "20261120-180152"
+}

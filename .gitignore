@@ -20,3 +20,6 @@
 # Generated delivery snapshots; canonical reports and docs live under reports/ and codes/docs/.
 /output/
 **/*交付包*.zip
+
+/codes/logs/*
+!/codes/logs/.gitkeep

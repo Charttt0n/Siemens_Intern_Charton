@@ -1,3 +1,0 @@
-$ arm-none-eabi-objcopy -O binary /var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/tx-full-ck19m_ju/build/tx-application.elf /var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/tx-full-ck19m_ju/build/injected-app.bin
-
-EXIT=0

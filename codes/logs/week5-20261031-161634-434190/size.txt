@@ -1,5 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-   9452	      0	   4284	  13736	   35a8	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-ttcg8zb6/bootloader-week5.elf
-    992	     12	   4132	   5136	   1410	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-ttcg8zb6/application-v1.elf
-    992	     12	   4132	   5136	   1410	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-ttcg8zb6/application-v2.elf
-    992	     12	   4132	   5136	   1410	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/stage5-ttcg8zb6/application-v3.elf

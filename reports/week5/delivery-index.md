@@ -11,7 +11,7 @@
 
 | 类别 | 入口 | 内容 |
 |---|---|---|
-| 周报 | [Markdown](week5-report.md)、[Word](Week5实习周报.docx)、[PDF](Week5实习周报.pdf) | 实现、测试、边界和后续安排 |
+| 周报 | [Markdown](week5-report.md)、[Word](Week5实习周报.docx)、[PDF](Week5实习周报.pdf) | 定稿版（含字段字典、A–E 场景拆测、附录错误码）；交老师用此三件 |
 | 升级源码 | [src/week5](../../codes/src/week5/) | YMODEM、CRC16、写入、参数、主流程、计时 |
 | 共享依赖 | [Week3](../../codes/src/week3/)、[Week4](../../codes/src/week4/) | UART/Flash、镜像与交接 |
 | 技术测试报告 | [Markdown](../../codes/docs/week5-test-report.md)、[PDF](../../codes/docs/week5-test-report.pdf) | 成功、拒绝、IO、中断快照和冷重启 |
@@ -21,4 +21,4 @@
 | 历史五周核查 | [报告](../../planning/week1-5-conformance-2026-11-01.md) | 11 月 1 日的验收记录、Week 1 研究缺口和平台适配差异 |
 | 完整交付入口 | [总索引](../../planning/week1-5-delivery-index.md) | 前五周材料及各版本交付包 |
 
-本轮 Week 5 共 75 个顶层检查分组通过，含 9 项互操作、24 条启动记录、12 条负向记录和 9 例中断快照。故障快照采用 QEMU 受控 NOR 写入前缀模型。真实硬件掉电、自动运行故障回退和签名属于后续范围。
+本轮 Week 5 顶层检查分组全部通过（按功能/场景分 A–E，详见周报），含互操作、启动记录、负向记录和中断快照等。故障快照采用 QEMU 受控 NOR 写入前缀模型。真实硬件掉电、自动运行故障回退和签名属于后续范围。旧名 `Week5实习周报-revised.docx` 已并入正式 `Week5实习周报.docx`。

@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "runs": 3,
+  "model": "QEMU icount shift=3, 8 ns per emulated instruction; TIMER0 25 MHz",
+  "window_ms": 200,
+  "note": "Simulation only, no cycle-accurate hardware performance claim",
+  "variants": {
+    "baseline": {
+      "elf": "/private/tmp/siemens-w8.EE27Ko/off/bootloader-week6.elf",
+      "sha256": "b9630c03489aefc8b5395e6a16ec5065ad1ca37c69a1e030662e25c726f41866",
+      "text": 29124,
+      "data": 8,
+      "bss_including_stack": 41176,
+      "load_bytes": 29132
+    },
+    "fixed-debug": {
+      "elf": "/private/tmp/siemens-w8.EE27Ko/off/bootloader-week7-debug.elf",
+      "sha256": "a58d98b8607ec459d09c16e634dce383bf0cda9200156b3180385a166d7c1a71",
+      "text": 29712,
+      "data": 8,
+      "bss_including_stack": 41176,
+      "load_bytes": 29720
+    },
+    "optimized": {
+      "elf": "/private/tmp/siemens-w8.EE27Ko/off/bootloader-week7.elf",
+      "sha256": "27c7e7cf2e629c61d73c85034e684b85f0004e672b8981220d87cd98ad9b2962",
+      "text": 27196,
+      "data": 8,
+      "bss_including_stack": 41176,
+      "load_bytes": 27204
+    }
+  },
+  "measurements": [
+    {
+      "image": "demo",
+      "payload_bytes": 3360,
+      "variant": "baseline",
+      "seed_sha256": "ab6dcfc6dec1c13999bf7256a153487db222fde82c83525b6f1b421d48c7c24e",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5875015,
+          "VERIFY": 825000,
+          "before_ms": 202.0006,
+          "total_ms": 235.0006,
+          "verify_ms": 33.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5875015,
+          "VERIFY": 825000,
+          "before_ms": 202.0006,
+          "total_ms": 235.0006,
+          "verify_ms": 33.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5875015,
+          "VERIFY": 825000,
+          "before_ms": 202.0006,
+          "total_ms": 235.0006,
+          "verify_ms": 33.0
+        }
+      ],
+      "median_verify_ms": 33.0,
+      "median_total_ms": 235.0006
+    },
+    {
+      "image": "demo",
+      "payload_bytes": 3360,
+      "variant": "fixed-debug",
+      "seed_sha256": "ab6dcfc6dec1c13999bf7256a153487db222fde82c83525b6f1b421d48c7c24e",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5800015,
+          "VERIFY": 750000,
+          "before_ms": 202.0006,
+          "total_ms": 232.0006,
+          "verify_ms": 30.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5800015,
+          "VERIFY": 750000,
+          "before_ms": 202.0006,
+          "total_ms": 232.0006,
+          "verify_ms": 30.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5800015,
+          "VERIFY": 750000,
+          "before_ms": 202.0006,
+          "total_ms": 232.0006,
+          "verify_ms": 30.0
+        }
+      ],
+      "median_verify_ms": 30.0,
+      "median_total_ms": 232.0006
+    },
+    {
+      "image": "demo",
+      "payload_bytes": 3360,
+      "variant": "optimized",
+      "seed_sha256": "ab6dcfc6dec1c13999bf7256a153487db222fde82c83525b6f1b421d48c7c24e",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5775015,
+          "VERIFY": 725000,
+          "before_ms": 202.0006,
+          "total_ms": 231.0006,
+          "verify_ms": 29.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5775015,
+          "VERIFY": 725000,
+          "before_ms": 202.0006,
+          "total_ms": 231.0006,
+          "verify_ms": 29.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 5775015,
+          "VERIFY": 725000,
+          "before_ms": 202.0006,
+          "total_ms": 231.0006,
+          "verify_ms": 29.0
+        }
+      ],
+      "median_verify_ms": 29.0,
+      "median_total_ms": 231.0006
+    },
+    {
+      "image": "128KiB",
+      "payload_bytes": 131072,
+      "variant": "baseline",
+      "seed_sha256": "e589634075082e6c3e9730b1fc1f21a77e8bde84474220fa33ef764b397f4e08",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 12200015,
+          "VERIFY": 7150000,
+          "before_ms": 202.0006,
+          "total_ms": 488.0006,
+          "verify_ms": 286.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 12200015,
+          "VERIFY": 7150000,
+          "before_ms": 202.0006,
+          "total_ms": 488.0006,
+          "verify_ms": 286.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 12200015,
+          "VERIFY": 7150000,
+          "before_ms": 202.0006,
+          "total_ms": 488.0006,
+          "verify_ms": 286.0
+        }
+      ],
+      "median_verify_ms": 286.0,
+      "median_total_ms": 488.0006
+    },
+    {
+      "image": "128KiB",
+      "payload_bytes": 131072,
+      "variant": "fixed-debug",
+      "seed_sha256": "e589634075082e6c3e9730b1fc1f21a77e8bde84474220fa33ef764b397f4e08",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9425015,
+          "VERIFY": 4375000,
+          "before_ms": 202.0006,
+          "total_ms": 377.0006,
+          "verify_ms": 175.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9425015,
+          "VERIFY": 4375000,
+          "before_ms": 202.0006,
+          "total_ms": 377.0006,
+          "verify_ms": 175.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9425015,
+          "VERIFY": 4375000,
+          "before_ms": 202.0006,
+          "total_ms": 377.0006,
+          "verify_ms": 175.0
+        }
+      ],
+      "median_verify_ms": 175.0,
+      "median_total_ms": 377.0006
+    },
+    {
+      "image": "128KiB",
+      "payload_bytes": 131072,
+      "variant": "optimized",
+      "seed_sha256": "e589634075082e6c3e9730b1fc1f21a77e8bde84474220fa33ef764b397f4e08",
+      "samples": [
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9125015,
+          "VERIFY": 4075000,
+          "before_ms": 202.0006,
+          "total_ms": 365.0006,
+          "verify_ms": 163.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9125015,
+          "VERIFY": 4075000,
+          "before_ms": 202.0006,
+          "total_ms": 365.0006,
+          "verify_ms": 163.0
+        },
+        {
+          "BEFORE": 5050015,
+          "TOTAL": 9125015,
+          "VERIFY": 4075000,
+          "before_ms": 202.0006,
+          "total_ms": 365.0006,
+          "verify_ms": 163.0
+        }
+      ],
+      "median_verify_ms": 163.0,
+      "median_total_ms": 365.0006
+    }
+  ],
+  "load_reduction_bytes": 1928,
+  "load_reduction_percent": 6.618151860497048
+}

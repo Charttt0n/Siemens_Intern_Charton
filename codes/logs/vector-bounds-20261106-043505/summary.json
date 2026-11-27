@@ -1,8 +1,0 @@
-{
-  "status": "FAIL",
-  "checks": [],
-  "elf_sha256": {
-    "bootloader-week4.elf": "9bda59487378e8ea9084bba5590bbdd785a80439b59f906d5e8bd72b077951b6",
-    "application.elf": "b07d00fc293017914144950d046307778b94068ca49c5fcf4999a68be830ff66"
-  }
-}

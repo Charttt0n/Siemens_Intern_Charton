@@ -1,3 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-   2172	      0	   4256	   6428	   191c	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/week3-build-dsa1ypm6/bootloader-week3.elf
-   3512	      0	   4260	   7772	   1e5c	/var/folders/03/p8v_3pqx53g79x925wkpqtpw0000gn/T/week3-build-dsa1ypm6/week3-test.elf

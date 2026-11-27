@@ -1,0 +1,21 @@
+0x00000c9c in unlock () at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week6/watchdog.c:15
+15	static void unlock(void) { WDOGLOCK = WDOG_UNLOCK; }
+Temporary breakpoint 1 at 0x126c: file /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week6/update.c, line 233.
+
+Temporary breakpoint 1, update_activate (ctx=ctx@entry=0x2000fe7c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week6/update.c:233
+233	    if (!ctx || !ctx->finished || ctx->failed) return UPDATE_STATE;
+W7_CFG_PENDING=0,1
+W7_CFG_STAGE=0,1
+W7_OLD_ACTIVE=1
+#0  update_activate (ctx=ctx@entry=0x2000fe7c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week6/update.c:233
+#1  0x0000615c in trial_activate (update=update@entry=0x2000fe7c, ops=ops@entry=0x2000ffc4, cfg=cfg@entry=0x2000ff5c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week7/control.c:44
+#2  0x00005764 in upgrade_session (storage=storage@entry=0x2000ffd4, ops=ops@entry=0x2000ffc4, cfg=cfg@entry=0x2000ff5c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week7/main.c:319
+#3  0x00005b5c in handle_line (line=line@entry=0x2000ff2c "u", storage=storage@entry=0x2000ffd4, ops=ops@entry=0x2000ffc4, cfg=cfg@entry=0x2000ff5c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week7/main.c:348
+#4  0x00005fce in main () at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week7/main.c:453
+trial_activate (update=update@entry=0x2000fe7c, ops=ops@entry=0x2000ffc4, cfg=cfg@entry=0x2000ff5c) at /Users/charton/Documents/ChatGPT/Siemens_Intern_Charton/codes/src/week7/control.c:48
+48	    return result;
+Value returned is $1 = 0
+W7_ACTIVATE_RESULT=0
+W7_NEW_ACTIVE=2
+$2 = {magic = 1296184653, schema = 1, generation = 9, active_slot = 2, target_slot = 4294967295, state = 0, progress = 0, expected_length = 0, candidate_version = 0, error = 0, crc = 2960471245, marker = 1414090051}
+[Inferior 1 (process 1) detached]

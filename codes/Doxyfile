@@ -1,0 +1,16 @@
+PROJECT_NAME           = "Cortex-M7 Bootloader"
+PROJECT_NUMBER         = "Week 8"
+OUTPUT_DIRECTORY       = build/api
+INPUT                  = src/week2/board.h src/week3/uart.h src/week3/flash.h \
+                         src/week4/image.h src/week4/crc32.h src/week5/boot_meta.h \
+                         src/week5/update.h src/week5/ymodem.h src/week5/timebase.h \
+                         src/week5/crc16.h src/week6/secure_image.h src/week6/boot_config.h \
+                         src/week6/watchdog.h src/week6/app_confirm.h src/week7/control.h
+EXTRACT_ALL            = YES
+FULL_PATH_NAMES        = NO
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO
+SOURCE_BROWSER         = YES
+WARN_IF_UNDOCUMENTED   = NO
+QUIET                  = YES
